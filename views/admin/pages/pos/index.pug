@@ -1,0 +1,638 @@
+extends ../../layout/pos.pug
+
+block css
+  // Datetimepicker CSS
+  link(rel="stylesheet", href="/admin/assets/css/bootstrap-datetimepicker.min.css")
+  // animation CSS
+  link(rel="stylesheet", href="/admin/assets/css/animate.css")
+  // Datatable CSS
+  link(rel="stylesheet", href="/admin/assets/css/dataTables.bootstrap5.min.css")
+  // Daterangepikcer CSS
+  link(rel="stylesheet", href="/admin/assets/plugins/daterangepicker/daterangepicker.css")
+  // Tabler Icon CSS
+  link(rel="stylesheet", href="/admin/assets/plugins/tabler-icons/tabler-icons.min.css")
+  // Datetimepicker CSS
+  link(rel="stylesheet", href="/admin/assets/css/bootstrap-datetimepicker.min.css")
+  // Owl Carousel CSS
+  link(rel="stylesheet", href="/admin/assets/plugins/owlcarousel/owl.carousel.min.css")
+  link(rel="stylesheet", href="/admin/assets/plugins/owlcarousel/owl.theme.default.min.css")
+  // Color Picker Css
+  link(rel="stylesheet", href="/admin/assets/plugins/@simonwep/pickr/themes/nano.min.css")
+
+block js
+  // Chart JS
+  script(src="/admin/assets/plugins/apexchart/apexcharts.min.js")
+  script(src="/admin/assets/plugins/apexchart/chart-data.js")
+  // Datatable JS
+  script(src="/admin/assets/js/jquery.dataTables.min.js")
+  script(src="/admin/assets/js/dataTables.bootstrap5.min.js")
+  // Daterangepikcer JS
+  script(src="/admin/assets/js/moment.min.js")
+  script(src="/admin/assets/js/bootstrap-datetimepicker.min.js")
+  script(src="/admin/assets/plugins/daterangepicker/daterangepicker.js")
+  // Owl JS
+  script(src="/admin/assets/plugins/owlcarousel/owl.carousel.min.js")
+  // Sticky-sidebar
+  script(src="/admin/assets/plugins/theia-sticky-sidebar/ResizeSensor.js")
+  script(src="/admin/assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js")
+  // Color Picker JS
+  script(src="/admin/assets/plugins/@simonwep/pickr/pickr.es5.min.js")
+  // Custom JS
+  script(src="/admin/assets/js/theme-colorpicker.js")
+  script(src="/admin/assets/js/calculator.js")
+
+block main
+  div(class="row align-items-start pos-wrapper")
+    // Products
+    div(class="col-md-12 col-lg-6")
+      div(class="pos-categories tabs_wrapper")
+        div(class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4")
+          div
+            h5(class="mb-1") Welcome,  Wesley Adrian
+            p December 24, 2024
+          div(class="d-flex align-items-center flex-wrap gap-3")
+            div(class="input-icon-start pos-search position-relative")
+              span(class="input-icon-addon")
+                i(class="ti ti-search")
+              input(type="text", class="form-control", placeholder="Search Product")
+            a(href="pos-5.html#", class="btn btn-sm btn-primary") View All Categories
+        ul(class="tabs owl-carousel pos-category4 mb-4")
+          li#all(class="active")
+            h6
+              a(href="javascript:void(0);") All Categories
+          li#headphones
+            h6
+              a(href="javascript:void(0);") Headphones
+          li#shoes
+            h6
+              a(href="javascript:void(0);") Shoes
+          li#mobiles
+            h6
+              a(href="javascript:void(0);") Mobiles
+          li#watches
+            h6
+              a(href="javascript:void(0);") Watches
+          li#laptops
+            h6
+              a(href="javascript:void(0);") Laptops
+          li#homeneed
+            h6
+              a(href="javascript:void(0);") Home Needs
+          li#headphone
+            h6
+              a(href="javascript:void(0);") Headphones
+        div(class="pos-products")
+          div(class="tabs_container")
+            div(class="tab_content active", data-tab="all")
+              div(class="row g-3")
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-01.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Charger Cable
+                      div(class="text-center")
+                        span(class="fs-14 fw-semibold text-gray-6") $30
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card active")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-02.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Apple Airpods 2
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $120
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-03.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Vacuum Cleaner
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $800
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-04.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Realme 8 Pro
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $700
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-05.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Vacuum Robot
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $600
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-06.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Apple Watch Series 9
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $300
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-07.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Apple Watch Series 9
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $300
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-08.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Bracelet
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $1430
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-09.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") YETI Flask
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $1560
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-10.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Osmo Med Kit
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $410
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-11.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Celestique Perfume
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $150
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-12.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Dell XPS 13
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $1140
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-13.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Cheese Snack
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $15
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-14.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Blue Boot Shoes
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $320
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-15.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Sonic Aura X7
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $230
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-16.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Brown Formal Shoes
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $160
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-17.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Apple Iphone 13 
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $1200
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-18.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") PixelCrafter 3000
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $900
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-19.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Citrify Orange Juice
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $80
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-20.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Aroma Coffee Maker
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $170
+            div(class="tab_content", data-tab="headphones")
+              div(class="row g-3")
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-02.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Apple Airpods 2
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $120
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-15.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Sonic Aura X7
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $1200
+            div(class="tab_content", data-tab="shoes")
+              div(class="row g-3")
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-14.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Blue Boot Shoes
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $320
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-16.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Brown Formal Shoes
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $160
+            div(class="tab_content", data-tab="mobiles")
+              div(class="row g-3")
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-01.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Charger Cable
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $30
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-04.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Realme 8 Pro
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $700
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-17.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Apple Iphone 13 
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $1200
+            div(class="tab_content", data-tab="watches")
+              div(class="row g-3")
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-07.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Apple Watch Series 9
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $300
+            div(class="tab_content", data-tab="laptops")
+              div(class="row row-cols-xxl-5")
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-12.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Dell XPS 13
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $1140
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-01.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Charger Cable
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $30
+            div(class="tab_content", data-tab="homeneed")
+              div(class="row row-cols-xxl-5")
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-03.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Vacuum Cleaner
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $800
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-05.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Vacuum Robot
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $600
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-13.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Cheese Snack
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $15
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-19.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Citrify Orange Juice
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $80
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-20.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Aroma Coffee Maker
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $170
+            div(class="tab_content", data-tab="headphone")
+              div(class="row row-cols-xxl-5")
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-02.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Apple Airpods 2
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $120
+                div(class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3")
+                  div(class="product-info card")
+                    a(href="javascript:void(0);", class="product-image")
+                      img(src="/admin/assets/img/products/pos-product-15.jpg", alt="Products")
+                    div(class="product-content text-center")
+                      h6(class="fs-14 fw-bold mb-1")
+                        a(href="javascript:void(0);") Apple Iphone 13 
+                      div(class="text-center")
+                        h6(class="fs-14 fw-semibold text-gray-6") $1200
+    // /Products
+    // Order Details
+    div(class="col-md-12 col-lg-6 ps-0 theiaStickySidebar")
+      aside(class="product-order-list")
+        div(class="customer-info")
+          div(class="order-head bg-light d-flex align-items-center justify-content-between w-100 mb-3")
+            div
+              h3 Order List
+              span Transaction ID : #65565
+            div
+              a(class="link-danger fs-16", href="javascript:void(0);")
+                i(class="ti ti-trash-x-filled")
+          div(class="row g-3")
+            div(class="col-md-4")
+              div(class="input-icon-end position-relative")
+                input(type="text", class="form-control datetimepicker", placeholder="dd/mm/yyyy")
+                span(class="input-icon-addon")
+                  i(class="ti ti-calendar text-gray-7")
+            div(class="col-md-4")
+              input(type="text", class="form-control", placeholder="Type Ref Number")
+            div(class="col-md-4")
+              select(class="select")
+                option Search Shop
+                option IPhone 14 64GB
+                option MacBook Pro
+                option Rolex Tribute V3
+                option Red Nike Angelo
+                option Airpod 2
+                option Oldest
+            div(class="col-md-12")
+              div(class="d-flex align-items-center gap-2")
+                div(class="w-100")
+                  select(class="select")
+                    option Walk in Customer
+                    option John
+                    option Smith
+                    option Ana
+                    option Elza
+                a(href="pos-5.html#", class="btn btn-primary btn-icon", data-bs-toggle="modal", data-bs-target="#create")
+                  i(class="ti ti-user-plus")
+            div(class="col-md-6")
+              select(class="select")
+                option USD
+                option EURO
+            div(class="col-md-6")
+              input(type="text", class="form-control", placeholder="Currency Exchange Rate")
+        div(class="product-added block-section")
+          div(class="d-flex align-items-center justify-content-between gap-3 mb-3")
+            h5(class="d-flex align-items-center mb-0") Order Details
+            div(class="badge bg-light text-gray-9 fs-12 fw-semibold py-2 border rounded") Items : 
+              span(class="text-teal") 3
+          div(class="product-wrap")
+            div(class="empty-cart")
+              div(class="mb-1")
+                img(src="/admin/assets/img/icons/empty-cart.svg", alt="img")
+              p(class="fw-bold") No Products Selected
+            div(class="product-list border-0 p-0")
+              div(class="table-responsive")
+                table(class="table table-borderless")
+                  thead
+                    tr
+                      th(class="bg-transparent fw-bold") Product
+                      th(class="bg-transparent fw-bold") Batch No
+                      th(class="bg-transparent fw-bold") Price
+                      th(class="bg-transparent fw-bold") QTY
+                      th(class="bg-transparent fw-bold") Sub Total
+                      th(class="bg-transparent fw-bold text-end")
+                  tbody
+                    tr
+                      td
+                        h6(class="fs-16 fw-medium mb-1")
+                          a(href="pos-5.html#", data-bs-toggle="modal", data-bs-target="#products") Iphone 11S
+                        | In Stock: 10
+                      td
+                        input(type="text", class="form-control")
+                      td(class="fw-bold") $400
+                      td
+                        div(class="qty-item m-0")
+                          a(href="javascript:void(0);", class="dec d-flex justify-content-center align-items-center", data-bs-toggle="tooltip", data-bs-placement="top", title="minus")
+                            i(data-feather="minus-circle", class="feather-14")
+                          input(type="text", class="form-control text-center", name="qty", value="4")
+                          a(href="javascript:void(0);", class="inc d-flex justify-content-center align-items-center", data-bs-toggle="tooltip", data-bs-placement="top", title="plus")
+                            i(data-feather="plus-circle", class="feather-14")
+                      td(class="fw-bold") $400
+                      td(class="text-end")
+                        a(class="btn-icon delete-icon", href="javascript:void(0);", data-bs-toggle="modal", data-bs-target="#delete")
+                          i(class="ti ti-trash")
+                    tr
+                      td
+                        h6(class="fs-16 fw-medium mb-1")
+                          a(href="pos-5.html#", data-bs-toggle="modal", data-bs-target="#products") Samsung Galaxy S21
+                        | In Stock: 06
+                      td
+                        input(type="text", class="form-control")
+                      td(class="fw-bold") $400
+                      td
+                        div(class="qty-item m-0")
+                          a(href="javascript:void(0);", class="dec d-flex justify-content-center align-items-center", data-bs-toggle="tooltip", data-bs-placement="top", title="minus")
+                            i(data-feather="minus-circle", class="feather-14")
+                          input(type="text", class="form-control text-center", name="qty", value="1")
+                          a(href="javascript:void(0);", class="inc d-flex justify-content-center align-items-center", data-bs-toggle="tooltip", data-bs-placement="top", title="plus")
+                            i(data-feather="plus-circle", class="feather-14")
+                      td(class="fw-bold") $400
+                      td(class="text-end")
+                        a(class="btn-icon delete-icon", href="javascript:void(0);", data-bs-toggle="modal", data-bs-target="#delete")
+                          i(class="ti ti-trash")
+                    tr
+                      td
+                        h6(class="fs-16 fw-medium mb-1")
+                          a(href="pos-5.html#", data-bs-toggle="modal", data-bs-target="#products") Red Boot Shoes
+                        | In Stock: 04
+                      td
+                        input(type="text", class="form-control")
+                      td(class="fw-bold") $600
+                      td
+                        div(class="qty-item m-0")
+                          a(href="javascript:void(0);", class="dec d-flex justify-content-center align-items-center", data-bs-toggle="tooltip", data-bs-placement="top", title="minus")
+                            i(data-feather="minus-circle", class="feather-14")
+                          input(type="text", class="form-control text-center", name="qty", value="3")
+                          a(href="javascript:void(0);", class="inc d-flex justify-content-center align-items-center", data-bs-toggle="tooltip", data-bs-placement="top", title="plus")
+                            i(data-feather="plus-circle", class="feather-14")
+                      td(class="fw-bold") $600
+                      td(class="text-end")
+                        a(class="btn-icon delete-icon", href="javascript:void(0);", data-bs-toggle="modal", data-bs-target="#delete")
+                          i(class="ti ti-trash")
+        div(class="block-section order-method bg-light m-0")
+          div(class="order-total")
+            div(class="table-responsive")
+              table(class="table table-borderless")
+                tr
+                  td Sub Total
+                  td(class="text-end") $1250
+                tr
+                  td Shipping
+                    a(href="pos-5.html#", class="ms-3 link-default", data-bs-toggle="modal", data-bs-target="#shipping-cost")
+                      i(class="ti ti-edit")
+                  td(class="text-end") $35
+                tr
+                  td Tax
+                    a(href="pos-5.html#", class="ms-3 link-default", data-bs-toggle="modal", data-bs-target="#order-tax")
+                      i(class="ti ti-edit")
+                  td(class="text-end") $25
+                tr
+                  td Coupon
+                    a(href="pos-5.html#", class="ms-3 link-default", data-bs-toggle="modal", data-bs-target="#coupon-code")
+                      i(class="ti ti-edit")
+                  td(class="text-end") $25
+                tr
+                  td
+                    span(class="text-danger") Discount
+                    a(href="pos-5.html#", class="ms-3 link-default", data-bs-toggle="modal", data-bs-target="#discount")
+                      i(class="ti ti-edit")
+                  td(class="text-danger text-end") -$24
+                tr
+                  td Grand Total
+                  td(class="text-end") $56590
+          div(class="row gx-2")
+            div(class="col-sm-4")
+              a(href="javascript:void(0);", class="btn btn-orange d-flex align-items-center justify-content-center w-100 mb-2", data-bs-toggle="modal", data-bs-target="#hold-order")
+                i(class="ti ti-player-pause me-2")
+                | Hold
+              a(href="javascript:void(0);", class="btn btn-secondary d-flex align-items-center justify-content-center w-100 mb-2", data-bs-toggle="modal", data-bs-target="#orders")
+                i(class="ti ti-shopping-cart me-2")
+                | View Orders
+            div(class="col-sm-4")
+              a(href="javascript:void(0);", class="btn btn-info d-flex align-items-center justify-content-center w-100 mb-2")
+                i(class="ti ti-trash me-2")
+                | Void
+              a(href="javascript:void(0);", class="btn btn-indigo d-flex align-items-center justify-content-center w-100 mb-2", data-bs-toggle="modal", data-bs-target="#reset")
+                i(class="ti ti-reload me-2")
+                | Reset
+            div(class="col-sm-4")
+              a(href="javascript:void(0);", class="btn btn-cyan d-flex align-items-center justify-content-center w-100 mb-2", data-bs-toggle="modal", data-bs-target="#payment-completed")
+                i(class="ti ti-cash-banknote me-2")
+                | Payment
+              a(href="javascript:void(0);", class="btn btn-danger d-flex align-items-center justify-content-center w-100 mb-2", data-bs-toggle="modal", data-bs-target="#recents")
+                i(class="ti ti-refresh-dot me-2")
+                | Transaction
+        div(class="block-section payment-method")
+          h5(class="mb-2") Select Payment
+          div(class="row align-items-center justify-content-center methods g-2 mb-4")
+            div(class="col-sm-6 col-md-4 col-xl d-flex")
+              a(href="javascript:void(0);", class="payment-item flex-fill", data-bs-toggle="modal", data-bs-target="#payment-cash")
+                img(src="/admin/assets/img/icons/cash-icon.svg", alt="img")
+                p(class="fw-medium") Cash
+            div(class="col-sm-6 col-md-4 col-xl d-flex")
+              a(href="javascript:void(0);", class="payment-item flex-fill", data-bs-toggle="modal", data-bs-target="#payment-card")
+                img(src="/admin/assets/img/icons/card.svg", alt="img")
+                p(class="fw-medium") Card
+            div(class="col-sm-6 col-md-4 col-xl d-flex")
+              a(href="javascript:void(0);", class="payment-item flex-fill", data-bs-toggle="modal", data-bs-target="#payment-points")
+                img(src="/admin/assets/img/icons/points.svg", alt="img")
+                p(class="fw-medium") Points
+            div(class="col-sm-6 col-md-4 col-xl d-flex")
+              a(href="javascript:void(0);", class="payment-item flex-fill", data-bs-toggle="modal", data-bs-target="#payment-deposit")
+                img(src="/admin/assets/img/icons/deposit.svg", alt="img")
+                p(class="fw-medium") Deposit
+            div(class="col-sm-6 col-md-4 col-xl d-flex")
+              a(href="javascript:void(0);", class="payment-item flex-fill", data-bs-toggle="modal", data-bs-target="#payment-cheque")
+                img(src="/admin/assets/img/icons/cheque.svg", alt="img")
+                p(class="fw-medium") Cheque
+          div(class="btn-block m-0")
+            a(class="btn btn-teal w-100", href="javascript:void(0);")
+              | Pay : $56590.00

@@ -1,0 +1,124 @@
+extends ../../layout/default.pug
+
+block css
+  // animation CSS
+  link(rel="stylesheet", href="/admin/assets/css/animate.css")
+  // Quill CSS
+  link(rel="stylesheet", href="/admin/assets/plugins/quill/quill.snow.css")
+  // Datetimepicker CSS
+  link(rel="stylesheet", href="/admin/assets/css/bootstrap-datetimepicker.min.css")
+  // Datatable CSS
+  link(rel="stylesheet", href="/admin/assets/css/dataTables.bootstrap5.min.css")
+  // Tabler Icon CSS
+  link(rel="stylesheet", href="/admin/assets/plugins/tabler-icons/tabler-icons.min.css")
+  // Color Picker Css
+  link(rel="stylesheet", href="/admin/assets/plugins/@simonwep/pickr/themes/nano.min.css")
+
+block js
+  // Datatable JS
+  script(src="/admin/assets/js/jquery.dataTables.min.js")
+  script(src="/admin/assets/js/dataTables.bootstrap5.min.js")
+  // Datetimepicker JS
+  script(src="/admin/assets/js/moment.min.js")
+  script(src="/admin/assets/js/bootstrap-datetimepicker.min.js")
+  // Quill JS
+  script(src="/admin/assets/plugins/quill/quill.min.js")
+  // Sticky-sidebar
+  script(src="/admin/assets/plugins/theia-sticky-sidebar/ResizeSensor.js")
+  script(src="/admin/assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js")
+  // Color Picker JS
+  script(src="/admin/assets/plugins/@simonwep/pickr/pickr.es5.min.js")
+  // Custom JS
+  script(src="/admin/assets/js/theme-colorpicker.js")
+
+block main
+  div(class="settings-content")
+    div(class="page-header settings-pg-header")
+      div(class="add-item d-flex")
+        div(class="page-title")
+          h4 Settings
+          h6 Manage your settings on portal
+      ul(class="table-top-head")
+        li
+          a(data-bs-toggle="tooltip", data-bs-placement="top", title="Refresh")
+            i(class="ti ti-refresh")
+        li
+          a#collapse-header(data-bs-toggle="tooltip", data-bs-placement="top", title="Collapse")
+            i(class="ti ti-chevron-up")
+    div(class="row")
+      div(class="col-xl-12")
+        div(class="settings-wrapper d-flex")
+          include ./partials/sidebar2.pug
+          div(class="card flex-fill mb-0")
+            div(class="card-header")
+              h4(class="fs-18 fw-bold" "/products") System Settings
+            div(class="card-body pb-0")
+              div(class="row")
+                div(class="col-xl-6 col-lg-12 col-md-6 d-flex")
+                  div(class="card flex-fill")
+                    div(class="card-body")
+                      div(class="d-flex align-items-center justify-content-between mb-2")
+                        div(class="d-flex align-items-center")
+                          span(class="system-app-icon")
+                            img(src="/admin/assets/img/icons/app-icon-07.svg", alt="Img")
+                          div(class="security-title")
+                            h5(class="fs-16 fw-medium") Google Captcha
+                        div(class="status-toggle modal-status d-flex justify-content-between align-items-center ms-2")
+                          input#user1(type="checkbox", class="check", checked)
+                          label(for="user1", class="checktoggle")
+                      p(class="fs-14 mb-3") Captcha helps protect you from spam and password decryption
+                      div
+                        a(href="system-settings.html#", class="btn btn-outline-secondary btn-sm", data-bs-toggle="modal", data-bs-target="#google-captcha")
+                          i(class="ti ti-tool me-1")
+                          | View Integration
+                div(class="col-xl-6 col-lg-12 col-md-6 d-flex")
+                  div(class="card flex-fill")
+                    div(class="card-body")
+                      div(class="d-flex align-items-center justify-content-between mb-2")
+                        div(class="d-flex align-items-center")
+                          span(class="system-app-icon")
+                            img(src="/admin/assets/img/icons/app-icon-08.svg", alt="Img")
+                          div(class="security-title")
+                            h5(class="fs-16 fw-medium") Google Analytics
+                        div(class="status-toggle modal-status d-flex justify-content-between align-items-center ms-2")
+                          input#user2(type="checkbox", class="check", checked)
+                          label(for="user2", class="checktoggle")
+                      p(class="fs-14 mb-3") Provides statistics and basic analytical tools for SEO and marketing purposes.
+                      div
+                        a(href="system-settings.html#", class="btn btn-outline-secondary btn-sm", data-bs-toggle="modal", data-bs-target="#google-analytics")
+                          i(class="ti ti-tool me-1")
+                          | View Integration
+                div(class="col-xl-6 col-lg-12 col-md-6 d-flex")
+                  div(class="card flex-fill")
+                    div(class="card-body")
+                      div(class="d-flex align-items-center justify-content-between mb-2")
+                        div(class="d-flex align-items-center")
+                          span(class="system-app-icon")
+                            img(src="/admin/assets/img/icons/app-icon-09.svg", alt="Img")
+                          div(class="security-title")
+                            h5(class="fs-16 fw-medium") Google Adsense Code
+                        div(class="status-toggle modal-status d-flex justify-content-between align-items-center ms-2")
+                          input#user3(type="checkbox", class="check", checked)
+                          label(for="user3", class="checktoggle")
+                      p(class="fs-14 mb-3") Provides a way for publishers to earn money from their online content.
+                      div
+                        a(href="system-settings.html#", class="btn btn-outline-secondary btn-sm", data-bs-toggle="modal", data-bs-target="#google-adsense")
+                          i(class="ti ti-tool me-1")
+                          | View Integration
+                div(class="col-xl-6 col-lg-12 col-md-6 d-flex")
+                  div(class="card flex-fill")
+                    div(class="card-body")
+                      div(class="d-flex align-items-center justify-content-between mb-2")
+                        div(class="d-flex align-items-center")
+                          span(class="system-app-icon")
+                            img(src="/admin/assets/img/icons/app-icon-10.svg", alt="Img")
+                          div(class="security-title")
+                            h5(class="fs-16 fw-medium") Google Map
+                        div(class="status-toggle modal-status d-flex justify-content-between align-items-center ms-2")
+                          input#user4(type="checkbox", class="check", checked)
+                          label(for="user4", class="checktoggle")
+                      p(class="fs-14 mb-3") Provides detailed information about geographical regions and sites worldwide.
+                      div
+                        a(href="system-settings.html#", class="btn btn-outline-secondary btn-sm", data-bs-toggle="modal", data-bs-target="#configure-google-map")
+                          i(class="ti ti-tool me-1")
+                          | View Integration

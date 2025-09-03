@@ -1,0 +1,248 @@
+extends ../../layout/default.pug
+
+block css
+  // animation CSS
+  link(rel="stylesheet", href="/admin/assets/css/animate.css")
+  // Quill CSS
+  link(rel="stylesheet", href="/admin/assets/plugins/quill/quill.snow.css")
+  // Datetimepicker CSS
+  link(rel="stylesheet", href="/admin/assets/css/bootstrap-datetimepicker.min.css")
+  // Datatable CSS
+  link(rel="stylesheet", href="/admin/assets/css/dataTables.bootstrap5.min.css")
+  // Tabler Icon CSS
+  link(rel="stylesheet", href="/admin/assets/plugins/tabler-icons/tabler-icons.min.css")
+  // Color Picker Css
+  link(rel="stylesheet", href="/admin/assets/plugins/@simonwep/pickr/themes/nano.min.css")
+
+block js
+  // Datatable JS
+  script(src="/admin/assets/js/jquery.dataTables.min.js")
+  script(src="/admin/assets/js/dataTables.bootstrap5.min.js")
+  // Datetimepicker JS
+  script(src="/admin/assets/js/moment.min.js")
+  script(src="/admin/assets/js/bootstrap-datetimepicker.min.js")
+  // Quill JS
+  script(src="/admin/assets/plugins/quill/quill.min.js")
+  // Sticky-sidebar
+  script(src="/admin/assets/plugins/theia-sticky-sidebar/ResizeSensor.js")
+  script(src="/admin/assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js")
+  // Color Picker JS
+  script(src="/admin/assets/plugins/@simonwep/pickr/pickr.es5.min.js")
+  // Custom JS
+  script(src="/admin/assets/js/theme-colorpicker.js")
+
+block main
+  div(class="settings-content")
+    div(class="page-header settings-pg-header")
+      div(class="add-item d-flex")
+        div(class="page-title")
+          h4 Settings
+          h6 Manage your settings on portal
+      ul(class="table-top-head")
+        li
+          a(data-bs-toggle="tooltip", data-bs-placement="top", title="Refresh")
+            i(class="ti ti-refresh")
+        li
+          a#collapse-header(data-bs-toggle="tooltip", data-bs-placement="top", title="Collapse")
+            i(class="ti ti-chevron-up")
+    div(class="row")
+      div(class="col-xl-12")
+        div(class="settings-wrapper d-flex")
+          include ./partials/sidebar2.pug
+          div(class="card flex-fill mb-0")
+            div(class="card-header")
+              h4(class="fs-18 fw-bold") Company Settings
+            div(class="card-body")
+              form(action="company-settings.html")
+                div(class="border-bottom mb-3")
+                  div(class="card-title-head")
+                    h6(class="fs-16 fw-bold mb-2")
+                      span(class="fs-16 me-2")
+                        i(class="ti ti-building")
+                      | 
+                      | Company Information
+                  div(class="row")
+                    div(class="col-xl-4 col-lg-6 col-md-4")
+                      div(class="mb-3")
+                        label(class="form-label")
+                          | Company Name
+                          span(class="text-danger") *
+                        input(type="text", class="form-control")
+                    div(class="col-xl-4 col-lg-6 col-md-4")
+                      div(class="mb-3")
+                        label(class="form-label")
+                          | Company Email Address
+                          span(class="text-danger") *
+                        input(type="email", class="form-control")
+                    div(class="col-md-4")
+                      div(class="mb-3")
+                        label(class="form-label")
+                          | Phone Number
+                          span(class="text-danger") *
+                        input(type="text", class="form-control")
+                    div(class="col-md-4")
+                      div(class="mb-3")
+                        label(class="form-label")
+                          | Fax
+                          span(class="text-danger") *
+                        input(type="text", class="form-control")
+                    div(class="col-md-4")
+                      div(class="mb-3")
+                        label(class="form-label")
+                          | Website
+                          span(class="text-danger") *
+                        input(type="text", class="form-control")
+                div(class="border-bottom mb-3 pb-3")
+                  div(class="card-title-head")
+                    h6(class="fs-16 fw-bold mb-2")
+                      span(class="fs-16 me-2")
+                        i(class="ti ti-photo")
+                      | 
+                      | Company Images
+                  div(class="row align-items-center gy-3")
+                    div(class="col-xl-9")
+                      div(class="row gy-3 align-items-center")
+                        div(class="col-lg-4")
+                          div(class="logo-info")
+                            h6(class="fw-medium") Company Icon
+                            p Upload Icon of your Company
+                        div(class="col-lg-8")
+                          div(class="profile-pic-upload mb-0 justify-content-lg-end")
+                            div(class="new-employee-field")
+                              div(class="mb-0")
+                                div(class="image-upload mb-0")
+                                  input(type="file")
+                                  div(class="image-uploads")
+                                    h4
+                                      i(class="ti ti-upload me-1")
+                                      | Upload Image
+                                span(class="mt-1") Recommended size is 450px x 450px. Max size 5mb.
+                    div(class="col-xl-3")
+                      div(class="new-logo ms-xl-auto")
+                        a(href="company-settings.html#")
+                          img(src="/admin/assets/img/logo-small.png", alt="Logo")
+                          span
+                            i(class="ti ti-x")
+                    div(class="col-xl-9")
+                      div(class="row gy-3 align-items-center")
+                        div(class="col-lg-4")
+                          div(class="logo-info")
+                            h6(class="fw-medium") Favicon
+                            p Upload Favicon of your Company
+                        div(class="col-lg-8")
+                          div(class="profile-pic-upload mb-0 justify-content-lg-end")
+                            div(class="new-employee-field")
+                              div(class="mb-0")
+                                div(class="image-upload mb-0")
+                                  input(type="file")
+                                  div(class="image-uploads")
+                                    h4
+                                      i(class="ti ti-upload me-1")
+                                      | Upload Image
+                                span(class="mt-1") Recommended size is 450px x 450px. Max size 5mb.
+                    div(class="col-xl-3")
+                      div(class="new-logo ms-xl-auto")
+                        a(href="company-settings.html#")
+                          img(src="/admin/assets/img/logo-small.png", alt="Logo")
+                          span
+                            i(class="ti ti-x")
+                    div(class="col-xl-9")
+                      div(class="row gy-3 align-items-center")
+                        div(class="col-lg-4")
+                          div(class="logo-info")
+                            h6(class="fw-medium") Company Logo
+                            p Upload Logo of your Company
+                        div(class="col-lg-8")
+                          div(class="profile-pic-upload mb-0 justify-content-lg-end")
+                            div(class="new-employee-field")
+                              div(class="mb-0")
+                                div(class="image-upload mb-0")
+                                  input(type="file")
+                                  div(class="image-uploads")
+                                    h4
+                                      i(class="ti ti-upload me-1")
+                                      | Upload Image
+                                span(class="mt-1") Recommended size is 450px x 450px. Max size 5mb.
+                    div(class="col-xl-3")
+                      div(class="new-logo ms-xl-auto")
+                        a(href="company-settings.html#")
+                          img(src="/admin/assets/img/products/company-logo.svg", alt="Logo")
+                          span
+                            i(class="ti ti-x")
+                    div(class="col-xl-9")
+                      div(class="row gy-3 align-items-center")
+                        div(class="col-lg-4")
+                          div(class="logo-info")
+                            h6(class="fw-medium") Company Dark Logo
+                            p Upload Logo of your Company
+                        div(class="col-lg-8")
+                          div(class="profile-pic-upload mb-0 justify-content-lg-end")
+                            div(class="new-employee-field")
+                              div(class="mb-0")
+                                div(class="image-upload mb-0")
+                                  input(type="file")
+                                  div(class="image-uploads")
+                                    h4
+                                      i(class="ti ti-upload me-1")
+                                      | Upload Image
+                                span(class="mt-1") Recommended size is 450px x 450px. Max size 5mb.
+                    div(class="col-xl-3")
+                      div(class="new-logo ms-xl-auto")
+                        a(href="company-settings.html#", class="bg-secondary")
+                          img(src="/admin/assets/img/products/white-logo.svg", alt="Logo")
+                          span
+                            i(class="ti ti-x")
+                div(class="company-address")
+                  div(class="card-title-head")
+                    h6(class="fs-16 fw-bold mb-2")
+                      span(class="fs-16 me-2")
+                        i(class="ti ti-map-pin")
+                      | 
+                      | Address Information
+                  div(class="row")
+                    div(class="col-md-12")
+                      div(class="mb-3")
+                        label(class="form-label")
+                          | Address
+                          span(class="text-danger") *
+                        input(type="text", class="form-control")
+                    div(class="col-md-6")
+                      div(class="mb-3")
+                        label(class="form-label")
+                          | Country
+                          span(class="text-danger") *
+                        select(class="select")
+                          option Select
+                          option USA
+                          option India
+                          option French
+                          option Australia
+                    div(class="col-md-6")
+                      div(class="mb-3")
+                        label(class="form-label")
+                          | State
+                          span(class="text-danger") *
+                        select(class="select")
+                          option Select
+                          option Alaska
+                          option Mexico
+                          option Tasmania
+                    div(class="col-md-6")
+                      div(class="mb-3")
+                        label(class="form-label")
+                          | City
+                          span(class="text-danger") *
+                        select(class="select")
+                          option Select
+                          option Anchorage
+                          option Tijuana
+                          option Hobart
+                    div(class="col-md-6")
+                      div(class="mb-3")
+                        label(class="form-label")
+                          | Postal Code
+                          span(class="text-danger") *
+                        input(type="text", class="form-control")
+                div(class="text-end settings-bottom-btn mt-0")
+                  button(type="button", class="btn btn-secondary me-2") Cancel
+                  button(type="submit", class="btn btn-primary") Save Changes

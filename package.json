@@ -5,6 +5,9 @@
   "scripts": {
     "start": "nodemon index.ts",
     "build": "tsc && node fs-extra.js",
+    "scss": "sass --watch public/admin/assets/scss/main.scss:public/admin/assets/css/style.css",
+    "scss:watch": "sass --watch public/admin/scss:public/admin/assets/css/bootstrap",
+    "scss:all": "sass public/admin/assets/scss/main.scss:public/admin/assets/css/style.css && sass public/admin/scss:public/admin/assets/css/bootstrap",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,11 +15,16 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@types/node-wifi": "^2.0.2",
     "body-parser": "^2.2.0",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
+    "fs-extra": "^11.3.1",
     "mongodb": "^6.19.0",
     "mongoose": "^8.18.0",
+    "no-internet": "^1.6.1",
+    "node-sass": "^9.0.0",
+    "node-wifi": "^2.0.16",
     "pug": "^3.0.3"
   },
   "devDependencies": {

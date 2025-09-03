@@ -1,0 +1,185 @@
+extends ../../layout/default.pug
+
+block css
+  // animation CSS
+  link(rel="stylesheet", href="/admin/assets/css/animate.css")
+  // Datatable CSS
+  link(rel="stylesheet", href="/admin/assets/css/dataTables.bootstrap5.min.css")
+  // Datetimepicker CSS
+  link(rel="stylesheet", href="/admin/assets/css/bootstrap-datetimepicker.min.css")
+  // Quill CSS
+  link(rel="stylesheet", href="/admin/assets/plugins/quill/quill.snow.css")
+  // Tabler Icon CSS
+  link(rel="stylesheet", href="/admin/assets/plugins/tabler-icons/tabler-icons.min.css")
+  // Color Picker Css
+  link(rel="stylesheet", href="/admin/assets/plugins/@simonwep/pickr/themes/nano.min.css")
+
+block js
+  // Datatable JS
+  script(src="/admin/assets/js/jquery.dataTables.min.js")
+  script(src="/admin/assets/js/dataTables.bootstrap5.min.js")
+  // Datetimepicker JS
+  script(src="/admin/assets/js/moment.min.js")
+  script(src="/admin/assets/js/bootstrap-datetimepicker.min.js")
+  // Quill JS
+  script(src="/admin/assets/plugins/quill/quill.min.js")
+  // Color Picker JS
+  script(src="/admin/assets/plugins/@simonwep/pickr/pickr.es5.min.js")
+  // Custom JS
+  script(src="/admin/assets/js/theme-colorpicker.js")
+
+block main
+  div(class="page-header")
+    div(class="add-item d-flex")
+      div(class="page-title")
+        h4 Invoice Details
+    ul(class="table-top-head")
+      li
+        a(data-bs-toggle="tooltip", data-bs-placement="top", title="Pdf")
+          img(src="/admin/assets/img/icons/pdf.svg", alt="img")
+      li
+        a(data-bs-toggle="tooltip", data-bs-placement="top", title="Print")
+          i(data-feather="printer", class="feather-rotate-ccw")
+      li
+        a#collapse-header(data-bs-toggle="tooltip", data-bs-placement="top", title="Collapse")
+          i(class="ti ti-chevron-up")
+    div(class="page-btn")
+      a(href="invoice.html", class="btn btn-primary")
+        i(data-feather="arrow-left", class="me-2")
+        | Back to Invoices
+  // Invoices
+  div(class="card")
+    div(class="card-body")
+      div(class="row justify-content-between align-items-center border-bottom mb-3")
+        div(class="col-md-6")
+          div(class="mb-2")
+            img(src="/admin/assets/img/logo.svg", width="130", class="img-fluid", alt="logo")
+          p 3099 Kennedy Court Framingham, MA 01702
+        div(class="col-md-6")
+          div(class=" text-end mb-3")
+            h5(class="text-gray mb-1") Invoice No 
+              span(class="text-primary") #INV0001
+            p(class="mb-1 fw-medium") Created Date : 
+              span(class="text-dark") Sep 24, 2024
+            p(class="fw-medium") Due Date : 
+              span(class="text-dark") Sep 30, 2024
+      div(class="row border-bottom mb-3")
+        div(class="col-md-5")
+          p(class="text-dark mb-2 fw-semibold") From
+          div
+            h4(class="mb-1") Thomas Lawler
+            p(class="mb-1") 2077 Chicago Avenue Orosi, CA 93647
+            p(class="mb-1") Email : 
+              span(class="text-dark")
+                a(href="../../cdn-cgi/l/email-protection", class="__cf_email__", data-cfemail="60340112010c0152545455200518010d100c054e030f0d") [email&amp;#160;protected]
+            p Phone : 
+              span(class="text-dark") +1 987 654 3210
+        div(class="col-md-5")
+          p(class="text-dark mb-2 fw-semibold") To
+          div
+            h4(class="mb-1") Carl Evans
+            p(class="mb-1") 3103 Trainer Avenue Peoria, IL 61602
+            p(class="mb-1") Email : 
+              span(class="text-dark")
+                a(href="../../cdn-cgi/l/email-protection", class="__cf_email__", data-cfemail="3764564556685e5954040377524f565a475b521954585a") [email&amp;#160;protected]
+            p Phone : 
+              span(class="text-dark") +1 987 471 6589
+        div(class="col-md-2")
+          div(class="mb-3")
+            p(class="text-title mb-2 fw-medium") Payment Status 
+            span(class="bg-success text-white fs-10 px-1 rounded")
+              i(class="ti ti-point-filled ")
+              | Paid
+            div(class="mt-3")
+              img(src="/admin/assets/img/qr.svg", class="img-fluid", alt="QR")
+      div
+        p(class="fw-medium") Invoice For : 
+          span(class="text-dark fw-medium") Design &amp; development of Website
+        div(class="table-responsive mb-3")
+          table(class="table")
+            thead(class="thead-light")
+              tr
+                th Job Description
+                th(class="text-end") Qty
+                th(class="text-end") Cost
+                th(class="text-end") Discount
+                th(class="text-end") Total
+            tbody
+              tr
+                td
+                  h6 UX Strategy
+                td(class="text-gray-9 fw-medium text-end") 1
+                td(class="text-gray-9 fw-medium text-end") $500
+                td(class="text-gray-9 fw-medium text-end") $100
+                td(class="text-gray-9 fw-medium text-end") $500
+              tr
+                td
+                  h6 Design System
+                td(class="text-gray-9 fw-medium text-end") 1
+                td(class="text-gray-9 fw-medium text-end") $5000
+                td(class="text-gray-9 fw-medium text-end") $100
+                td(class="text-gray-9 fw-medium text-end") $5000
+              tr
+                td
+                  h6 Brand Guidellines
+                td(class="text-gray-9 fw-medium text-end") 1
+                td(class="text-gray-9 fw-medium text-end") $5000
+                td(class="text-gray-9 fw-medium text-end") $100
+                td(class="text-gray-9 fw-medium text-end") $5000
+              tr
+                td
+                  h6 Social Media Template
+                td(class="text-gray-9 fw-medium text-end") 1
+                td(class="text-gray-9 fw-medium text-end") $5000
+                td(class="text-gray-9 fw-medium text-end") $100
+                td(class="text-gray-9 fw-medium text-end") $5000
+      div(class="row border-bottom mb-3")
+        div(class="col-md-5 ms-auto mb-3")
+          div(class="d-flex justify-content-between align-items-center border-bottom mb-2 pe-3")
+            p(class="mb-0") Sub Total
+            p(class="text-dark fw-medium mb-2") $5500
+          div(class="d-flex justify-content-between align-items-center border-bottom mb-2 pe-3")
+            p(class="mb-0") Discount (0%)
+            p(class="text-dark fw-medium mb-2") $400
+          div(class="d-flex justify-content-between align-items-center mb-2 pe-3")
+            p(class="mb-0") VAT (5%)
+            p(class="text-dark fw-medium mb-2") $54
+          div(class="d-flex justify-content-between align-items-center mb-2 pe-3")
+            h5 Total Amount
+            h5 $5775
+          p(class="fs-12")
+            | Amount in Words : Dollar Five thousand Seven Seventy Five
+      div(class="row align-items-center border-bottom mb-3")
+        div(class="col-md-7")
+          div
+            div(class="mb-3")
+              h6(class="mb-1") Terms and Conditions
+              p Please pay within 15 days from the date of invoice, overdue interest @ 14% will be charged on delayed payments.
+            div(class="mb-3")
+              h6(class="mb-1") Notes
+              p Please quote invoice number when remitting funds.
+        div(class="col-md-5")
+          div(class="text-end")
+            img(src="/admin/assets/img/sign.svg", class="img-fluid", alt="sign")
+          div(class="text-end mb-3")
+            h6(class="fs-14 fw-medium pe-3") Ted M. Davis
+            p Assistant Manager
+      div(class="text-center")
+        div(class="mb-3")
+          img(src="/admin/assets/img/logo.svg", width="130", class="img-fluid", alt="logo")
+        p(class="text-dark mb-1") Payment Made Via bank transfer / Cheque in the name of Thomas Lawler
+        div(class="d-flex justify-content-center align-items-center")
+          p(class="fs-12 mb-0 me-3") Bank Name : 
+            span(class="text-dark") HDFC Bank
+          p(class="fs-12 mb-0 me-3") Account Number : 
+            span(class="text-dark") 45366287987
+          p(class="fs-12") IFSC : 
+            span(class="text-dark") HDFC0018159
+  // /Invoices
+  div(class="d-flex justify-content-center align-items-center mb-4")
+    a(href="invoice-details.html#", class="btn btn-primary d-flex justify-content-center align-items-center me-2")
+      i(class="ti ti-printer me-2")
+      | Print Invoice
+    a(href="invoice-details.html#", class="btn btn-secondary d-flex justify-content-center align-items-center border")
+      i(class="ti ti-copy me-2")
+      | Clone Invoice

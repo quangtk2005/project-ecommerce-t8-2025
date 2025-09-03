@@ -1,0 +1,1111 @@
+extends ../../layout/default.pug
+
+block css
+  // Datetimepicker CSS
+  link(rel="stylesheet", href="/admin/assets/css/bootstrap-datetimepicker.min.css")
+  // animation CSS
+  link(rel="stylesheet", href="/admin/assets/css/animate.css")
+  // Daterangepikcer CSS
+  link(rel="stylesheet", href="/admin/assets/plugins/daterangepicker/daterangepicker.css")
+  // Tabler Icon CSS
+  link(rel="stylesheet", href="/admin/assets/plugins/tabler-icons/tabler-icons.min.css")
+  // Color Picker Css
+  link(rel="stylesheet", href="/admin/assets/plugins/@simonwep/pickr/themes/nano.min.css")
+
+block js
+  // ApexChart JS
+  script(src="/admin/assets/plugins/apexchart/apexcharts.min.js")
+  script(src="/admin/assets/plugins/apexchart/chart-data.js")
+  // Chart JS
+  script(src="/admin/assets/plugins/chartjs/chart.min.js")
+  script(src="/admin/assets/plugins/chartjs/chart-data.js")
+  // Daterangepikcer JS
+  script(src="/admin/assets/js/moment.min.js")
+  script(src="/admin/assets/plugins/daterangepicker/daterangepicker.js")
+  // Color Picker JS
+  script(src="/admin/assets/plugins/@simonwep/pickr/pickr.es5.min.js")
+  // Custom JS
+  script(src="/admin/assets/js/theme-colorpicker.js")
+
+
+block main
+  div(class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-2")
+    div(class="mb-3")
+      h1(class="mb-1") Welcome, Admin
+      p(class="fw-medium") You have 
+        span(class="text-primary fw-bold") 200+
+        | Orders, Today
+    div(class="input-icon-start position-relative mb-3")
+      span(class="input-icon-addon fs-16 text-gray-9")
+        i(class="ti ti-calendar")
+      input(type="text", class="form-control date-range bookingrange", placeholder="Search Product")
+  div(class="alert bg-orange-transparent alert-dismissible fade show mb-4")
+    div
+      span
+        i(class="ti ti-info-circle fs-14 text-orange me-2")
+        | Your Product
+      span(class="text-orange fw-semibold")  Apple Iphone 15 is running Low, 
+      | already below 5 Pcs.,
+      a(href="javascript:void(0);", class="link-orange text-decoration-underline fw-semibold", data-bs-toggle="modal", data-bs-target="#add-stock") Add Stock
+    button(type="button", class="btn-close text-gray-9 fs-14", data-bs-dismiss="alert", aria-label="Close")
+      i(class="ti ti-x")
+  div(class="row")
+    div(class="col-xl-3 col-sm-6 col-12 d-flex")
+      div(class="card bg-primary sale-widget flex-fill")
+        div(class="card-body d-flex align-items-center")
+          span(class="sale-icon bg-white text-primary")
+            i(class="ti ti-file-text fs-24")
+          div(class="ms-2")
+            p(class="text-white mb-1") Total Sales
+            div(class="d-inline-flex align-items-center flex-wrap gap-2")
+              h4(class="text-white") $48,988,078
+              span(class="badge badge-soft-primary")
+                i(class="ti ti-arrow-up me-1")
+                | +22%
+    div(class="col-xl-3 col-sm-6 col-12 d-flex")
+      div(class="card bg-secondary sale-widget flex-fill")
+        div(class="card-body d-flex align-items-center")
+          span(class="sale-icon bg-white text-secondary")
+            i(class="ti ti-repeat fs-24")
+          div(class="ms-2")
+            p(class="text-white mb-1") Total Sales Return
+            div(class="d-inline-flex align-items-center flex-wrap gap-2")
+              h4(class="text-white") $16,478,145
+              span(class="badge badge-soft-danger")
+                i(class="ti ti-arrow-down me-1")
+                | -22%
+    div(class="col-xl-3 col-sm-6 col-12 d-flex")
+      div(class="card bg-teal sale-widget flex-fill")
+        div(class="card-body d-flex align-items-center")
+          span(class="sale-icon bg-white text-teal")
+            i(class="ti ti-gift fs-24")
+          div(class="ms-2")
+            p(class="text-white mb-1") Total Purchase
+            div(class="d-inline-flex align-items-center flex-wrap gap-2")
+              h4(class="text-white") $24,145,789
+              span(class="badge badge-soft-success")
+                i(class="ti ti-arrow-up me-1")
+                | +22%
+    div(class="col-xl-3 col-sm-6 col-12 d-flex")
+      div(class="card bg-info sale-widget flex-fill")
+        div(class="card-body d-flex align-items-center")
+          span(class="sale-icon bg-white text-info")
+            i(class="ti ti-brand-pocket fs-24")
+          div(class="ms-2")
+            p(class="text-white mb-1") Total Purchase Return
+            div(class="d-inline-flex align-items-center flex-wrap gap-2")
+              h4(class="text-white") $18,458,747
+              span(class="badge badge-soft-success")
+                i(class="ti ti-arrow-up me-1")
+                | +22%
+  div(class="row")
+    // Profit
+    div(class="col-xl-3 col-sm-6 col-12 d-flex")
+      div(class="card revenue-widget flex-fill")
+        div(class="card-body")
+          div(class="d-flex align-items-center justify-content-between mb-3 pb-3 border-bottom")
+            div
+              h4(class="mb-1") $8,458,798
+              p Profit
+            span(class="revenue-icon bg-cyan-transparent text-cyan")
+              i(class="fa-solid fa-layer-group fs-16")
+          div(class="d-flex align-items-center justify-content-between")
+            p(class="mb-0")
+              span(class="fs-13 fw-bold text-success") +35%
+              | vs Last Month
+            a(href="profit-and-loss.html", class="text-decoration-underline fs-13 fw-medium") View All
+    // /Profit
+    // Invoice
+    div(class="col-xl-3 col-sm-6 col-12 d-flex")
+      div(class="card revenue-widget flex-fill")
+        div(class="card-body")
+          div(class="d-flex align-items-center justify-content-between mb-3 pb-3 border-bottom")
+            div
+              h4(class="mb-1") $48,988,78
+              p Invoice Due
+            span(class="revenue-icon bg-teal-transparent text-teal")
+              i(class="ti ti-chart-pie fs-16")
+          div(class="d-flex align-items-center justify-content-between")
+            p(class="mb-0")
+              span(class="fs-13 fw-bold text-success") +35%
+              | vs Last Month
+            a(href="invoice-report.html", class="text-decoration-underline fs-13 fw-medium") View All
+    // /Invoice
+    // Expenses
+    div(class="col-xl-3 col-sm-6 col-12 d-flex")
+      div(class="card revenue-widget flex-fill")
+        div(class="card-body")
+          div(class="d-flex align-items-center justify-content-between mb-3 pb-3 border-bottom")
+            div
+              h4(class="mb-1") $8,980,097
+              p Total Expenses
+            span(class="revenue-icon bg-orange-transparent text-orange")
+              i(class="ti ti-lifebuoy fs-16")
+          div(class="d-flex align-items-center justify-content-between")
+            p(class="mb-0")
+              span(class="fs-13 fw-bold text-success") +41%
+              | vs Last Month
+            a(href="expense-list.html", class="text-decoration-underline fs-13 fw-medium") View All
+    // /Expenses
+    // Returns
+    div(class="col-xl-3 col-sm-6 col-12 d-flex")
+      div(class="card revenue-widget flex-fill")
+        div(class="card-body")
+          div(class="d-flex align-items-center justify-content-between mb-3 pb-3 border-bottom")
+            div
+              h4(class="mb-1") $78,458,798
+              p Total Payment Returns
+            span(class="revenue-icon bg-indigo-transparent text-indigo")
+              i(class="ti ti-hash fs-16")
+          div(class="d-flex align-items-center justify-content-between")
+            p(class="mb-0")
+              span(class="fs-13 fw-bold text-danger") -20%
+              | vs Last Month
+            a(href="sales-report.html", class="text-decoration-underline fs-13 fw-medium") View All
+    // /Returns
+  div(class="row")
+    // Sales & Purchase
+    div(class="col-xxl-8 col-xl-7 col-sm-12 col-12 d-flex")
+      div(class="card flex-fill")
+        div(class="card-header d-flex justify-content-between align-items-center")
+          div(class="d-inline-flex align-items-center")
+            span(class="title-icon bg-soft-primary fs-16 me-2")
+              i(class="ti ti-shopping-cart")
+            h5(class="card-title mb-0") Sales &amp; Purchase
+          ul(class="nav btn-group custom-btn-group")
+            a(class="btn btn-outline-light", href="javascript:void(0);") 1D
+            a(class="btn btn-outline-light", href="javascript:void(0);") 1W
+            a(class="btn btn-outline-light", href="javascript:void(0);") 1M
+            a(class="btn btn-outline-light", href="javascript:void(0);") 3M
+            a(class="btn btn-outline-light", href="javascript:void(0);") 6M
+            a(class="btn btn-outline-light active", href="javascript:void(0);") 1Y
+        div(class="card-body pb-0")
+          div
+            div(class="d-flex align-items-center gap-2")
+              div(class="border p-2 br-8")
+                p(class="d-inline-flex align-items-center mb-1")
+                  i(class="ti ti-circle-filled fs-8 text-primary-300 me-1")
+                  | Total Purchase
+                h4 3K
+              div(class="border p-2 br-8")
+                p(class="d-inline-flex align-items-center mb-1")
+                  i(class="ti ti-circle-filled fs-8 text-primary me-1")
+                  | Total Sales
+                h4 1K
+            div#sales-daychart
+    // /Sales & Purchase
+    // Top Selling Products
+    div(class="col-xxl-4 col-xl-5 d-flex")
+      div(class="card flex-fill")
+        div(class="card-header")
+          div(class="d-inline-flex align-items-center")
+            span(class="title-icon bg-soft-info fs-16 me-2")
+              i(class="ti ti-info-circle")
+            h5(class="card-title mb-0") Overall Information
+        div(class="card-body")
+          div(class="row g-3")
+            div(class="col-md-4")
+              div(class="info-item border bg-light p-3 text-center")
+                div(class="mb-2 text-info fs-24")
+                  i(class="ti ti-user-check")
+                p(class="mb-1") Suppliers
+                h5 6987
+            div(class="col-md-4")
+              div(class="info-item border bg-light p-3 text-center")
+                div(class="mb-2 text-orange fs-24")
+                  i(class="ti ti-users")
+                p(class="mb-1") Customer
+                h5 4896
+            div(class="col-md-4")
+              div(class="info-item border bg-light p-3 text-center")
+                div(class="mb-2 text-teal fs-24")
+                  i(class="ti ti-shopping-cart")
+                p(class="mb-1") Orders
+                h5 487
+        div(class="card-footer pb-sm-0")
+          div(class="d-flex align-items-center justify-content-between flex-wrap gap-3")
+            h5 Customers Overview
+            div(class="dropdown dropdown-wraper")
+              a(href="javascript:void(0);", class="dropdown-toggle btn btn-sm btn-white", data-bs-toggle="dropdown", aria-expanded="false")
+                i(class="ti ti-calendar me-1")
+                | Today
+              ul(class="dropdown-menu p-3")
+                li
+                  a(href="javascript:void(0);", class="dropdown-item") Today
+                li
+                  a(href="javascript:void(0);", class="dropdown-item") Weekly
+                li
+                  a(href="javascript:void(0);", class="dropdown-item") Monthly
+          div(class="row align-items-center")
+            div(class="col-sm-5")
+              div#customer-chart
+            div(class="col-sm-7")
+              div(class="row gx-0")
+                div(class="col-sm-6")
+                  div(class="text-center border-end")
+                    h2(class="mb-1") 5.5K
+                    p(class="text-orange mb-2") First Time
+                    span(class="badge badge-success badge-xs d-inline-flex align-items-center")
+                      i(class="ti ti-arrow-up-left me-1")
+                      | 25%
+                div(class="col-sm-6")
+                  div(class="text-center")
+                    h2(class="mb-1") 3.5K
+                    p(class="text-teal mb-2") Return
+                    span(class="badge badge-success badge-xs d-inline-flex align-items-center")
+                      i(class="ti ti-arrow-up-left me-1")
+                      | 21%
+  div(class="row")
+    // Top Selling Products
+    div(class="col-xxl-4 col-md-6 d-flex")
+      div(class="card flex-fill")
+        div(class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3")
+          div(class="d-inline-flex align-items-center")
+            span(class="title-icon bg-soft-pink fs-16 me-2")
+              i(class="ti ti-box")
+            h5(class="card-title mb-0") Top Selling Products
+          div(class="dropdown")
+            a(href="javascript:void(0);", class="dropdown-toggle btn btn-sm btn-white", data-bs-toggle="dropdown", aria-expanded="false")
+              i(class="ti ti-calendar me-1")
+              | Today
+            ul(class="dropdown-menu p-3")
+              li
+                a(href="javascript:void(0);", class="dropdown-item") Today
+              li
+                a(href="javascript:void(0);", class="dropdown-item") Weekly
+              li
+                a(href="javascript:void(0);", class="dropdown-item") Monthly
+        div(class="card-body sell-product")
+          div(class="d-flex align-items-center justify-content-between border-bottom")
+            div(class="d-flex align-items-center")
+              a(href="javascript:void(0);", class="avatar avatar-lg")
+                img(src="/admin/assets/img/products/product-01.jpg", alt="img")
+              div(class="ms-2")
+                h6(class="fw-bold mb-1")
+                  a(href="javascript:void(0);") Charger Cable - Lighting
+                div(class="d-flex align-items-center item-list")
+                  p $187
+                  p 247+ Sales
+            span(class="badge bg-outline-success badge-xs d-inline-flex align-items-center")
+              i(class="ti ti-arrow-up-left me-1")
+              | 25%
+          div(class="d-flex align-items-center justify-content-between border-bottom")
+            div(class="d-flex align-items-center")
+              a(href="javascript:void(0);", class="avatar avatar-lg")
+                img(src="/admin/assets/img/products/product-16.jpg", alt="img")
+              div(class="ms-2")
+                h6(class="fw-bold mb-1")
+                  a(href="javascript:void(0);") Yves Saint Eau De Parfum
+                div(class="d-flex align-items-center item-list")
+                  p $145
+                  p 289+ Sales
+            span(class="badge bg-outline-success badge-xs d-inline-flex align-items-center")
+              i(class="ti ti-arrow-up-left me-1")
+              | 25%
+          div(class="d-flex align-items-center justify-content-between border-bottom")
+            div(class="d-flex align-items-center")
+              a(href="javascript:void(0);", class="avatar avatar-lg")
+                img(src="/admin/assets/img/products/product-03.jpg", alt="img")
+              div(class="ms-2")
+                h6(class="fw-bold mb-1")
+                  a(href="javascript:void(0);") Apple Airpods 2
+                div(class="d-flex align-items-center item-list")
+                  p $458
+                  p 300+ Sales
+            span(class="badge bg-outline-success badge-xs d-inline-flex align-items-center")
+              i(class="ti ti-arrow-up-left me-1")
+              | 25%
+          div(class="d-flex align-items-center justify-content-between border-bottom")
+            div(class="d-flex align-items-center")
+              a(href="javascript:void(0);", class="avatar avatar-lg")
+                img(src="/admin/assets/img/products/product-04.jpg", alt="img")
+              div(class="ms-2")
+                h6(class="fw-bold mb-1")
+                  a(href="javascript:void(0);") Vacuum Cleaner
+                div(class="d-flex align-items-center item-list")
+                  p $139
+                  p 225+ Sales
+            span(class="badge bg-outline-danger badge-xs d-inline-flex align-items-center")
+              i(class="ti ti-arrow-down-left me-1")
+              | 21%
+          div(class="d-flex align-items-center justify-content-between")
+            div(class="d-flex align-items-center")
+              a(href="javascript:void(0);", class="avatar avatar-lg")
+                img(src="/admin/assets/img/products/product-05.jpg", alt="img")
+              div(class="ms-2")
+                h6(class="fw-bold mb-1")
+                  a(href="javascript:void(0);") Samsung Galaxy S21 Fe 5g
+                div(class="d-flex align-items-center item-list")
+                  p $898
+                  p 365+ Sales
+            span(class="badge bg-outline-success badge-xs d-inline-flex align-items-center")
+              i(class="ti ti-arrow-up-left me-1")
+              | 25%
+    // /Top Selling Products
+    // Low Stock Products
+    div(class="col-xxl-4 col-md-6 d-flex")
+      div(class="card flex-fill")
+        div(class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3")
+          div(class="d-inline-flex align-items-center")
+            span(class="title-icon bg-soft-danger fs-16 me-2")
+              i(class="ti ti-alert-triangle")
+            h5(class="card-title mb-0") Low Stock Products
+          a(href="low-stocks.html", class="fs-13 fw-medium text-decoration-underline") View All
+        div(class="card-body")
+          div(class="d-flex align-items-center justify-content-between mb-4")
+            div(class="d-flex align-items-center")
+              a(href="javascript:void(0);", class="avatar avatar-lg")
+                img(src="/admin/assets/img/products/product-06.jpg", alt="img")
+              div(class="ms-2")
+                h6(class="fw-bold mb-1")
+                  a(href="javascript:void(0);") Dell XPS 13
+                p(class="fs-13") ID : #665814
+            div(class="text-end")
+              p(class="fs-13 mb-1") Instock
+              h6(class="text-orange fw-medium") 08
+          div(class="d-flex align-items-center justify-content-between mb-4")
+            div(class="d-flex align-items-center")
+              a(href="javascript:void(0);", class="avatar avatar-lg")
+                img(src="/admin/assets/img/products/product-07.jpg", alt="img")
+              div(class="ms-2")
+                h6(class="fw-bold mb-1")
+                  a(href="javascript:void(0);") Vacuum Cleaner Robot
+                p(class="fs-13") ID : #940004
+            div(class="text-end")
+              p(class="fs-13 mb-1") Instock
+              h6(class="text-orange fw-medium") 14
+          div(class="d-flex align-items-center justify-content-between mb-4")
+            div(class="d-flex align-items-center")
+              a(href="javascript:void(0);", class="avatar avatar-lg")
+                img(src="/admin/assets/img/products/product-08.jpg", alt="img")
+              div(class="ms-2")
+                h6(class="fw-bold mb-1")
+                  a(href="javascript:void(0);") KitchenAid Stand Mixer
+                p(class="fs-13") ID : #325569
+            div(class="text-end")
+              p(class="fs-13 mb-1") Instock
+              h6(class="text-orange fw-medium") 21
+          div(class="d-flex align-items-center justify-content-between mb-4")
+            div(class="d-flex align-items-center")
+              a(href="javascript:void(0);", class="avatar avatar-lg")
+                img(src="/admin/assets/img/products/product-09.jpg", alt="img")
+              div(class="ms-2")
+                h6(class="fw-bold mb-1")
+                  a(href="javascript:void(0);") Levi&apos;s Trucker Jacket
+                p(class="fs-13") ID : #124588
+            div(class="text-end")
+              p(class="fs-13 mb-1") Instock
+              h6(class="text-orange fw-medium") 12
+          div(class="d-flex align-items-center justify-content-between mb-0")
+            div(class="d-flex align-items-center")
+              a(href="javascript:void(0);", class="avatar avatar-lg")
+                img(src="/admin/assets/img/products/product-10.jpg", alt="img")
+              div(class="ms-2")
+                h6(class="fw-bold mb-1")
+                  a(href="javascript:void(0);") Lay&apos;s Classic
+                p(class="fs-13") ID : #365586
+            div(class="text-end")
+              p(class="fs-13 mb-1") Instock
+              h6(class="text-orange fw-medium") 10
+    // /Low Stock Products
+    // Recent Sales
+    div(class="col-xxl-4 col-md-12 d-flex")
+      div(class="card flex-fill")
+        div(class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3")
+          div(class="d-inline-flex align-items-center")
+            span(class="title-icon bg-soft-pink fs-16 me-2")
+              i(class="ti ti-box")
+            h5(class="card-title mb-0") Recent Sales
+          div(class="dropdown")
+            a(href="javascript:void(0);", class="dropdown-toggle btn btn-sm btn-white", data-bs-toggle="dropdown", aria-expanded="false")
+              i(class="ti ti-calendar me-1")
+              | Weekly
+            ul(class="dropdown-menu p-3")
+              li
+                a(href="javascript:void(0);", class="dropdown-item") Today
+              li
+                a(href="javascript:void(0);", class="dropdown-item") Weekly
+              li
+                a(href="javascript:void(0);", class="dropdown-item") Monthly
+        div(class="card-body")
+          div(class="d-flex align-items-center justify-content-between mb-4")
+            div(class="d-flex align-items-center")
+              a(href="javascript:void(0);", class="avatar avatar-lg")
+                img(src="/admin/assets/img/products/product-11.jpg", alt="img")
+              div(class="ms-2")
+                h6(class="fw-bold mb-1")
+                  a(href="javascript:void(0);") Apple Watch Series 9
+                div(class="d-flex align-items-center item-list")
+                  p Electronics
+                  p(class="text-gray-9") $640
+            div(class="text-end")
+              p(class="fs-13 mb-1") Today
+              span(class="badge bg-purple badge-xs d-inline-flex align-items-center")
+                i(class="ti ti-circle-filled fs-5 me-1")
+                | Processing
+          div(class="d-flex align-items-center justify-content-between mb-4")
+            div(class="d-flex align-items-center")
+              a(href="javascript:void(0);", class="avatar avatar-lg")
+                img(src="/admin/assets/img/products/product-12.jpg", alt="img")
+              div(class="ms-2")
+                h6(class="fw-bold mb-1")
+                  a(href="javascript:void(0);") Gold Bracelet
+                div(class="d-flex align-items-center item-list")
+                  p Fashion
+                  p(class="text-gray-9") $126
+            div(class="text-end")
+              p(class="fs-13 mb-1") Today
+              span(class="badge badge-danger badge-xs d-inline-flex align-items-center")
+                i(class="ti ti-circle-filled fs-5 me-1")
+                | Cancelled
+          div(class="d-flex align-items-center justify-content-between mb-4")
+            div(class="d-flex align-items-center")
+              a(href="javascript:void(0);", class="avatar avatar-lg")
+                img(src="/admin/assets/img/products/product-13.jpg", alt="img")
+              div(class="ms-2")
+                h6(class="fw-bold mb-1")
+                  a(href="javascript:void(0);") Parachute Down Duvet
+                div(class="d-flex align-items-center item-list")
+                  p Health
+                  p(class="text-gray-9") $69
+            div(class="text-end")
+              p(class="fs-13 mb-1") 15 Jan 2025
+              span(class="badge badge-cyan badge-xs d-inline-flex align-items-center")
+                i(class="ti ti-circle-filled fs-5 me-1")
+                | Onhold
+          div(class="d-flex align-items-center justify-content-between mb-4")
+            div(class="d-flex align-items-center")
+              a(href="javascript:void(0);", class="avatar avatar-lg")
+                img(src="/admin/assets/img/products/product-14.jpg", alt="img")
+              div(class="ms-2")
+                h6(class="fw-bold mb-1")
+                  a(href="javascript:void(0);") YETI Rambler Tumbler
+                div(class="d-flex align-items-center item-list")
+                  p Sports
+                  p(class="text-gray-9") $65
+            div(class="text-end")
+              p(class="fs-13 mb-1") 12 Jan 2025
+              span(class="badge bg-purple badge-xs d-inline-flex align-items-center")
+                i(class="ti ti-circle-filled fs-5 me-1")
+                | Processing
+          div(class="d-flex align-items-center justify-content-between mb-0")
+            div(class="d-flex align-items-center")
+              a(href="javascript:void(0);", class="avatar avatar-lg")
+                img(src="/admin/assets/img/products/product-15.jpg", alt="img")
+              div(class="ms-2")
+                h6(class="fw-bold mb-1")
+                  a(href="javascript:void(0);") Osmo Genius Starter Kit
+                div(class="d-flex align-items-center item-list")
+                  p Lifestyles
+                  p(class="text-gray-9") $87.56
+            div(class="text-end")
+              p(class="fs-13 mb-1") 11 Jan 2025
+              span(class="badge badge-success badge-xs d-inline-flex align-items-center")
+                i(class="ti ti-circle-filled fs-5 me-1")
+                | Completed
+    // /Recent Sales
+  div(class="row")
+    // Sales Statics
+    div(class="col-xl-6 col-sm-12 col-12 d-flex")
+      div(class="card flex-fill")
+        div(class="card-header d-flex justify-content-between align-items-center")
+          div(class="d-inline-flex align-items-center")
+            span(class="title-icon bg-soft-danger fs-16 me-2")
+              i(class="ti ti-alert-triangle")
+            h5(class="card-title mb-0") Sales Statics
+          div(class="dropdown")
+            a(href="javascript:void(0);", class="dropdown-toggle btn btn-sm btn-white", data-bs-toggle="dropdown", aria-expanded="false")
+              i(class="ti ti-calendar me-1")
+              | 2025
+            ul(class="dropdown-menu p-3")
+              li
+                a(href="javascript:void(0);", class="dropdown-item") 2025
+              li
+                a(href="javascript:void(0);", class="dropdown-item") 2022
+              li
+                a(href="javascript:void(0);", class="dropdown-item") 2021
+        div(class="card-body pb-0")
+          div(class="d-flex align-items-center flex-wrap gap-2")
+            div(class="border p-2 br-8")
+              h5(class="d-inline-flex align-items-center text-teal") $12,189
+                span(class="badge badge-success badge-xs d-inline-flex align-items-center ms-2")
+                  i(class="ti ti-arrow-up-left me-1")
+                  | 25%
+              p Revenue
+            div(class="border p-2 br-8")
+              h5(class="d-inline-flex align-items-center text-orange") $48,988,078
+                span(class="badge badge-danger badge-xs d-inline-flex align-items-center ms-2")
+                  i(class="ti ti-arrow-down-right me-1")
+                  | 25%
+              p Expense
+          div#sales-statistics
+    // /Sales Statics
+    // Recent Transactions
+    div(class="col-xl-6 col-sm-12 col-12 d-flex")
+      div(class="card flex-fill")
+        div(class="card-header d-flex align-items-center justify-content-between flex-wrap gap-3")
+          div(class="d-inline-flex align-items-center")
+            span(class="title-icon bg-soft-orange fs-16 me-2")
+              i(class="ti ti-flag")
+            h5(class="card-title mb-0") Recent Transactions
+          a(href="online-orders.html", class="fs-13 fw-medium text-decoration-underline") View All
+        div(class="card-body p-0")
+          ul(class="nav nav-tabs nav-justified transaction-tab")
+            li(class="nav-item")
+              a(class="nav-link active", href="#sale", data-bs-toggle="tab") Sale
+            li(class="nav-item")
+              a(class="nav-link", href="#purchase-transaction", data-bs-toggle="tab") Purchase
+            li(class="nav-item")
+              a(class="nav-link", href="#quotation", data-bs-toggle="tab") Quotation
+            li(class="nav-item")
+              a(class="nav-link", href="#expenses", data-bs-toggle="tab") Expenses
+            li(class="nav-item")
+              a(class="nav-link", href="#invoices", data-bs-toggle="tab") Invoices
+          div(class="tab-content")
+            div#sale(class="tab-pane show active")
+              div(class="table-responsive")
+                table(class="table table-borderless custom-table")
+                  thead(class="thead-light")
+                    tr
+                      th Date
+                      th Customer
+                      th Status
+                      th Total
+                  tbody
+                    tr
+                      td 24 May 2025
+                      td
+                        div(class="d-flex align-items-center file-name-icon")
+                          a(href="javascript:void(0);", class="avatar avatar-md")
+                            img(src="/admin/assets/img/customer/customer16.jpg", class="img-fluid", alt="img")
+                          div(class="ms-2")
+                            h6
+                              a(href="javascript:void(0);", class="fw-bold") Andrea Willer
+                            span(class="fs-13 text-orange") #114589
+                      td
+                        span(class="badge badge-success badge-xs d-inline-flex align-items-center")
+                          i(class="ti ti-circle-filled fs-5 me-1")
+                          | Completed
+                      td(class="fs-16 fw-bold text-gray-9") $4,560
+                    tr
+                      td 23 May 2025
+                      td
+                        div(class="d-flex align-items-center file-name-icon")
+                          a(href="javascript:void(0);", class="avatar avatar-md")
+                            img(src="/admin/assets/img/customer/customer17.jpg", class="img-fluid", alt="img")
+                          div(class="ms-2")
+                            h6
+                              a(href="javascript:void(0);", class="fw-bold") Timothy Sandsr
+                            span(class="fs-13 text-orange") #114589
+                      td
+                        span(class="badge badge-success badge-xs d-inline-flex align-items-center")
+                          i(class="ti ti-circle-filled fs-5 me-1")
+                          | Completed
+                      td(class="fs-16 fw-bold text-gray-9") $3,569
+                    tr
+                      td 22 May 2025
+                      td
+                        div(class="d-flex align-items-center file-name-icon")
+                          a(href="javascript:void(0);", class="avatar avatar-md")
+                            img(src="/admin/assets/img/customer/customer18.jpg", class="img-fluid", alt="img")
+                          div(class="ms-2")
+                            h6
+                              a(href="javascript:void(0);", class="fw-bold") Bonnie Rodrigues
+                            span(class="fs-13 text-orange") #114589
+                      td
+                        span(class="badge badge-pink badge-xs d-inline-flex align-items-center")
+                          i(class="ti ti-circle-filled fs-5 me-1")
+                          | Draft
+                      td(class="fs-16 fw-bold text-gray-9") $4,560
+                    tr
+                      td 21 May 2025
+                      td
+                        div(class="d-flex align-items-center file-name-icon")
+                          a(href="javascript:void(0);", class="avatar avatar-md")
+                            img(src="/admin/assets/img/customer/customer15.jpg", class="img-fluid", alt="img")
+                          div(class="ms-2")
+                            h6
+                              a(href="javascript:void(0);", class="fw-bold") Randy McCree
+                            span(class="fs-13 text-orange") #114589
+                      td
+                        span(class="badge badge-success badge-xs d-inline-flex align-items-center")
+                          i(class="ti ti-circle-filled fs-5 me-1")
+                          | Completed
+                      td(class="fs-16 fw-bold text-gray-9") $2,155
+                    tr
+                      td 21 May 2025
+                      td
+                        div(class="d-flex align-items-center file-name-icon")
+                          a(href="javascript:void(0);", class="avatar avatar-md")
+                            img(src="/admin/assets/img/customer/customer13.jpg", class="img-fluid", alt="img")
+                          div(class="ms-2")
+                            h6
+                              a(href="javascript:void(0);", class="fw-bold") Dennis Anderson
+                            span(class="fs-13 text-orange") #114589
+                      td
+                        span(class="badge badge-success badge-xs d-inline-flex align-items-center")
+                          i(class="ti ti-circle-filled fs-5 me-1")
+                          | Completed
+                      td(class="fs-16 fw-bold text-gray-9") $5,123
+            div#purchase-transaction(class="tab-pane fade")
+              div(class="table-responsive")
+                table(class="table table-borderless custom-table")
+                  thead(class="thead-light")
+                    tr
+                      th Date
+                      th Supplier
+                      th Status
+                      th Total
+                  tbody
+                    tr
+                      td 24 May 2025
+                      td
+                        a(href="javascript:void(0);", class="fw-semibold") Electro Mart
+                      td
+                        span(class="badge badge-success badge-xs d-inline-flex align-items-center")
+                          i(class="ti ti-circle-filled fs-5 me-1")
+                          | Completed
+                      td(class="text-gray-9") $1000
+                    tr
+                      td 23 May 2025
+                      td
+                        a(href="javascript:void(0);", class="fw-semibold") Quantum Gadgets
+                      td
+                        span(class="badge badge-success badge-xs d-inline-flex align-items-center")
+                          i(class="ti ti-circle-filled fs-5 me-1")
+                          | Completed
+                      td(class="text-gray-9") $1500
+                    tr
+                      td 22 May 2025
+                      td
+                        a(href="javascript:void(0);", class="fw-semibold") Prime Bazaar
+                      td
+                        span(class="badge badge-cyan badge-xs d-inline-flex align-items-center")
+                          i(class="ti ti-circle-filled fs-5 me-1")
+                          | Pending
+                      td(class="text-gray-9") $2000
+                    tr
+                      td 21 May 2025
+                      td
+                        a(href="javascript:void(0);", class="fw-semibold") Alpha Mobiles
+                      td
+                        span(class="badge badge-success badge-xs d-inline-flex align-items-center")
+                          i(class="ti ti-circle-filled fs-5 me-1")
+                          | Completed
+                      td(class="text-gray-9") $1200
+                    tr
+                      td 21 May 2025
+                      td
+                        a(href="javascript:void(0);", class="fw-semibold") Aesthetic Bags
+                      td
+                        span(class="badge badge-success badge-xs d-inline-flex align-items-center")
+                          i(class="ti ti-circle-filled fs-5 me-1")
+                          | Completed
+                      td(class="text-gray-9") $1300
+                    tr
+                      td 28 May 2025
+                      td
+                        a(href="javascript:void(0);", class="fw-semibold") Sigma Chairs
+                      td
+                        span(class="badge badge-success badge-xs d-inline-flex align-items-center")
+                          i(class="ti ti-circle-filled fs-5 me-1")
+                          | Completed
+                      td(class="text-gray-9") $1600
+                    tr
+                      td 26 May 2025
+                      td
+                        a(href="javascript:void(0);", class="fw-semibold") A-Z Store	s
+                      td
+                        span(class="badge badge-success badge-xs d-inline-flex align-items-center")
+                          i(class="ti ti-circle-filled fs-5 me-1")
+                          | Completed
+                      td(class="text-gray-9") $1100
+            div#quotation(class="tab-pane")
+              div(class="table-responsive")
+                table(class="table table-borderless custom-table")
+                  thead(class="thead-light")
+                    tr
+                      th Date
+                      th Customer
+                      th Status
+                      th Total
+                  tbody
+                    tr
+                      td 24 May 2025
+                      td
+                        div(class="d-flex align-items-center file-name-icon")
+                          a(href="javascript:void(0);", class="avatar avatar-md")
+                            img(src="/admin/assets/img/customer/customer16.jpg", class="img-fluid", alt="img")
+                          div(class="ms-2")
+                            h6(class="fw-medium")
+                              a(href="javascript:void(0);") Andrea Willer
+                            span(class="fs-13 text-orange") #114589
+                      td
+                        span(class="badge badge-success badge-xs d-inline-flex align-items-center")
+                          i(class="ti ti-circle-filled fs-5 me-1")
+                          | Sent
+                      td(class="text-gray-9") $4,560
+                    tr
+                      td 23 May 2025
+                      td
+                        div(class="d-flex align-items-center file-name-icon")
+                          a(href="javascript:void(0);", class="avatar avatar-md")
+                            img(src="/admin/assets/img/customer/customer17.jpg", class="img-fluid", alt="img")
+                          div(class="ms-2")
+                            h6(class="fw-medium")
+                              a(href="javascript:void(0);") Timothy Sandsr
+                            span(class="fs-13 text-orange") #114589
+                      td
+                        span(class="badge badge-warning badge-xs d-inline-flex align-items-center")
+                          i(class="ti ti-circle-filled fs-5 me-1")
+                          | Ordered
+                      td(class="text-gray-9") $3,569
+                    tr
+                      td 22 May 2025
+                      td
+                        div(class="d-flex align-items-center file-name-icon")
+                          a(href="javascript:void(0);", class="avatar avatar-md")
+                            img(src="/admin/assets/img/customer/customer18.jpg", class="img-fluid", alt="img")
+                          div(class="ms-2")
+                            h6(class="fw-medium")
+                              a(href="javascript:void(0);") Bonnie Rodrigues
+                            span(class="fs-13 text-orange") #114589
+                      td
+                        span(class="badge badge-cyan badge-xs d-inline-flex align-items-center")
+                          i(class="ti ti-circle-filled fs-5 me-1")
+                          | Pending
+                      td(class="text-gray-9") $4,560
+                    tr
+                      td 21 May 2025
+                      td
+                        div(class="d-flex align-items-center file-name-icon")
+                          a(href="javascript:void(0);", class="avatar avatar-md")
+                            img(src="/admin/assets/img/customer/customer15.jpg", class="img-fluid", alt="img")
+                          div(class="ms-2")
+                            h6(class="fw-medium")
+                              a(href="javascript:void(0);") Randy McCree
+                            span(class="fs-13 text-orange") #114589
+                      td
+                        span(class="badge badge-warning badge-xs d-inline-flex align-items-center")
+                          i(class="ti ti-circle-filled fs-5 me-1")
+                          | Ordered
+                      td(class="text-gray-9") $2,155
+                    tr
+                      td 21 May 2025
+                      td
+                        div(class="d-flex align-items-center file-name-icon")
+                          a(href="javascript:void(0);", class="avatar avatar-md")
+                            img(src="/admin/assets/img/customer/customer13.jpg", class="img-fluid", alt="img")
+                          div(class="ms-2")
+                            h6(class="fw-medium")
+                              a(href="javascript:void(0);") Dennis Anderson
+                            span(class="fs-13 text-orange") #114589
+                      td
+                        span(class="badge badge-success badge-xs d-inline-flex align-items-center")
+                          i(class="ti ti-circle-filled fs-5 me-1")
+                          | Sent
+                      td(class="text-gray-9") $5,123
+            div#expenses(class="tab-pane fade")
+              div(class="table-responsive")
+                table(class="table table-borderless custom-table")
+                  thead(class="thead-light")
+                    tr
+                      th Date
+                      th Expenses
+                      th Status
+                      th Total
+                  tbody
+                    tr
+                      td 24 May 2025
+                      td
+                        h6(class="fw-medium")
+                          a(href="javascript:void(0);") Electricity Payment
+                        span(class="fs-13 text-orange") #EX849
+                      td
+                        span(class="badge badge-success badge-xs d-inline-flex align-items-center")
+                          i(class="ti ti-circle-filled fs-5 me-1")
+                          | Approved
+                      td(class="text-gray-9") $200
+                    tr
+                      td 23 May 2025
+                      td
+                        h6(class="fw-medium")
+                          a(href="javascript:void(0);") Electricity Payment
+                        span(class="fs-13 text-orange") #EX849
+                      td
+                        span(class="badge badge-success badge-xs d-inline-flex align-items-center")
+                          i(class="ti ti-circle-filled fs-5 me-1")
+                          | Approved
+                      td(class="text-gray-9") $200
+                    tr
+                      td 22 May 2025
+                      td
+                        h6(class="fw-medium")
+                          a(href="javascript:void(0);") Stationery Purchase
+                        span(class="fs-13 text-orange") #EX848
+                      td
+                        span(class="badge badge-success badge-xs d-inline-flex align-items-center")
+                          i(class="ti ti-circle-filled fs-5 me-1")
+                          | Approved
+                      td(class="text-gray-9") $50
+                    tr
+                      td 21 May 2025
+                      td
+                        h6(class="fw-medium")
+                          a(href="javascript:void(0);") AC Repair Service
+                        span(class="fs-13 text-orange") #EX847
+                      td
+                        span(class="badge badge-cyan badge-xs d-inline-flex align-items-center")
+                          i(class="ti ti-circle-filled fs-5 me-1")
+                          | Pending
+                      td(class="text-gray-9") $800
+                    tr
+                      td 21 May 2025
+                      td
+                        h6(class="fw-medium")
+                          a(href="javascript:void(0);") Client Meeting
+                        span(class="fs-13 text-orange") #EX846
+                      td
+                        span(class="badge badge-success badge-xs d-inline-flex align-items-center")
+                          i(class="ti ti-circle-filled fs-5 me-1")
+                          | Approved
+                      td(class="text-gray-9") $100
+            div#invoices(class="tab-pane")
+              div(class="table-responsive")
+                table(class="table table-borderless custom-table")
+                  thead(class="thead-light")
+                    tr
+                      th Customer
+                      th Due Date
+                      th Status
+                      th Amount
+                  tbody
+                    tr
+                      td
+                        div(class="d-flex align-items-center file-name-icon")
+                          a(href="javascript:void(0);", class="avatar avatar-md")
+                            img(src="/admin/assets/img/customer/customer16.jpg", class="img-fluid", alt="img")
+                          div(class="ms-2")
+                            h6(class="fw-bold")
+                              a(href="javascript:void(0);") Andrea Willer
+                            span(class="fs-13 text-orange") #INV005
+                      td 24 May 2025
+                      td
+                        span(class="badge badge-success badge-xs d-inline-flex align-items-center")
+                          i(class="ti ti-circle-filled fs-5 me-1")
+                          | Paid
+                      td(class="text-gray-9") $1300
+                    tr
+                      td
+                        div(class="d-flex align-items-center file-name-icon")
+                          a(href="javascript:void(0);", class="avatar avatar-md")
+                            img(src="/admin/assets/img/customer/customer17.jpg", class="img-fluid", alt="img")
+                          div(class="ms-2")
+                            h6(class="fw-bold")
+                              a(href="javascript:void(0);") Timothy Sandsr
+                            span(class="fs-13 text-orange") #INV004
+                      td 23 May 2025
+                      td
+                        span(class="badge badge-warning badge-xs d-inline-flex align-items-center")
+                          i(class="ti ti-circle-filled fs-5 me-1")
+                          | Overdue
+                      td(class="text-gray-9") $1250
+                    tr
+                      td
+                        div(class="d-flex align-items-center file-name-icon")
+                          a(href="javascript:void(0);", class="avatar avatar-md")
+                            img(src="/admin/assets/img/customer/customer18.jpg", class="img-fluid", alt="img")
+                          div(class="ms-2")
+                            h6(class="fw-bold")
+                              a(href="javascript:void(0);") Bonnie Rodrigues
+                            span(class="fs-13 text-orange") #INV003
+                      td 22 May 2025
+                      td
+                        span(class="badge badge-success badge-xs d-inline-flex align-items-center")
+                          i(class="ti ti-circle-filled fs-5 me-1")
+                          | Paid
+                      td(class="text-gray-9") $1700
+                    tr
+                      td
+                        div(class="d-flex align-items-center file-name-icon")
+                          a(href="javascript:void(0);", class="avatar avatar-md")
+                            img(src="/admin/assets/img/customer/customer15.jpg", class="img-fluid", alt="img")
+                          div(class="ms-2")
+                            h6(class="fw-bold")
+                              a(href="javascript:void(0);") Randy McCree
+                            span(class="fs-13 text-orange") #INV002
+                      td 21 May 2025
+                      td
+                        span(class="badge badge-danger badge-xs d-inline-flex align-items-center")
+                          i(class="ti ti-circle-filled fs-5 me-1")
+                          | Unpaid
+                      td(class="text-gray-9") $1500
+                    tr
+                      td
+                        div(class="d-flex align-items-center file-name-icon")
+                          a(href="javascript:void(0);", class="avatar avatar-md")
+                            img(src="/admin/assets/img/customer/customer13.jpg", class="img-fluid", alt="img")
+                          div(class="ms-2")
+                            h6(class="fw-bold")
+                              a(href="javascript:void(0);") Dennis Anderson
+                            span(class="fs-13 text-orange") #INV001
+                      td 21 May 2025
+                      td
+                        span(class="badge badge-success badge-xs d-inline-flex align-items-center")
+                          i(class="ti ti-circle-filled fs-5 me-1")
+                          | Paid
+                      td(class="text-gray-9") $1000
+    // /Recent Transactions
+  div(class="row")
+    // Top Customers
+    div(class="col-xxl-4 col-md-6 d-flex")
+      div(class="card flex-fill")
+        div(class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3")
+          div(class="d-inline-flex align-items-center")
+            span(class="title-icon bg-soft-orange fs-16 me-2")
+              i(class="ti ti-users")
+            h5(class="card-title mb-0") Top Customers
+          a(href="customers.html", class="fs-13 fw-medium text-decoration-underline") View All
+        div(class="card-body")
+          div(class="d-flex align-items-center justify-content-between border-bottom mb-3 pb-3 flex-wrap gap-2")
+            div(class="d-flex align-items-center")
+              a(href="javascript:void(0);", class="avatar avatar-lg flex-shrink-0")
+                img(src="/admin/assets/img/customer/customer11.jpg", alt="img")
+              div(class="ms-2")
+                h6(class="fs-14 fw-bold mb-1")
+                  a(href="javascript:void(0);") Carlos Curran
+                div(class="d-flex align-items-center item-list")
+                  p(class="d-inline-flex align-items-center")
+                    i(class="ti ti-map-pin me-1")
+                    | USA
+                  p 24 Orders
+            div(class="text-end")
+              h5 $8,9645
+          div(class="d-flex align-items-center justify-content-between border-bottom mb-3 pb-3 flex-wrap gap-2")
+            div(class="d-flex align-items-center")
+              a(href="javascript:void(0);", class="avatar avatar-lg flex-shrink-0")
+                img(src="/admin/assets/img/customer/customer12.jpg", alt="img")
+              div(class="ms-2")
+                h6(class="fs-14 fw-bold mb-1")
+                  a(href="javascript:void(0);") Stan Gaunter
+                div(class="d-flex align-items-center item-list")
+                  p(class="d-inline-flex align-items-center")
+                    i(class="ti ti-map-pin me-1")
+                    | UAE
+                  p 22 Orders
+            div(class="text-end")
+              h5 $16,985
+          div(class="d-flex align-items-center justify-content-between border-bottom mb-3 pb-3 flex-wrap gap-2")
+            div(class="d-flex align-items-center")
+              a(href="javascript:void(0);", class="avatar avatar-lg flex-shrink-0")
+                img(src="/admin/assets/img/customer/customer13.jpg", alt="img")
+              div(class="ms-2")
+                h6(class="fs-14 fw-bold mb-1")
+                  a(href="javascript:void(0);") Richard Wilson
+                div(class="d-flex align-items-center item-list")
+                  p(class="d-inline-flex align-items-center")
+                    i(class="ti ti-map-pin me-1")
+                    | Germany
+                  p 14 Orders
+            div(class="text-end")
+              h5 $5,366
+          div(class="d-flex align-items-center justify-content-between border-bottom mb-3 pb-3 flex-wrap gap-2")
+            div(class="d-flex align-items-center")
+              a(href="javascript:void(0);", class="avatar avatar-lg flex-shrink-0")
+                img(src="/admin/assets/img/customer/customer14.jpg", alt="img")
+              div(class="ms-2")
+                h6(class="fs-14 fw-bold mb-1")
+                  a(href="javascript:void(0);") Mary Bronson
+                div(class="d-flex align-items-center item-list")
+                  p(class="d-inline-flex align-items-center")
+                    i(class="ti ti-map-pin me-1")
+                    | Belgium
+                  p 08 Orders
+            div(class="text-end")
+              h5 $4,569
+          div(class="d-flex align-items-center justify-content-between flex-wrap gap-2")
+            div(class="d-flex align-items-center")
+              a(href="javascript:void(0);", class="avatar avatar-lg flex-shrink-0")
+                img(src="/admin/assets/img/customer/customer15.jpg", alt="img")
+              div(class="ms-2")
+                h6(class="fs-14 fw-bold mb-1")
+                  a(href="javascript:void(0);") Annie Tremblay
+                div(class="d-flex align-items-center item-list")
+                  p(class="d-inline-flex align-items-center")
+                    i(class="ti ti-map-pin me-1")
+                    | Greenland
+                  p 14 Orders
+            div(class="text-end")
+              h5 $3,5698
+    // /Top Customers
+    // Top Categories
+    div(class="col-xxl-4 col-md-6 d-flex")
+      div(class="card flex-fill")
+        div(class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3")
+          div(class="d-inline-flex align-items-center")
+            span(class="title-icon bg-soft-orange fs-16 me-2")
+              i(class="ti ti-users")
+            h5(class="card-title mb-0") Top Categories
+          div(class="dropdown")
+            a(href="javascript:void(0);", class="dropdown-toggle btn btn-sm btn-white d-flex align-items-center", data-bs-toggle="dropdown", aria-expanded="false")
+              i(class="ti ti-calendar me-1")
+              | Weekly
+            ul(class="dropdown-menu p-3")
+              li
+                a(href="javascript:void(0);", class="dropdown-item") Today
+              li
+                a(href="javascript:void(0);", class="dropdown-item") Weekly
+              li
+                a(href="javascript:void(0);", class="dropdown-item") Monthly
+        div(class="card-body")
+          div(class="d-flex align-items-center justify-content-between flex-wrap gap-4 mb-4")
+            div
+              canvas#top-category(height="230", width="200")
+            div
+              div(class="category-item category-primary")
+                p(class="fs-13 mb-1") Electronics
+                h2(class="d-flex align-items-center") 698
+                  span(class="fs-13 fw-normal text-default ms-1") Sales
+              div(class="category-item category-orange")
+                p(class="fs-13 mb-1") Sports
+                h2(class="d-flex align-items-center") 545
+                  span(class="fs-13 fw-normal text-default ms-1") Sales
+              div(class="category-item category-secondary")
+                p(class="fs-13 mb-1") Lifestyles
+                h2(class="d-flex align-items-center") 456
+                  span(class="fs-13 fw-normal text-default ms-1") Sales
+          h6(class="mb-2") Category Statistics
+          div(class="border br-8")
+            div(class="d-flex align-items-center justify-content-between border-bottom p-2")
+              p(class="d-inline-flex align-items-center mb-0")
+                i(class="ti ti-square-rounded-filled text-indigo fs-8 me-2")
+                | Total Number Of Categories
+              h5 698
+            div(class="d-flex align-items-center justify-content-between p-2")
+              p(class="d-inline-flex align-items-center mb-0")
+                i(class="ti ti-square-rounded-filled text-orange fs-8 me-2")
+                | Total Number Of Products
+              h5 7899
+    // /Top Categories
+    // Order Statistics
+    div(class="col-xxl-4 col-md-12 d-flex")
+      div(class="card flex-fill")
+        div(class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3")
+          div(class="d-inline-flex align-items-center")
+            span(class="title-icon bg-soft-indigo fs-16 me-2")
+              i(class="ti ti-package")
+            h5(class="card-title mb-0") Order Statistics
+          div(class="dropdown")
+            a(href="javascript:void(0);", class="dropdown-toggle btn btn-sm btn-white", data-bs-toggle="dropdown", aria-expanded="false")
+              i(class="ti ti-calendar me-1")
+              | Weekly
+            ul(class="dropdown-menu p-3")
+              li
+                a(href="javascript:void(0);", class="dropdown-item") Today
+              li
+                a(href="javascript:void(0);", class="dropdown-item") Weekly
+              li
+                a(href="javascript:void(0);", class="dropdown-item") Monthly
+        div(class="card-body pb-0")
+          div(id="heat_chart")
+    // /Order Statistics
