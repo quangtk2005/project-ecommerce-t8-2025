@@ -1,36 +1,1034 @@
-
-aside(class=`w-[252px] bg-[#505969] h-full text-white`)
-  div(class=`px-[24px] h-[65px] border-b border-b-[${COLOR.border-color}] flex items-center`)
-    a(href="")
-      img(class=`w-[130px]` src="https://dreamspos.dreamstechnologies.com/html/template/assets/img/logo-white.svg", alt="logo")
-  div(class=`p-[24px] text-[14px]`)
-    ui(class=`list-none`)
-      li
-        h6(class=`text-[${COLOR["font-size-12"]}]  font-[${COLOR["font-weight-bold"]}] mb-[8px]`) Chính
-      li(class="")
-        a(href="/admin/dashboard" class=`rounded-[5px] px-[12px] py-[8px] hover:bg-[${COLOR["light-900"]}] hover:text-[${COLOR["title-color"]}] w-full`) Tổng quan
-      li
-        details(id="" open)
-          summary
-            span(class="")
-              i(class="fas fa-cog")
-            | Sản phẩm
+//- Sidebar
+div#sidebar(class="sidebar")
+  //- Logo
+  div(class="sidebar-logo active")
+    a(href="index.html", class="logo logo-normal")
+      img(src="/admin/assets/img/logo.svg", alt="Img")
+    a(href="index.html", class="logo logo-white")
+      img(src="/admin/assets/img/logo-white.svg", alt="Img")
+    a(href="index.html", class="logo-small")
+      img(src="/admin/assets/img/logo-small.png", alt="Img")
+    a(id="toggle_btn", href="javascript:void(0);")
+      i(data-feather="chevrons-left", class="feather-16")
+  //- /Logo
+  div(class="modern-profile p-3 pb-0")
+    div(class="text-center rounded bg-light p-3 mb-4 user-profile")
+      div(class="avatar avatar-lg online mb-3")
+        img(src="/admin/assets/img/customer/customer15.jpg", alt="Img", class="img-fluid rounded-circle")
+      h6(class="fs-14 fw-bold mb-1") Adrian Herman
+      p(class="fs-12 mb-0") System Admin
+    div(class="sidebar-nav mb-3")
+      ul(class="nav nav-tabs nav-tabs-solid nav-tabs-rounded nav-justified bg-transparent", role="tablist")
+        li(class="nav-item")
+          a(class="nav-link active border-0", href="#") Menu
+        li(class="nav-item")
+          a(class="nav-link border-0", href="chat.html") Chats
+        li(class="nav-item")
+          a(class="nav-link border-0", href="email.html") Inbox
+  div(class="sidebar-header p-3 pb-0 pt-2")
+    div(class="text-center rounded bg-light p-2 mb-4 sidebar-profile d-flex align-items-center")
+      div(class="avatar avatar-md onlin")
+        img(src="/admin/assets/img/customer/customer15.jpg", alt="Img", class="img-fluid rounded-circle")
+      div(class="text-start sidebar-profile-info ms-2")
+        h6(class="fs-14 fw-bold mb-1") Adrian Herman
+        p(class="fs-12") System Admin
+    div(class="d-flex align-items-center justify-content-between menu-item mb-3")
+      div
+        a(href="index.html", class="btn btn-sm btn-icon bg-light")
+          i(class="ti ti-layout-grid-remove")
+      div
+        a(href="chat.html", class="btn btn-sm btn-icon bg-light")
+          i(class="ti ti-brand-hipchat")
+      div
+        a(href="email.html", class="btn btn-sm btn-icon bg-light position-relative")
+          i(class="ti ti-message")
+      div(class="notification-item")
+        a(href="activities.html", class="btn btn-sm btn-icon bg-light position-relative")
+          i(class="ti ti-bell")
+          span(class="notification-status-dot")
+      div(class="me-0")
+        a(href="general-settings.html", class="btn btn-sm btn-icon bg-light")
+          i(class="ti ti-settings")
+  div(class="sidebar-inner slimscroll")
+    div#sidebar-menu(class="sidebar-menu")
+      ul
+        li(class="submenu-open")
+          h6(class="submenu-hdr") Main
+          ul
+            li(class="submenu")
+              a(href="javascript:void(0);", class="subdrop active")
+                i(class="ti ti-layout-grid fs-16 me-2")
+                span Dashboard
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="index.html", class="active") Admin Dashboard
+                li
+                  a(href="admin-dashboard.html") Admin Dashboard 2
+                li
+                  a(href="sales-dashboard.html") Sales Dashboard
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-user-edit fs-16 me-2")
+                span Super Admin
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="dashboard.html") Dashboard
+                li
+                  a(href="companies.html") Companies
+                li
+                  a(href="subscription.html") Subscriptions
+                li
+                  a(href="packages.html") Packages
+                li
+                  a(href="domain.html") Domain
+                li
+                  a(href="purchase-transaction.html") Purchase Transaction
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-brand-apple-arcade fs-16 me-2")
+                span Application
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="chat.html") Chat
+                li(class="submenu submenu-two")
+                  a(href="javascript:void(0);") Call
+                    span(class="menu-arrow inside-submenu")
+                  ul
+                    li
+                      a(href="video-call.html") Video Call
+                    li
+                      a(href="audio-call.html") Audio Call
+                    li
+                      a(href="call-history.html") Call History
+                li
+                  a(href="calendar.html") Calendar
+                li
+                  a(href="contacts.html") Contacts
+                li
+                  a(href="email.html") Email
+                li
+                  a(href="todo.html") To Do
+                li
+                  a(href="notes.html") Notes
+                li
+                  a(href="file-manager.html") File Manager
+                li
+                  a(href="projects.html") Projects
+                li(class="submenu submenu-two")
+                  a(href="javascript:void(0);") Ecommerce
+                    span(class="menu-arrow inside-submenu")
+                  ul
+                    li
+                      a(href="products.html") Products
+                    li
+                      a(href="orders.html") Orders
+                    li
+                      a(href="customers.html") Customers
+                    li
+                      a(href="cart.html") Cart
+                    li
+                      a(href="checkout.html") Checkout
+                    li
+                      a(href="wishlist.html") Wishlist
+                    li
+                      a(href="reviews.html") Reviews
+                li
+                  a(href="social-feed.html") Social Feed
+                li
+                  a(href="search-list.html") Search List
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-layout-sidebar-right-collapse fs-16 me-2")
+                span Layouts
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="layout-horizontal.html") Horizontal
+                li
+                  a(href="layout-detached.html") Detached
+                li
+                  a(href="layout-two-column.html") Two Column
+                li
+                  a(href="layout-hovered.html") Hovered
+                li
+                  a(href="layout-boxed.html") Boxed
+                li
+                  a(href="layout-rtl.html") RTL
+                li
+                  a(href="layout-dark.html") Dark
+        li(class="submenu-open")
+          h6(class="submenu-hdr") Inventory
           ul
             li
-              a(href="") Thêm mới
+              a(href="product-list.html")
+                i(data-feather="box")
+                span Products
             li
-              a(href="") Danh sách
-      li
-        a(href="") Danh mục
-      li
-        a(href="") Thương hiệu
-      li
-        a(href="") Đơn vị tính
-      li
-        a(href="") Biến thể thuộc tính
-      li
-        a(href="") Bảo hành
-      li
-        a(href="") In mã vạch (barcode)
-      li
-        a(href="") In mã QR
+              a(href="add-product.html")
+                i(class="ti ti-table-plus fs-16 me-2")
+                span Create Product
+            li
+              a(href="expired-products.html")
+                i(class="ti ti-progress-alert fs-16 me-2")
+                span Expired Products
+            li
+              a(href="low-stocks.html")
+                i(class="ti ti-trending-up-2 fs-16 me-2")
+                span Low Stocks
+            li
+              a(href="category-list.html")
+                i(class="ti ti-list-details fs-16 me-2")
+                span Category
+            li
+              a(href="sub-categories.html")
+                i(class="ti ti-carousel-vertical fs-16 me-2")
+                span Sub Category
+            li
+              a(href="brand-list.html")
+                i(class="ti ti-triangles fs-16 me-2")
+                span Brands
+            li
+              a(href="units.html")
+                i(class="ti ti-brand-unity fs-16 me-2")
+                span Units
+            li
+              a(href="varriant-attributes.html")
+                i(class="ti ti-checklist fs-16 me-2")
+                span Variant Attributes
+            li
+              a(href="warranty.html")
+                i(class="ti ti-certificate fs-16 me-2")
+                span Warranties
+            li
+              a(href="barcode.html")
+                i(class="ti ti-barcode fs-16 me-2")
+                span Print Barcode
+            li
+              a(href="qrcode.html")
+                i(class="ti ti-qrcode fs-16 me-2")
+                span Print QR Code
+        li(class="submenu-open")
+          h6(class="submenu-hdr") Stock
+          ul
+            li
+              a(href="manage-stocks.html")
+                i(class="ti ti-stack-3 fs-16 me-2")
+                span Manage Stock
+            li
+              a(href="stock-adjustment.html")
+                i(class="ti ti-stairs-up fs-16 me-2")
+                span Stock Adjustment
+            li
+              a(href="stock-transfer.html")
+                i(class="ti ti-stack-pop fs-16 me-2")
+                span Stock Transfer
+        li(class="submenu-open")
+          h6(class="submenu-hdr") Sales
+          ul
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-layout-grid fs-16 me-2")
+                span Sales
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="online-orders.html") Online Orders
+                li
+                  a(href="pos-orders.html") POS Orders
+            li
+              a(href="invoice.html")
+                i(class="ti ti-file-invoice fs-16 me-2")
+                span Invoices
+            li
+              a(href="sales-returns.html")
+                i(class="ti ti-receipt-refund fs-16 me-2")
+                span Sales Return
+            li
+              a(href="quotation-list.html")
+                i(class="ti ti-files fs-16 me-2")
+                span Quotation
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-device-laptop fs-16 me-2")
+                span POS
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="pos.html") POS 1
+                li
+                  a(href="pos-2.html") POS 2
+                li
+                  a(href="pos-3.html") POS 3
+                li
+                  a(href="pos-4.html") POS 4
+                li
+                  a(href="pos-5.html") POS 5
+        li(class="submenu-open")
+          h6(class="submenu-hdr") Promo
+          ul
+            li
+              a(href="coupons.html")
+                i(class="ti ti-ticket fs-16 me-2")
+                span Coupons
+            li
+              a(href="gift-cards.html")
+                i(class="ti ti-cards fs-16 me-2")
+                span Gift Cards
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-file-percent fs-16 me-2")
+                span Discount
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="discount-plan.html") Discount Plan
+                li
+                  a(href="discount.html") Discount
+        li(class="submenu-open")
+          h6(class="submenu-hdr") Purchases
+          ul
+            li
+              a(href="purchase-list.html")
+                i(class="ti ti-shopping-bag fs-16 me-2")
+                span Purchases
+            li
+              a(href="purchase-order-report.html")
+                i(class="ti ti-file-unknown fs-16 me-2")
+                span Purchase Order
+            li
+              a(href="purchase-returns.html")
+                i(class="ti ti-file-upload fs-16 me-2")
+                span Purchase Return
+        li(class="submenu-open")
+          h6(class="submenu-hdr") Finance &amp; Accounts
+          ul
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-file-stack fs-16 me-2")
+                span Expenses
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="expense-list.html") Expenses
+                li
+                  a(href="expense-category.html") Expense Category
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-file-pencil fs-16 me-2")
+                span Income
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="income.html") Income
+                li
+                  a(href="income-category.html") Income Category
+            li
+              a(href="account-list.html")
+                i(class="ti ti-building-bank fs-16 me-2")
+                span Bank Accounts
+            li
+              a(href="money-transfer.html")
+                i(class="ti ti-moneybag fs-16 me-2")
+                span Money Transfer
+            li
+              a(href="balance-sheet.html")
+                i(class="ti ti-report-money fs-16 me-2")
+                span Balance Sheet
+            li
+              a(href="trial-balance.html")
+                i(class="ti ti-alert-circle fs-16 me-2")
+                span Trial Balance
+            li
+              a(href="cash-flow.html")
+                i(class="ti ti-zoom-money fs-16 me-2")
+                span Cash Flow
+            li
+              a(href="account-statement.html")
+                i(class="ti ti-file-infinity fs-16 me-2")
+                span Account Statement
+        li(class="submenu-open")
+          h6(class="submenu-hdr") Peoples
+          ul
+            li
+              a(href="customers.html")
+                i(class="ti ti-users-group fs-16 me-2")
+                span Customers
+            li
+              a(href="billers.html")
+                i(class="ti ti-user-up fs-16 me-2")
+                span Billers
+            li
+              a(href="suppliers.html")
+                i(class="ti ti-user-dollar fs-16 me-2")
+                span Suppliers
+            li
+              a(href="store-list.html")
+                i(class="ti ti-home-bolt fs-16 me-2")
+                span Stores
+            li
+              a(href="warehouse.html")
+                i(class="ti ti-archive fs-16 me-2")
+                span Warehouses
+        li(class="submenu-open")
+          h6(class="submenu-hdr") HRM
+          ul
+            li
+              a(href="employees-grid.html")
+                i(class="ti ti-user fs-16 me-2")
+                span Employees
+            li
+              a(href="department-grid.html")
+                i(class="ti ti-compass fs-16 me-2")
+                span Departments
+            li
+              a(href="designation.html")
+                i(class="ti ti-git-merge fs-16 me-2")
+                span Designation
+            li
+              a(href="shift.html")
+                i(class="ti ti-arrows-shuffle fs-16 me-2")
+                span Shifts
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-user-cog fs-16 me-2")
+                span Attendence
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="attendance-employee.html") Employee
+                li
+                  a(href="attendance-admin.html") Admin
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-calendar fs-16 me-2")
+                span Leaves
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="leaves-admin.html") Admin Leaves
+                li
+                  a(href="leaves-employee.html") Employee Leaves
+                li
+                  a(href="leave-types.html") Leave Types
+            li
+              a(href="holidays.html")
+                i(class="ti ti-calendar-share fs-16 me-2")
+                span Holidays
+            li(class="submenu")
+              a(href="employee-salary.html")
+                i(class="ti ti-file-dollar fs-16 me-2")
+                span Payroll
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="employee-salary.html") Employee Salary
+                li
+                  a(href="payslip.html") Payslip
+        li(class="submenu-open")
+          h6(class="submenu-hdr") Reports
+          ul
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-chart-bar fs-16 me-2")
+                span Sales Report
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="sales-report.html") Sales Report
+                li
+                  a(href="best-seller.html") Best Seller
+            li
+              a(href="purchase-report.html")
+                i(class="ti ti-chart-pie-2 fs-16 me-2")
+                span Purchase report
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-triangle-inverted fs-16 me-2")
+                span Inventory Report
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="inventory-report.html") Inventory Report
+                li
+                  a(href="stock-history.html") Stock History
+                li
+                  a(href="sold-stock.html") Sold Stock
+            li
+              a(href="invoice-report.html")
+                i(class="ti ti-businessplan fs-16 me-2")
+                span Invoice Report
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-user-star fs-16 me-2")
+                span Supplier Report
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="supplier-report.html") Supplier Report
+                li
+                  a(href="supplier-due-report.html") Supplier Due Report
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-report fs-16 me-2")
+                span Customer Report
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="customer-report.html") Customer Report
+                li
+                  a(href="customer-due-report.html") Customer Due Report
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-report-analytics fs-16 me-2")
+                span Product Report
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="product-report.html") Product Report
+                li
+                  a(href="product-expiry-report.html") Product Expiry Report
+                li
+                  a(href="product-quantity-alert.html") Product Quantity Alert
+            li
+              a(href="expense-report.html")
+                i(class="ti ti-file-vector fs-16 me-2")
+                span Expense Report
+            li
+              a(href="income-report.html")
+                i(class="ti ti-chart-ppf fs-16 me-2")
+                span Income Report
+            li
+              a(href="tax-reports.html")
+                i(class="ti ti-chart-dots-2 fs-16 me-2")
+                span Tax Report
+            li
+              a(href="profit-and-loss.html")
+                i(class="ti ti-chart-donut fs-16 me-2")
+                span Profit &amp; Loss
+            li
+              a(href="annual-report.html")
+                i(class="ti ti-report-search fs-16 me-2")
+                span Annual Report
+        li(class="submenu-open")
+          h6(class="submenu-hdr") Content (CMS)
+          ul
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-page-break fs-16 me-2")
+                span Pages
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="pages.html") Pages
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-wallpaper fs-16 me-2")
+                span Blog
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="all-blog.html") All Blog
+                li
+                  a(href="blog-tag.html") Blog Tags
+                li
+                  a(href="blog-categories.html") Categories
+                li
+                  a(href="blog-comments.html") Blog Comments
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-map-pin fs-16 me-2")
+                span Location
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="countries.html") Countries
+                li
+                  a(href="states.html") States
+                li
+                  a(href="cities.html") Cities
+            li
+              a(href="testimonials.html")
+                i(class="ti ti-star fs-16 me-2")
+                span Testimonials
+            li
+              a(href="faq.html")
+                i(class="ti ti-help-circle fs-16 me-2")
+                span FAQ
+        li(class="submenu-open")
+          h6(class="submenu-hdr") User Management
+          ul
+            li
+              a(href="users.html")
+                i(class="ti ti-shield-up fs-16 me-2")
+                span Users
+            li
+              a(href="roles-permissions.html")
+                i(class="ti ti-jump-rope fs-16 me-2")
+                span Roles &amp; Permissions
+            li
+              a(href="delete-account.html")
+                i(class="ti ti-trash-x fs-16 me-2")
+                span Delete Account Request
+        li(class="submenu-open")
+          h6(class="submenu-hdr") Pages
+          ul
+            li
+              a(href="profile.html")
+                i(class="ti ti-user-circle fs-16 me-2")
+                span Profile
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-shield fs-16 me-2")
+                span Authentication
+                span(class="menu-arrow")
+              ul
+                li(class="submenu submenu-two")
+                  a(href="javascript:void(0);") Login
+                    span(class="menu-arrow inside-submenu")
+                  ul
+                    li
+                      a(href="signin.html") Cover
+                    li
+                      a(href="signin-2.html") Illustration
+                    li
+                      a(href="signin-3.html") Basic
+                li(class="submenu submenu-two")
+                  a(href="javascript:void(0);") Register
+                    span(class="menu-arrow inside-submenu")
+                  ul
+                    li
+                      a(href="register.html") Cover
+                    li
+                      a(href="register-2.html") Illustration
+                    li
+                      a(href="register-3.html") Basic
+                li(class="submenu submenu-two")
+                  a(href="javascript:void(0);") Forgot Password
+                    span(class="menu-arrow inside-submenu")
+                  ul
+                    li
+                      a(href="forgot-password.html") Cover
+                    li
+                      a(href="forgot-password-2.html") Illustration
+                    li
+                      a(href="forgot-password-3.html") Basic
+                li(class="submenu submenu-two")
+                  a(href="javascript:void(0);") Reset Password
+                    span(class="menu-arrow inside-submenu")
+                  ul
+                    li
+                      a(href="reset-password.html") Cover
+                    li
+                      a(href="reset-password-2.html") Illustration
+                    li
+                      a(href="reset-password-3.html") Basic
+                li(class="submenu submenu-two")
+                  a(href="javascript:void(0);") Email Verification
+                    span(class="menu-arrow inside-submenu")
+                  ul
+                    li
+                      a(href="email-verification.html") Cover
+                    li
+                      a(href="email-verification-2.html") Illustration
+                    li
+                      a(href="email-verification-3.html") Basic
+                li(class="submenu submenu-two")
+                  a(href="javascript:void(0);") 2 Step Verification
+                    span(class="menu-arrow inside-submenu")
+                  ul
+                    li
+                      a(href="two-step-verification.html") Cover
+                    li
+                      a(href="two-step-verification-2.html") Illustration
+                    li
+                      a(href="two-step-verification-3.html") Basic
+                li
+                  a(href="lock-screen.html") Lock Screen
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-file-x fs-16 me-2")
+                span Error Pages
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="error-404.html") 404 Error 
+                li
+                  a(href="error-500.html") 500 Error 
+            li
+              a(href="blank-page.html")
+                i(class="ti ti-file fs-16 me-2")
+                span Blank Page
+            li
+              a(href="pricing.html")
+                i(class="ti ti-currency-dollar fs-16 me-2")
+                span Pricing
+            li
+              a(href="coming-soon.html")
+                i(class="ti ti-send fs-16 me-2")
+                span Coming Soon
+            li
+              a(href="under-maintenance.html")
+                i(class="ti ti-alert-triangle fs-16 me-2")
+                span Under Maintenance
+        li(class="submenu-open")
+          h6(class="submenu-hdr") Settings
+          ul
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-settings fs-16 me-2")
+                span General Settings
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="general-settings.html") Profile
+                li
+                  a(href="security-settings.html") Security
+                li
+                  a(href="notification.html") Notifications
+                li
+                  a(href="connected-apps.html") Connected Apps
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-world fs-16 me-2")
+                span Website Settings
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="system-settings.html") System Settings
+                li
+                  a(href="company-settings.html") Company Settings 
+                li
+                  a(href="localization-settings.html") Localization
+                li
+                  a(href="prefixes.html") Prefixes
+                li
+                  a(href="preference.html") Preference
+                li
+                  a(href="appearance.html") Appearance
+                li
+                  a(href="social-authentication.html") Social Authentication
+                li
+                  a(href="language-settings.html") Language
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-device-mobile fs-16 me-2")
+                span App Settings
+                span(class="menu-arrow")
+              ul
+                li(class="submenu submenu-two")
+                  a(href="javascript:void(0);") Invoice
+                    span(class="menu-arrow inside-submenu")
+                  ul
+                    li
+                      a(href="invoice-settings.html") Invoice Settings
+                    li
+                      a(href="invoice-template.html") Invoice Template
+                li
+                  a(href="printer-settings.html") Printer
+                li
+                  a(href="pos-settings.html") POS
+                li
+                  a(href="custom-fields.html") Custom Fields
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-device-desktop fs-16 me-2")
+                span System Settings
+                span(class="menu-arrow")
+              ul
+                li(class="submenu submenu-two")
+                  a(href="javascript:void(0);") Email
+                    span(class="menu-arrow inside-submenu")
+                  ul
+                    li
+                      a(href="email-settings.html") Email Settings
+                    li
+                      a(href="email-template.html") Email Template
+                li(class="submenu submenu-two")
+                  a(href="javascript:void(0);") SMS
+                    span(class="menu-arrow inside-submenu")
+                  ul
+                    li
+                      a(href="sms-settings.html") SMS Settings
+                    li
+                      a(href="sms-template.html") SMS Template
+                li
+                  a(href="otp-settings.html") OTP
+                li
+                  a(href="gdpr-settings.html") GDPR Cookies
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-settings-dollar fs-16 me-2")
+                span Financial Settings
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="payment-gateway-settings.html") Payment Gateway
+                li
+                  a(href="bank-settings-grid.html") Bank Accounts
+                li
+                  a(href="tax-rates.html") Tax Rates
+                li
+                  a(href="currency-settings.html") Currencies
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-settings-2 fs-16 me-2")
+                span Other Settings
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="storage-settings.html") Storage
+                li
+                  a(href="ban-ip-address.html") Ban IP Address
+            li
+              a(href="signin.html")
+                i(class="ti ti-logout fs-16 me-2")
+                span Logout
+        li(class="submenu-open")
+          h6(class="submenu-hdr") UI Interface
+          ul
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-vector-bezier fs-16 me-2")
+                span Base UI
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="ui-alerts.html") Alerts
+                li
+                  a(href="ui-accordion.html") Accordion
+                li
+                  a(href="ui-avatar.html") Avatar
+                li
+                  a(href="ui-badges.html") Badges
+                li
+                  a(href="ui-borders.html") Border
+                li
+                  a(href="ui-buttons.html") Buttons
+                li
+                  a(href="ui-buttons-group.html") Button Group
+                li
+                  a(href="ui-breadcrumb.html") Breadcrumb
+                li
+                  a(href="ui-cards.html") Card
+                li
+                  a(href="ui-carousel.html") Carousel
+                li
+                  a(href="ui-colors.html") Colors
+                li
+                  a(href="ui-dropdowns.html") Dropdowns
+                li
+                  a(href="ui-grid.html") Grid
+                li
+                  a(href="ui-images.html") Images
+                li
+                  a(href="ui-lightbox.html") Lightbox
+                li
+                  a(href="ui-media.html") Media
+                li
+                  a(href="ui-modals.html") Modals
+                li
+                  a(href="ui-offcanvas.html") Offcanvas
+                li
+                  a(href="ui-pagination.html") Pagination
+                li
+                  a(href="ui-popovers.html") Popovers
+                li
+                  a(href="ui-progress.html") Progress
+                li
+                  a(href="ui-placeholders.html") Placeholders
+                li
+                  a(href="ui-rangeslider.html") Range Slider
+                li
+                  a(href="ui-spinner.html") Spinner
+                li
+                  a(href="ui-sweetalerts.html") Sweet Alerts
+                li
+                  a(href="ui-nav-tabs.html") Tabs
+                li
+                  a(href="ui-toasts.html") Toasts
+                li
+                  a(href="ui-tooltips.html") Tooltips
+                li
+                  a(href="ui-typography.html") Typography
+                li
+                  a(href="ui-video.html") Video
+                li
+                  a(href="ui-sortable.html") Sortable
+                li
+                  a(href="ui-swiperjs.html") Swiperjs
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(data-feather="layers")
+                span Advanced UI
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="ui-ribbon.html") Ribbon
+                li
+                  a(href="ui-clipboard.html") Clipboard
+                li
+                  a(href="ui-drag-drop.html") Drag &amp; Drop
+                li
+                  a(href="ui-rangeslider.html") Range Slider
+                li
+                  a(href="ui-rating.html") Rating
+                li
+                  a(href="ui-text-editor.html") Text Editor
+                li
+                  a(href="ui-counter.html") Counter
+                li
+                  a(href="ui-scrollbar.html") Scrollbar
+                li
+                  a(href="ui-stickynote.html") Sticky Note
+                li
+                  a(href="ui-timeline.html") Timeline
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-chart-infographic fs-16 me-2")
+                span Charts
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="chart-apex.html") Apex Charts
+                li
+                  a(href="chart-c3.html") Chart C3
+                li
+                  a(href="chart-js.html") Chart Js
+                li
+                  a(href="chart-morris.html") Morris Charts
+                li
+                  a(href="chart-flot.html") Flot Charts
+                li
+                  a(href="chart-peity.html") Peity Charts
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-icons fs-16 me-2")
+                span Icons
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="icon-fontawesome.html") Fontawesome Icons
+                li
+                  a(href="icon-feather.html") Feather Icons
+                li
+                  a(href="icon-ionic.html") Ionic Icons
+                li
+                  a(href="icon-material.html") Material Icons
+                li
+                  a(href="icon-pe7.html") Pe7 Icons
+                li
+                  a(href="icon-simpleline.html") Simpleline Icons
+                li
+                  a(href="icon-themify.html") Themify Icons
+                li
+                  a(href="icon-weather.html") Weather Icons
+                li
+                  a(href="icon-typicon.html") Typicon Icons
+                li
+                  a(href="icon-flag.html") Flag Icons
+                li
+                  a(href="icon-tabler.html") Tabler Icons
+                li
+                  a(href="icon-bootstrap.html") Bootstrap Icons
+                li
+                  a(href="icon-remix.html") Remix Icons
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-input-search fs-16 me-2")
+                span Forms
+                span(class="menu-arrow")
+              ul
+                li(class="submenu submenu-two")
+                  a(href="javascript:void(0);") Form Elements
+                    span(class="menu-arrow inside-submenu")
+                  ul
+                    li
+                      a(href="form-basic-inputs.html") Basic Inputs
+                    li
+                      a(href="form-checkbox-radios.html") Checkbox &amp; Radios
+                    li
+                      a(href="form-input-groups.html") Input Groups
+                    li
+                      a(href="form-grid-gutters.html") Grid &amp; Gutters
+                    li
+                      a(href="form-select.html") Form Select
+                    li
+                      a(href="form-mask.html") Input Masks
+                    li
+                      a(href="form-fileupload.html") File Uploads
+                li(class="submenu submenu-two")
+                  a(href="javascript:void(0);") Layouts
+                    span(class="menu-arrow inside-submenu")
+                  ul
+                    li
+                      a(href="form-horizontal.html") Horizontal Form
+                    li
+                      a(href="form-vertical.html") Vertical Form
+                    li
+                      a(href="form-floating-labels.html") Floating Labels
+                li
+                  a(href="form-validation.html") Form Validation
+                li
+                  a(href="form-select2.html") Select2
+                li
+                  a(href="form-wizard.html") Form Wizard
+                li
+                  a(href="form-pickers.html") Form Picker
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-table fs-16 me-2")
+                span Tables
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="tables-basic.html") Basic Tables 
+                li
+                  a(href="data-tables.html") Data Table 
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-map-pin-pin fs-16 me-2")
+                span Maps
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="maps-vector.html") Vector
+                li
+                  a(href="maps-leaflet.html") Leaflet
+        li(class="submenu-open")
+          h6(class="submenu-hdr") Help
+          ul
+            li
+              a(href="javascript:void(0);")
+                i(class="ti ti-file-text fs-16 me-2")
+                span Documentation
+            li
+              a(href="javascript:void(0);")
+                i(class="ti ti-exchange fs-16 me-2")
+                span Changelog 
+                span(class="badge bg-primary badge-xs text-white fs-10 ms-2") v2.0.9
+            li(class="submenu")
+              a(href="javascript:void(0);")
+                i(class="ti ti-menu-2 fs-16 me-2")
+                span Multi Level
+                span(class="menu-arrow")
+              ul
+                li
+                  a(href="javascript:void(0);") Level 1.1
+                li(class="submenu submenu-two")
+                  a(href="javascript:void(0);") Level 1.2
+                    span(class="menu-arrow inside-submenu")
+                  ul
+                    li
+                      a(href="javascript:void(0);") Level 2.1
+                    li(class="submenu submenu-two submenu-three")
+                      a(href="javascript:void(0);") Level 2.2
+                        span(class="menu-arrow inside-submenu inside-submenu-two")
+                      ul
+                        li
+                          a(href="javascript:void(0);") Level 3.1
+                        li
+                          a(href="javascript:void(0);") Level 3.2
+//- /Sidebar

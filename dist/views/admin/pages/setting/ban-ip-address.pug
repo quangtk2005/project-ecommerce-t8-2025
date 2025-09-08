@@ -1,0 +1,224 @@
+extends ../../layout/default.pug
+
+block css
+  // animation CSS
+  link(rel="stylesheet", href="/admin/assets/css/animate.css")
+  // Quill CSS
+  link(rel="stylesheet", href="/admin/assets/plugins/quill/quill.snow.css")
+  // Datetimepicker CSS
+  link(rel="stylesheet", href="/admin/assets/css/bootstrap-datetimepicker.min.css")
+  // Datatable CSS
+  link(rel="stylesheet", href="/admin/assets/css/dataTables.bootstrap5.min.css")
+  // Tabler Icon CSS
+  link(rel="stylesheet", href="/admin/assets/plugins/tabler-icons/tabler-icons.min.css")
+  // Color Picker Css
+  link(rel="stylesheet", href="/admin/assets/plugins/@simonwep/pickr/themes/nano.min.css")
+
+block js
+  // Slimscroll JS
+  script(src="/admin/assets/js/jquery.slimscroll.min.js", type="6c965bcacbcc7f1c0992960a-text/javascript")
+  // Datatable JS
+  script(src="/admin/assets/js/jquery.dataTables.min.js", type="6c965bcacbcc7f1c0992960a-text/javascript")
+  script(src="/admin/assets/js/dataTables.bootstrap5.min.js", type="6c965bcacbcc7f1c0992960a-text/javascript")
+  // Datetimepicker JS
+  script(src="/admin/assets/js/moment.min.js", type="6c965bcacbcc7f1c0992960a-text/javascript")
+  script(src="/admin/assets/js/bootstrap-datetimepicker.min.js", type="6c965bcacbcc7f1c0992960a-text/javascript")
+  // Quill JS
+  script(src="/admin/assets/plugins/quill/quill.min.js", type="6c965bcacbcc7f1c0992960a-text/javascript")
+  // Sticky-sidebar
+  script(src="/admin/assets/plugins/theia-sticky-sidebar/ResizeSensor.js", type="6c965bcacbcc7f1c0992960a-text/javascript")
+  script(src="/admin/assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js", type="6c965bcacbcc7f1c0992960a-text/javascript")
+  // Color Picker JS
+  script(src="/admin/assets/plugins/@simonwep/pickr/pickr.es5.min.js", type="6c965bcacbcc7f1c0992960a-text/javascript")
+  // Custom JS
+  script(src="/admin/assets/js/theme-colorpicker.js", type="6c965bcacbcc7f1c0992960a-text/javascript")
+
+block main
+  div(class="settings-content")
+    div(class="page-header settings-pg-header")
+      div(class="add-item d-flex")
+        div(class="page-title")
+          h4 Settings
+          h6 Manage your settings on portal
+      ul(class="table-top-head")
+        li
+          a(data-bs-toggle="tooltip", data-bs-placement="top", title="Refresh")
+            i(class="ti ti-refresh")
+        li
+          a#collapse-header(data-bs-toggle="tooltip", data-bs-placement="top", title="Collapse")
+            i(class="ti ti-chevron-up")
+    div(class="row")
+      div(class="col-xl-12")
+        div(class="settings-wrapper d-flex")
+          div#sidebar2(class="settings-sidebar")
+            div(class="sidebar-inner slimscroll")
+              div#sidebar-menu5(class="sidebar-menu")
+                h4(class="fw-bold fs-18 mb-2 pb-2") Settings
+                ul
+                  li(class="submenu-open")
+                    ul
+                      li(class="submenu")
+                        a(href="javascript:void(0);")
+                          i(class="ti ti-settings fs-18")
+                          span(class="fs-14 fw-medium ms-2") General Settings
+                          span(class="menu-arrow")
+                        ul
+                          li
+                            a(href="general-settings.html") Profile
+                          li
+                            a(href="security-settings.html") Security
+                          li
+                            a(href="notification.html") Notifications
+                          li
+                            a(href="connected-apps.html") Connected Apps
+                      li(class="submenu")
+                        a(href="javascript:void(0);")
+                          i(class="ti ti-world fs-18")
+                          span(class="fs-14 fw-medium ms-2") Website Settings
+                          span(class="menu-arrow")
+                        ul
+                          li
+                            a(href="system-settings.html") System Settings
+                          li
+                            a(href="company-settings.html") Company Settings 
+                          li
+                            a(href="localization-settings.html") Localization
+                          li
+                            a(href="prefixes.html") Prefixes
+                          li
+                            a(href="preference.html") Preference
+                          li
+                            a(href="appearance.html") Appearance
+                          li
+                            a(href="social-authentication.html") Social Authentication
+                          li
+                            a(href="language-settings.html") Language
+                      li(class="submenu")
+                        a(href="javascript:void(0);")
+                          i(class="ti ti-device-mobile fs-18")
+                          span(class="fs-14 fw-medium ms-2") App Settings
+                          span(class="menu-arrow")
+                        ul
+                          li
+                            a(href="invoice-settings.html") Invoice Settings
+                          li
+                            a(href="invoice-templates.html") Invoice Templates
+                          li
+                            a(href="printer-settings.html") Printer 
+                          li
+                            a(href="pos-settings.html") POS
+                          li
+                            a(href="signatures.html") Signatures
+                          li
+                            a(href="custom-fields.html") Custom Fields
+                      li(class="submenu")
+                        a(href="javascript:void(0);")
+                          i(class="ti ti-device-desktop fs-18")
+                          span(class="fs-14 fw-medium ms-2") System Settings
+                          span(class="menu-arrow")
+                        ul
+                          li(class="submenu submenu-two")
+                            a(href="javascript:void(0);") Email
+                              span(class="menu-arrow inside-submenu")
+                            ul
+                              li
+                                a(href="email-settings.html") Email Settings
+                              li
+                                a(href="email-templates.html") Email Templates
+                          li(class="submenu submenu-two")
+                            a(href="javascript:void(0);") SMS
+                              span(class="menu-arrow inside-submenu")
+                            ul
+                              li
+                                a(href="sms-settings.html") SMS Settings
+                              li
+                                a(href="sms-templates.html") SMS Templates
+                          li
+                            a(href="otp-settings.html") OTP
+                          li
+                            a(href="gdpr-settings.html") GDPR Cookies
+                      li(class="submenu")
+                        a(href="javascript:void(0);")
+                          i(class="ti ti-settings-dollar fs-18")
+                          span(class="fs-14 fw-medium ms-2") Financial Settings
+                          span(class="menu-arrow")
+                        ul
+                          li
+                            a(href="payment-gateway-settings.html") Payment Gateway
+                          li
+                            a(href="bank-settings-grid.html") Bank Accounts 
+                          li
+                            a(href="tax-rates.html") Tax Rates
+                          li
+                            a(href="currency-settings.html") Currencies
+                      li(class="submenu")
+                        a(href="javascript:void(0);", class="active subdrop")
+                          i(class="ti ti-settings-2 fs-18")
+                          span(class="fs-14 fw-medium ms-2") Other Settings
+                          span(class="menu-arrow")
+                        ul
+                          li
+                            a(href="storage-settings.html") Storage
+                          li
+                            a(href="ban-ip-address.html", class="active") Ban IP Address 
+          div(class="card flex-fill mb-0 w-50")
+            div(class="card-header d-flex align-items-center")
+              h5(class="card-title flex-grow-1 mb-0") Ban IP Address
+              div(class="flex-shrink-0")
+                button(class="btn btn-primary add-btn", data-bs-toggle="modal", data-bs-target="#add-banip")
+                  i(class="ti ti-circle-plus me-1")
+                  | Add Ban IP Address
+            div(class="card-body p-0")
+              div(class="table-responsive")
+                table(class="table")
+                  thead(class="thead-light")
+                    tr
+                      th IP Address
+                      th Reason
+                      th Created On
+                      th(class="no-sort text-end")
+                  tbody
+                    tr
+                      td(class="text-gray-9 fw-medium") 211.11.0.25
+                      td
+                        p Suspicious Activity
+                      td 25 Apr 2025
+                      td(class="action-table-data justify-content-end")
+                        div(class="edit-delete-action")
+                          a(class="me-2 p-2", href="ban-ip-address.html#", data-bs-toggle="modal", data-bs-target="#edit-banip")
+                            i(data-feather="edit", class="feather-edit")
+                          a(data-bs-toggle="modal", data-bs-target="#delete-modal", class="p-2", href="javascript:void(0);")
+                            i(data-feather="trash-2", class="feather-trash-2")
+                    tr
+                      td(class="text-gray-9 fw-medium") 211.03.0.11
+                      td
+                        p Spam or Abuse
+                      td 18 Mar 2025
+                      td(class="action-table-data justify-content-end")
+                        div(class="edit-delete-action")
+                          a(class="me-2 p-2", href="ban-ip-address.html#", data-bs-toggle="modal", data-bs-target="#edit-banip")
+                            i(data-feather="edit", class="feather-edit")
+                          a(data-bs-toggle="modal", data-bs-target="#delete-modal", class="p-2", href="javascript:void(0);")
+                            i(data-feather="trash-2", class="feather-trash-2")
+                    tr
+                      td(class="text-gray-9 fw-medium") 211.24.0.17
+                      td
+                        p Unauthorized Access
+                      td 06 Feb 2025
+                      td(class="action-table-data justify-content-end")
+                        div(class="edit-delete-action")
+                          a(class="me-2 p-2", href="ban-ip-address.html#", data-bs-toggle="modal", data-bs-target="#edit-banip")
+                            i(data-feather="edit", class="feather-edit")
+                          a(data-bs-toggle="modal", data-bs-target="#delete-modal", class="p-2", href="javascript:void(0);")
+                            i(data-feather="trash-2", class="feather-trash-2")
+                    tr
+                      td(class="text-gray-9 fw-medium") 211.12.0.34
+                      td
+                        p Violation of Terms
+                      td 02 Jan 2025
+                      td(class="action-table-data justify-content-end")
+                        div(class="edit-delete-action")
+                          a(class="me-2 p-2", href="ban-ip-address.html#", data-bs-toggle="modal", data-bs-target="#edit-banip")
+                            i(data-feather="edit", class="feather-edit")
+                          a(data-bs-toggle="modal", data-bs-target="#delete-modal", class="p-2", href="javascript:void(0);")
+                            i(data-feather="trash-2", class="feather-trash-2")

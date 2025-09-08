@@ -1,10 +1,11 @@
-doctype html
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title 404 - Không tìm thấy trang
-  body
-    h1 404 - Không tìm thấy trang phía quản trị
-    p Vui lòng kiểm tra lại đường dẫn
-    a(href="/") Quay về trang chủ
+extends ../../layout/default.pug
+
+block main
+  div(class="error-box")
+    div(class="error-img")
+      img(src="/admin/assets/img/authentication/error-404.png", class="img-fluid", alt="Img")
+    h3(class="h2 mb-3") Oops, something went wrong
+    p
+      | Error 404 Page not found. Sorry the page you looking for
+      | doesn’t exist or has been moved
+    a(href="index.html", class="btn btn-primary") Back to Dashboard
