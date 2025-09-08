@@ -5,7 +5,6 @@
   "scripts": {
     "start": "nodemon index.ts",
     "build": "tsc && node fs-extra.js",
-    "vercel-build": "npm run scss:all && tsc",
     "scss": "sass --watch public/admin/assets/scss/main.scss:public/admin/assets/css/style.css",
     "scss:watch": "sass --watch public/admin/scss:public/admin/assets/css/bootstrap",
     "scss:all": "sass public/admin/assets/scss/main.scss:public/admin/assets/css/style.css && sass public/admin/scss:public/admin/assets/css/bootstrap",
