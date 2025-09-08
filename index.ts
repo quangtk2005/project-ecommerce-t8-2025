@@ -20,7 +20,7 @@ app.use("/admin", adminRouter);
 app.use(clientRouter);
 
 app.set("view engine", "pug");
-app.set("views", "views");
+app.set("views", `${__dirname}/views`);
 
 app.listen(port, () => {
     console.log(`Website đang chạy trên cổng ${port}`);
