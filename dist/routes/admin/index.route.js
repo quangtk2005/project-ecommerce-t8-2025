@@ -56,6 +56,8 @@ const giftCards_routes_1 = __importDefault(require("./giftCards.routes"));
 const purchase_routes_1 = __importDefault(require("./purchase.routes"));
 const purchase_return_routes_1 = __importDefault(require("./purchase-return.routes"));
 const setting_routes_1 = __importDefault(require("./setting.routes"));
+const account_admin_routes_1 = __importDefault(require("./account-admin.routes"));
+const roles_routes_1 = __importDefault(require("./roles.routes"));
 const adminMiddlewares = __importStar(require("../../middlewares/admin/middlewares"));
 router.use(adminMiddlewares.checkInternet);
 router.use("/dashboard", dashboard_route_1.default);
@@ -75,7 +77,9 @@ router.use("/coupons", coupons_routes_1.default);
 router.use("/gift-cards", giftCards_routes_1.default);
 router.use("/purchase", purchase_routes_1.default);
 router.use("/purchase-return", purchase_return_routes_1.default);
+router.use("/account", account_admin_routes_1.default);
 router.use("/setting", setting_routes_1.default);
+router.use("/role", roles_routes_1.default);
 router.all('{*splat}', (req, res) => {
     res.status(404).render("admin/pages/status/404");
 });

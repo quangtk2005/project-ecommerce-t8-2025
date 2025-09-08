@@ -4,4 +4,6 @@ const router = Router( { caseSensitive: true });
 
 router.get("", orderController.index);
 
+router.get("/return", orderController.index);
+
 export default router;

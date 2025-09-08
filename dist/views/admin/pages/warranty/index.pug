@@ -1,30 +1,22 @@
 extends ../../layout/default.pug
 
 block css
-  // animation CSS
+  //- animation CSS
   link(rel="stylesheet", href="/admin/assets/css/animate.css")
-  // Datetimepicker CSS
+  //- Datetimepicker CSS
   link(rel="stylesheet", href="/admin/assets/css/bootstrap-datetimepicker.min.css")
-  // Datatable CSS
+  //- Datatable CSS
   link(rel="stylesheet", href="/admin/assets/css/dataTables.bootstrap5.min.css")
-  // Tabler Icon CSS
-  link(rel="stylesheet", href="/admin/assets/plugins/tabler-icons/tabler-icons.min.css")
-  // Color Picker Css
-  link(rel="stylesheet", href="/admin/assets/plugins/@simonwep/pickr/themes/nano.min.css")
 
 block js
-  // Datatable JS
+  //- Datatable JS
   script(src="/admin/assets/js/jquery.dataTables.min.js")
   script(src="/admin/assets/js/dataTables.bootstrap5.min.js")
-  // Bootstrap Core JS
+  //- Bootstrap Core JS
   script(src="/admin/assets/js/bootstrap.bundle.min.js")
-  // Datetimepicker JS
+  //- Datetimepicker JS
   script(src="/admin/assets/js/moment.min.js")
   script(src="/admin/assets/js/bootstrap-datetimepicker.min.js")
-  // Color Picker JS
-  script(src="/admin/assets/plugins/@simonwep/pickr/pickr.es5.min.js")
-  // Custom JS
-  script(src="/admin/assets/js/theme-colorpicker.js")
 
 block main
   div(class="page-header")
@@ -49,7 +41,7 @@ block main
       a(href="warranty.html#", class="btn btn-primary", data-bs-toggle="modal", data-bs-target="#add-warranty")
         i(class="ti ti-circle-plus me-1")
         | Add Warranty
-  // /product list
+  //- /product list
   div(class="card")
     div(class="card-header d-flex align-items-center justify-content-between flex-wrap row-gap-3")
       div(class="search-set")

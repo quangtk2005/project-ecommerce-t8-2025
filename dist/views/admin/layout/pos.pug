@@ -4,11 +4,11 @@ html(lang="en")
   body(class="pos-page")
     div#global-loader
       div(class="whirly-loader")
-    // Main Wrapper
+    //- Main Wrapper
     div(class="main-wrapper pos-three pos-four")
-      // Header
+      //- Header
       div(class="header pos-header")
-        // Logo
+        //- Logo
         div(class="header-left active")
           a(href="index.html", class="logo logo-normal")
             img(src="/admin/assets/img/logo.svg", alt="Img")
@@ -17,25 +17,25 @@ html(lang="en")
             //- img(src="/admin/assets/img/logo-white.svg", alt="Img")
           a(href="index.html", class="logo-small")
             img(src="/admin/assets/img/logo-small.png", alt="Img")
-        // /Logo
+        //- /Logo
         a(id="mobile_btn", class="mobile_btn d-none", href="pos-5.html#sidebar")
           span(class="bar-icon")
             span
             span
             span
-        // Header Menu
+        //- Header Menu
         ul(class="nav user-menu")
-          // Search
+          //- Search
           li(class="nav-item time-nav")
             span(class="bg-teal text-white d-inline-flex align-items-center")
               img(src="/admin/assets/img/icons/clock-icon.svg", alt="img", class="me-2")
               | 09:25:32
-          // /Search
+          //- /Search
           li(class="nav-item pos-nav")
             a(href="index.html", class="btn btn-purple btn-md d-inline-flex align-items-center")
               i(class="ti ti-world me-1")
               | Dashboard
-          // Select Store
+          //- Select Store
           li(class="nav-item dropdown has-arrow main-drop select-store-dropdown")
             a(href="javascript:void(0);", class="dropdown-toggle nav-link select-store", data-bs-toggle="dropdown")
               span(class="user-info")
@@ -56,7 +56,7 @@ html(lang="en")
               a(href="javascript:void(0);", class="dropdown-item")
                 img(src="/admin/assets/img/store/store-04.png", alt="Store Logo", class="img-fluid")
                 | Grocery Eden
-          // /Select Store
+          //- /Select Store
           li(class="nav-item nav-item-box")
             a(href="pos-5.html#", data-bs-toggle="modal", data-bs-target="#calculator", class="bg-orange border-orange text-white")
               i(class="ti ti-calculator")
@@ -104,8 +104,8 @@ html(lang="en")
                 a(class="dropdown-item logout pb-0", href="signin.html")
                   img(src="/admin/assets/img/icons/log-out.svg", class="me-2", alt="img")
                   | Logout
-        // /Header Menu
-        // Mobile Menu
+        //- /Header Menu
+        //- Mobile Menu
         div(class="dropdown mobile-user-menu")
           a(href="javascript:void(0);", class="nav-link dropdown-toggle", data-bs-toggle="dropdown", aria-expanded="false")
             i(class="fa fa-ellipsis-v")
@@ -113,14 +113,14 @@ html(lang="en")
             a(class="dropdown-item", href="profile.html") My Profile
             a(class="dropdown-item", href="general-settings.html") Settings
             a(class="dropdown-item", href="signin.html") Logout
-        // /Mobile Menu
-      // Header
+        //- /Mobile Menu
+      //- Header
       div(class="page-wrapper pos-pg-wrapper ms-0")
         div(class="content pos-design p-0")
           block main
 
-    // /Main Wrapper
-    // Payment Completed
+    //- /Main Wrapper
+    //- Payment Completed
     div#payment-completed(class="modal fade modal-default", aria-labelledby="payment-completed")
       div(class="modal-dialog modal-dialog-centered")
         div(class="modal-content")
@@ -135,8 +135,8 @@ html(lang="en")
                   button(type="button", class="btn btn-md btn-secondary", data-bs-toggle="modal", data-bs-target="#print-receipt") Print Receipt
                     i(class="feather-arrow-right-circle icon-me-5")
                   button(type="submit", class="btn btn-md btn-primary") Next Order
-    // /Payment Completed
-    // Print Receipt
+    //- /Payment Completed
+    //- Print Receipt
     div#print-receipt(class="modal fade modal-default", aria-labelledby="print-receipt")
       div(class="modal-dialog modal-dialog-centered")
         div(class="modal-content")
@@ -222,8 +222,8 @@ html(lang="en")
               p(class="text-dark fw-bold") Sale 31
               p Thank You For Shopping With Us. Please Come Again
               a(href="javascript:void(0);", class="btn btn-md btn-primary") Print Receipt
-    // /Print Receipt
-    // Products
+    //- /Print Receipt
+    //- Products
     div#products(class="modal fade modal-default pos-modal", aria-labelledby="products")
       div(class="modal-dialog modal-dialog-centered")
         div(class="modal-content")
@@ -257,7 +257,7 @@ html(lang="en")
                           a(href="javascript:void(0);") Iphone 11S
                         p Quantity : 04
                     p(class="text-teal fw-bold") $3000
-    // /Products
+    //- /Products
     div#create(class="modal fade", tabindex="-1", aria-labelledby="create", aria-hidden="true")
       div(class="modal-dialog modal-lg modal-dialog-centered", role="document")
         div(class="modal-content")
@@ -297,7 +297,7 @@ html(lang="en")
             div(class="modal-footer d-flex justify-content-end gap-2 flex-wrap")
               button(type="button", class="btn btn-md btn-secondary", data-bs-dismiss="modal") Cancel
               button(type="submit", class="btn btn-md btn-primary") Submit
-    // Hold
+    //- Hold
     div#hold-order(class="modal fade modal-default pos-modal", aria-labelledby="hold-order")
       div(class="modal-dialog modal-dialog-centered")
         div(class="modal-content")
@@ -317,8 +317,8 @@ html(lang="en")
             div(class="modal-footer d-flex justify-content-end gap-2")
               button(type="button", class="btn btn-md btn-secondary", data-bs-dismiss="modal") Cancel
               button(type="submit", class="btn btn-md btn-primary") Confirm
-    // /Hold
-    // Edit Product
+    //- /Hold
+    //- Edit Product
     div#edit-product(class="modal fade modal-default pos-modal", aria-labelledby="edit-product")
       div(class="modal-dialog modal-dialog-centered")
         div(class="modal-content")
@@ -379,8 +379,8 @@ html(lang="en")
             div(class="modal-footer d-flex justify-content-end flex-wrap gap-2")
               button(type="button", class="btn btn-md btn-secondary", data-bs-dismiss="modal") Cancel
               button(type="submit", class="btn btn-md btn-primary") Submit
-    // /Edit Product
-    // Delete Product
+    //- /Edit Product
+    //- Delete Product
     div#delete(class="modal fade modal-default", aria-labelledby="payment-completed")
       div(class="modal-dialog modal-dialog-centered")
         div(class="modal-content")
@@ -395,8 +395,8 @@ html(lang="en")
                 div(class="d-flex align-items-center justify-content-center gap-2 flex-wrap")
                   button(type="button", class="btn btn-md btn-secondary", data-bs-dismiss="modal") No, Cancel
                   button(type="submit", class="btn btn-md btn-primary") Yes, Delete
-    // /Delete Product
-    // Reset
+    //- /Delete Product
+    //- Reset
     div#reset(class="modal fade modal-default", aria-labelledby="payment-completed")
       div(class="modal-dialog modal-dialog-centered")
         div(class="modal-content")
@@ -410,8 +410,8 @@ html(lang="en")
                 div(class="d-flex align-items-center justify-content-center gap-2 flex-wrap")
                   button(type="button", class="btn btn-md btn-secondary", data-bs-dismiss="modal") No, Cancel
                   button(type="submit", class="btn btn-md btn-primary") Yes, Proceed
-    // /Reset
-    // Recent Transactions
+    //- /Reset
+    //- Recent Transactions
     div#recents(class="modal fade pos-modal", tabindex="-1", aria-hidden="true")
       div(class="modal-dialog modal-lg modal-dialog-centered", role="document")
         div(class="modal-content")
@@ -966,8 +966,8 @@ html(lang="en")
                                     i(data-feather="edit", class="feather-edit")
                                   a(class="p-2", href="javascript:void(0);")
                                     i(data-feather="trash-2", class="feather-trash-2")
-    // /Recent Transactions
-    // Orders
+    //- /Recent Transactions
+    //- Orders
     div#orders(class="modal fade pos-modal", tabindex="-1", aria-hidden="true")
       div(class="modal-dialog modal-md modal-dialog-centered", role="document")
         div(class="modal-content")
@@ -1130,8 +1130,8 @@ html(lang="en")
                             p(class="fs-15")
                               span(class="fs-14 fw-bold text-gray-9") Date :
                               | 23 Dec 2024 13:39:11
-    // /Orders
-    // Order Tax
+    //- /Orders
+    //- Order Tax
     div#order-tax(class="modal fade modal-default")
       div(class="modal-dialog modal-dialog-centered")
         div(class="modal-content")
@@ -1154,8 +1154,8 @@ html(lang="en")
             div(class="modal-footer d-flex justify-content-end flex-wrap gap-2")
               button(type="button", class="btn btn-md btn-secondary", data-bs-dismiss="modal") Cancel
               button(type="submit", class="btn btn-md btn-primary") Submit
-    // /Order Tax
-    // Shipping Cost
+    //- /Order Tax
+    //- Shipping Cost
     div#shipping-cost(class="modal fade modal-default")
       div(class="modal-dialog modal-dialog-centered")
         div(class="modal-content")
@@ -1172,8 +1172,8 @@ html(lang="en")
             div(class="modal-footer d-flex justify-content-end flex-wrap gap-2")
               button(type="button", class="btn btn-md btn-secondary", data-bs-dismiss="modal") Cancel
               button(type="submit", class="btn btn-md btn-primary") Submit
-    // /Shipping Cost
-    // Coupon Code
+    //- /Shipping Cost
+    //- Coupon Code
     div#coupon-code(class="modal fade modal-default")
       div(class="modal-dialog modal-dialog-centered")
         div(class="modal-content")
@@ -1195,8 +1195,8 @@ html(lang="en")
             div(class="modal-footer d-flex justify-content-end flex-wrap gap-2")
               button(type="button", class="btn btn-md btn-secondary", data-bs-dismiss="modal") Cancel
               button(type="submit", class="btn btn-md btn-primary") Submit
-    // /Coupon Code
-    // Discount
+    //- /Coupon Code
+    //- Discount
     div#discount(class="modal fade modal-default")
       div(class="modal-dialog modal-dialog-centered")
         div(class="modal-content")
@@ -1220,8 +1220,8 @@ html(lang="en")
             div(class="modal-footer d-flex justify-content-end flex-wrap gap-2")
               button(type="button", class="btn btn-md btn-secondary", data-bs-dismiss="modal") Cancel
               button(type="submit", class="btn btn-md btn-primary") Submit
-    // /Discount
-    // Payment Cash
+    //- /Discount
+    //- Payment Cash
     div#payment-cash(class="modal fade modal-default")
       div(class="modal-dialog modal-dialog-centered modal-lg")
         div(class="modal-content")
@@ -1313,8 +1313,8 @@ html(lang="en")
             div(class="modal-footer d-flex justify-content-end flex-wrap gap-2")
               button(type="button", class="btn btn-md btn-secondary", data-bs-dismiss="modal") Cancel
               button(type="submit", class="btn btn-md btn-primary") Submit
-    // /Payment Cash
-    // Payment Card
+    //- /Payment Cash
+    //- Payment Card
     div#payment-card(class="modal fade modal-default")
       div(class="modal-dialog modal-dialog-centered modal-lg")
         div(class="modal-content")
@@ -1406,8 +1406,8 @@ html(lang="en")
             div(class="modal-footer d-flex justify-content-end flex-wrap gap-2")
               button(type="button", class="btn btn-md btn-secondary", data-bs-dismiss="modal") Cancel
               button(type="submit", class="btn btn-md btn-primary") Submit
-    // /Payment Card
-    // Payment Cheque
+    //- /Payment Card
+    //- Payment Cheque
     div#payment-cheque(class="modal fade modal-default")
       div(class="modal-dialog modal-dialog-centered modal-lg")
         div(class="modal-content")
@@ -1499,8 +1499,8 @@ html(lang="en")
             div(class="modal-footer d-flex justify-content-end flex-wrap gap-2")
               button(type="button", class="btn btn-md btn-secondary", data-bs-dismiss="modal") Cancel
               button(type="submit", class="btn btn-md btn-primary") Submit
-    // /Payment Cheque
-    // Payment Deposit
+    //- /Payment Cheque
+    //- Payment Deposit
     div#payment-deposit(class="modal fade modal-default")
       div(class="modal-dialog modal-dialog-centered modal-lg")
         div(class="modal-content")
@@ -1592,8 +1592,8 @@ html(lang="en")
             div(class="modal-footer d-flex justify-content-end flex-wrap gap-2")
               button(type="button", class="btn btn-md btn-secondary", data-bs-dismiss="modal") Cancel
               button(type="submit", class="btn btn-md btn-primary") Submit
-    // /Payment Deposit
-    // Payment Point
+    //- /Payment Deposit
+    //- Payment Point
     div#payment-points(class="modal fade modal-default")
       div(class="modal-dialog modal-dialog-centered modal-lg")
         div(class="modal-content")
@@ -1685,8 +1685,8 @@ html(lang="en")
             div(class="modal-footer d-flex justify-content-end flex-wrap gap-2")
               button(type="button", class="btn btn-md btn-secondary", data-bs-dismiss="modal") Cancel
               button(type="submit", class="btn btn-md btn-primary") Submit
-    // /Payment Point
-    // Calculator
+    //- /Payment Point
+    //- Calculator
     div#calculator(class="modal fade pos-modal", tabindex="-1", aria-hidden="true")
       div(class="modal-dialog modal-md modal-dialog-centered", role="document")
         div(class="modal-content")
@@ -1725,8 +1725,8 @@ html(lang="en")
                   button(class="btn btn-expression", onclick="if (!window.__cfRLUnblockHandlers) return false; dis('-')", data-cf-modified-29734735067a81becd7484e5-="") -
                   button(class="btn btn-expression", onclick="if (!window.__cfRLUnblockHandlers) return false; dis('+')", data-cf-modified-29734735067a81becd7484e5-="") +
                   button(class="btn btn-clear", onclick="if (!window.__cfRLUnblockHandlers) return false; solve()", data-cf-modified-29734735067a81becd7484e5-="") =
-    // /Calculator
-    // Cash Register Details
+    //- /Calculator
+    //- Cash Register Details
     div#cash-register(class="modal fade pos-modal", tabindex="-1", aria-hidden="true")
       div(class="modal-dialog modal-md modal-dialog-centered", role="document")
         div(class="modal-content")
@@ -1760,8 +1760,8 @@ html(lang="en")
                   td(class="text-gray-9 fw-bold text-end bg-secondary-transparent") $587130.97
           div(class="modal-footer d-flex justify-content-end gap-2 flex-wrap")
             button(type="button", class="btn btn-md btn-primary", data-bs-dismiss="modal") Cancel
-    // /Cash Register Details
-    // Today's Sale
+    //- /Cash Register Details
+    //- Today's Sale
     div#today-sale(class="modal fade pos-modal", tabindex="-1", aria-hidden="true")
       div(class="modal-dialog modal-md modal-dialog-centered", role="document")
         div(class="modal-content")
@@ -1813,8 +1813,8 @@ html(lang="en")
                   td(class="text-gray-9 fw-bold text-end bg-secondary-transparent") $587130.97
           div(class="modal-footer d-flex justify-content-end gap-2 flex-wrap")
             button(type="button", class="btn btn-md btn-primary", data-bs-dismiss="modal") Cancel
-    // /Today's Sale
-    // Today's Profit
+    //- /Today's Sale
+    //- Today's Profit
     div#today-profit(class="modal fade pos-modal", tabindex="-1", aria-hidden="true")
       div(class="modal-dialog modal-md modal-dialog-centered", role="document")
         div(class="modal-content")
@@ -1879,7 +1879,7 @@ html(lang="en")
                   td(class="text-gray-9 fw-bold text-end bg-secondary-transparent") $587130.97
           div(class="modal-footer d-flex justify-content-end gap-2 flex-wrap")
             button(type="button", class="btn btn-md btn-primary", data-bs-dismiss="modal") Cancel
-    // /Today's Profit
+    //- /Today's Profit
     
     
     include ./js.pug

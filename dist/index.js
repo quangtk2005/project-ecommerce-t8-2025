@@ -37,12 +37,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
+require("dotenv/config");
 const index_route_1 = __importDefault(require("./routes/client/index.route"));
 const index_route_2 = __importDefault(require("./routes/admin/index.route"));
-require("dotenv/config");
 const databaseConnect = __importStar(require("./configs/mongodb.connect"));
 const app = (0, express_1.default)();
-const port = process.env.PORT || 3000;
+const port = parseInt(process.env.PORT) || 3000;
 databaseConnect.mongodbConnect();
 app.use((req, res, next) => {
     if (req.url) {

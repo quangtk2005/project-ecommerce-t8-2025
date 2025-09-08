@@ -16300,6 +16300,11 @@ div#global-loader {
   z-index: 999999;
   width: 100%;
   height: 100vh;
+  visibility: visible;
+  animation: fadeInLoader 0.5s ease-in-out;
+}
+div#global-loader.fade-out {
+  animation: fadeOutLoader 0.5s ease-in-out forwards;
 }
 div#global-loader .whirly-loader:not(:required) {
   animation: whirly-loader 1.25s linear infinite;
@@ -16340,6 +16345,26 @@ div#global-loader .whirly-loader:not(:required) {
   to {
     -webkit-transform: rotate(1turn);
     transform: rotate(1turn);
+  }
+}
+@keyframes fadeInLoader {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 0.9;
+    visibility: visible;
+  }
+}
+@keyframes fadeOutLoader {
+  0% {
+    opacity: 0.9;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 .sidebar, .settings-sidebar {

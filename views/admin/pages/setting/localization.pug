@@ -1,35 +1,27 @@
 extends ../../layout/default.pug
 
 block css
-  // animation CSS
+  //- animation CSS
   link(rel="stylesheet", href="/admin/assets/css/animate.css")
-  // Quill CSS
+  //- Quill CSS
   link(rel="stylesheet", href="/admin/assets/plugins/quill/quill.snow.css")
-  // Datetimepicker CSS
+  //- Datetimepicker CSS
   link(rel="stylesheet", href="/admin/assets/css/bootstrap-datetimepicker.min.css")
-  // Datatable CSS
+  //- Datatable CSS
   link(rel="stylesheet", href="/admin/assets/css/dataTables.bootstrap5.min.css")
-  // Tabler Icon CSS
-  link(rel="stylesheet", href="/admin/assets/plugins/tabler-icons/tabler-icons.min.css")
-  // Color Picker Css
-  link(rel="stylesheet", href="/admin/assets/plugins/@simonwep/pickr/themes/nano.min.css")
 
 block js
-  // Datatable JS
+  //- Datatable JS
   script(src="/admin/assets/js/jquery.dataTables.min.js")
   script(src="/admin/assets/js/dataTables.bootstrap5.min.js")
-  // Datetimepicker JS
+  //- Datetimepicker JS
   script(src="/admin/assets/js/moment.min.js")
   script(src="/admin/assets/js/bootstrap-datetimepicker.min.js")
-  // Quill JS
+  //- Quill JS
   script(src="/admin/assets/plugins/quill/quill.min.js")
-  // Sticky-sidebar
+  //- Sticky-sidebar
   script(src="/admin/assets/plugins/theia-sticky-sidebar/ResizeSensor.js")
   script(src="/admin/assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js")
-  // Color Picker JS
-  script(src="/admin/assets/plugins/@simonwep/pickr/pickr.es5.min.js")
-  // Custom JS
-  script(src="/admin/assets/js/theme-colorpicker.js")
 
 block main
   div(class="settings-content")
@@ -48,119 +40,7 @@ block main
     div(class="row")
       div(class="col-xl-12")
         div(class="settings-wrapper d-flex")
-          div#sidebar2(class="settings-sidebar")
-            div(class="sidebar-inner slimscroll")
-              div#sidebar-menu5(class="sidebar-menu")
-                h4(class="fw-bold fs-18 mb-2 pb-2") Settings
-                ul
-                  li(class="submenu-open")
-                    ul
-                      li(class="submenu")
-                        a(href="javascript:void(0);")
-                          i(class="ti ti-settings fs-18")
-                          span(class="fs-14 fw-medium ms-2") General Settings
-                          span(class="menu-arrow")
-                        ul
-                          li
-                            a(href="general-settings.html") Profile
-                          li
-                            a(href="security-settings.html") Security
-                          li
-                            a(href="notification.html") Notifications
-                          li
-                            a(href="connected-apps.html") Connected Apps
-                      li(class="submenu")
-                        a(href="javascript:void(0);", class="active subdrop")
-                          i(class="ti ti-world fs-18")
-                          span(class="fs-14 fw-medium ms-2") Website Settings
-                          span(class="menu-arrow")
-                        ul
-                          li
-                            a(href="system-settings.html") System Settings
-                          li
-                            a(href="company-settings.html") Company Settings 
-                          li
-                            a(href="localization-settings.html", class="active") Localization
-                          li
-                            a(href="prefixes.html") Prefixes
-                          li
-                            a(href="preference.html") Preference
-                          li
-                            a(href="appearance.html") Appearance
-                          li
-                            a(href="social-authentication.html") Social Authentication
-                          li
-                            a(href="language-settings.html") Language
-                      li(class="submenu")
-                        a(href="javascript:void(0);")
-                          i(class="ti ti-device-mobile fs-18")
-                          span(class="fs-14 fw-medium ms-2") App Settings
-                          span(class="menu-arrow")
-                        ul
-                          li
-                            a(href="invoice-settings.html") Invoice Settings
-                          li
-                            a(href="invoice-templates.html") Invoice Templates
-                          li
-                            a(href="printer-settings.html") Printer 
-                          li
-                            a(href="pos-settings.html") POS
-                          li
-                            a(href="signatures.html") Signatures
-                          li
-                            a(href="custom-fields.html") Custom Fields
-                      li(class="submenu")
-                        a(href="javascript:void(0);")
-                          i(class="ti ti-device-desktop fs-18")
-                          span(class="fs-14 fw-medium ms-2") System Settings
-                          span(class="menu-arrow")
-                        ul
-                          li(class="submenu submenu-two")
-                            a(href="javascript:void(0);") Email
-                              span(class="menu-arrow inside-submenu")
-                            ul
-                              li
-                                a(href="email-settings.html") Email Settings
-                              li
-                                a(href="email-templates.html") Email Templates
-                          li(class="submenu submenu-two")
-                            a(href="javascript:void(0);") SMS
-                              span(class="menu-arrow inside-submenu")
-                            ul
-                              li
-                                a(href="sms-settings.html") SMS Settings
-                              li
-                                a(href="sms-templates.html") SMS Templates
-                          li
-                            a(href="sms-settings.html") SMS Gateways
-                          li
-                            a(href="otp-settings.html") OTP
-                          li
-                            a(href="gdpr-settings.html") GDPR Cookies
-                      li(class="submenu")
-                        a(href="javascript:void(0);")
-                          i(class="ti ti-settings-dollar fs-18")
-                          span(class="fs-14 fw-medium ms-2") Financial Settings
-                          span(class="menu-arrow")
-                        ul
-                          li
-                            a(href="payment-gateway-settings.html") Payment Gateway
-                          li
-                            a(href="bank-settings-grid.html") Bank Accounts 
-                          li
-                            a(href="tax-rates.html") Tax Rates
-                          li
-                            a(href="currency-settings.html") Currencies
-                      li(class="submenu")
-                        a(href="javascript:void(0);")
-                          i(class="ti ti-settings-2 fs-18")
-                          span(class="fs-14 fw-medium ms-2") Other Settings
-                          span(class="menu-arrow")
-                        ul
-                          li
-                            a(href="storage-settings.html") Storage
-                          li
-                            a(href="ban-ip-address.html") Ban IP Address 
+          include ./partials/sidebar2.pug
           div(class="card flex-fill mb-0")
             div(class="card-header")
               h4(class="fs-18 fw-bold") Localization

@@ -1,41 +1,28 @@
 extends ../../layout/default.pug
 
 block css
-  // Datetimepicker CSS
+  //- Datetimepicker CSS
   link(rel="stylesheet", href="/admin/assets/css/bootstrap-datetimepicker.min.css")
-  // animation CSS
+  //- animation CSS
   link(rel="stylesheet", href="/admin/assets/css/animate.css")
-  // Feathericon CSS
-  link(rel="stylesheet", href="/admin/assets/css/feather.css")
-  // Quill CSS
+  //- Quill CSS
   link(rel="stylesheet", href="/admin/assets/plugins/quill/quill.snow.css")
-  // Bootstrap Tagsinput CSS
+  //- Bootstrap Tagsinput CSS
   link(rel="stylesheet", href="/admin/assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css")
-  // Datatable CSS
+  //- Datatable CSS
   link(rel="stylesheet", href="/admin/assets/css/dataTables.bootstrap5.min.css")
-  // Fontawesome CSS
-  link(rel="stylesheet", href="/admin/assets/plugins/fontawesome/css/fontawesome.min.css")
-  link(rel="stylesheet", href="/admin/assets/plugins/fontawesome/css/all.min.css")
-  // Tabler Icon CSS
-  link(rel="stylesheet", href="/admin/assets/plugins/tabler-icons/tabler-icons.min.css")
-  // Color Picker Css
-  link(rel="stylesheet", href="/admin/assets/plugins/%40simonwep/pickr/themes/nano.min.css")
 
 block js
-  // Datatable JS
+  //- Datatable JS
   script(src="/admin/assets/js/jquery.dataTables.min.js")
   script(src="/admin/assets/js/dataTables.bootstrap5.min.js")
-  // Quill JS
+  //- Quill JS
   script(src="/admin/assets/plugins/quill/quill.min.js")
-  // Datetimepicker JS
+  //- Datetimepicker JS
   script(src="/admin/assets/js/moment.min.js")
   script(src="/admin/assets/js/bootstrap-datetimepicker.min.js")
-  // Bootstrap Tagsinput JS
+  //- Bootstrap Tagsinput JS
   script(src="/admin/assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js")
-  // Color Picker JS
-  script(src="/admin/assets/plugins/%40simonwep/pickr/pickr.es5.min.js")
-  // Custom JS
-  script(src="/admin/assets/js/theme-colorpicker.js")
 
 
 block main
@@ -218,13 +205,13 @@ block main
                     input(type="text", class="form-control list")
                     button(type="submit", class="btn btn-primaryadd")
                       | Generate
-              // Editor
+              //- Editor
               div(class="col-lg-12")
                 div(class="summer-description-box")
                   label(class="form-label") Description
                   div(class="editor pages-editor")
                   p(class="fs-14 mt-1") Maximum 60 Words
-              // /Editor
+              //- /Editor
         div(class="accordion-item border mb-4")
           h2#headingSpacingTwo(class="accordion-header")
             div(class="accordion-button collapsed bg-white", data-bs-toggle="collapse", data-bs-target="#SpacingTwo", aria-expanded="true", aria-controls="SpacingTwo")

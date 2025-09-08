@@ -1,31 +1,23 @@
 extends ../../layout/default.pug
 
 block css
-  // Datetimepicker CSS
+  //- Datetimepicker CSS
   link(rel="stylesheet", href="/admin/assets/css/bootstrap-datetimepicker.min.css")
-  // animation CSS
+  //- animation CSS
   link(rel="stylesheet", href="/admin/assets/css/animate.css")
-  // Daterangepikcer CSS
+  //- Daterangepikcer CSS
   link(rel="stylesheet", href="/admin/assets/plugins/daterangepicker/daterangepicker.css")
-  // Tabler Icon CSS
-  link(rel="stylesheet", href="/admin/assets/plugins/tabler-icons/tabler-icons.min.css")
-  // Color Picker Css
-  link(rel="stylesheet", href="/admin/assets/plugins/@simonwep/pickr/themes/nano.min.css")
 
 block js
-  // ApexChart JS
+  //- ApexChart JS
   script(src="/admin/assets/plugins/apexchart/apexcharts.min.js")
   script(src="/admin/assets/plugins/apexchart/chart-data.js")
-  // Chart JS
+  //- Chart JS
   script(src="/admin/assets/plugins/chartjs/chart.min.js")
   script(src="/admin/assets/plugins/chartjs/chart-data.js")
-  // Daterangepikcer JS
+  //- Daterangepikcer JS
   script(src="/admin/assets/js/moment.min.js")
   script(src="/admin/assets/plugins/daterangepicker/daterangepicker.js")
-  // Color Picker JS
-  script(src="/admin/assets/plugins/@simonwep/pickr/pickr.es5.min.js")
-  // Custom JS
-  script(src="/admin/assets/js/theme-colorpicker.js")
 
 
 block main
@@ -99,7 +91,7 @@ block main
                 i(class="ti ti-arrow-up me-1")
                 | +22%
   div(class="row")
-    // Profit
+    //- Profit
     div(class="col-xl-3 col-sm-6 col-12 d-flex")
       div(class="card revenue-widget flex-fill")
         div(class="card-body")
@@ -114,8 +106,8 @@ block main
               span(class="fs-13 fw-bold text-success") +35%
               | vs Last Month
             a(href="profit-and-loss.html", class="text-decoration-underline fs-13 fw-medium") View All
-    // /Profit
-    // Invoice
+    //- /Profit
+    //- Invoice
     div(class="col-xl-3 col-sm-6 col-12 d-flex")
       div(class="card revenue-widget flex-fill")
         div(class="card-body")
@@ -130,8 +122,8 @@ block main
               span(class="fs-13 fw-bold text-success") +35%
               | vs Last Month
             a(href="invoice-report.html", class="text-decoration-underline fs-13 fw-medium") View All
-    // /Invoice
-    // Expenses
+    //- /Invoice
+    //- Expenses
     div(class="col-xl-3 col-sm-6 col-12 d-flex")
       div(class="card revenue-widget flex-fill")
         div(class="card-body")
@@ -146,8 +138,8 @@ block main
               span(class="fs-13 fw-bold text-success") +41%
               | vs Last Month
             a(href="expense-list.html", class="text-decoration-underline fs-13 fw-medium") View All
-    // /Expenses
-    // Returns
+    //- /Expenses
+    //- Returns
     div(class="col-xl-3 col-sm-6 col-12 d-flex")
       div(class="card revenue-widget flex-fill")
         div(class="card-body")
@@ -162,9 +154,9 @@ block main
               span(class="fs-13 fw-bold text-danger") -20%
               | vs Last Month
             a(href="sales-report.html", class="text-decoration-underline fs-13 fw-medium") View All
-    // /Returns
+    //- /Returns
   div(class="row")
-    // Sales & Purchase
+    //- Sales & Purchase
     div(class="col-xxl-8 col-xl-7 col-sm-12 col-12 d-flex")
       div(class="card flex-fill")
         div(class="card-header d-flex justify-content-between align-items-center")
@@ -193,8 +185,8 @@ block main
                   | Total Sales
                 h4 1K
             div#sales-daychart
-    // /Sales & Purchase
-    // Top Selling Products
+    //- /Sales & Purchase
+    //- Top Selling Products
     div(class="col-xxl-4 col-xl-5 d-flex")
       div(class="card flex-fill")
         div(class="card-header")
@@ -256,7 +248,7 @@ block main
                       i(class="ti ti-arrow-up-left me-1")
                       | 21%
   div(class="row")
-    // Top Selling Products
+    //- Top Selling Products
     div(class="col-xxl-4 col-md-6 d-flex")
       div(class="card flex-fill")
         div(class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3")
@@ -341,8 +333,8 @@ block main
             span(class="badge bg-outline-success badge-xs d-inline-flex align-items-center")
               i(class="ti ti-arrow-up-left me-1")
               | 25%
-    // /Top Selling Products
-    // Low Stock Products
+    //- /Top Selling Products
+    //- Low Stock Products
     div(class="col-xxl-4 col-md-6 d-flex")
       div(class="card flex-fill")
         div(class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3")
@@ -407,8 +399,8 @@ block main
             div(class="text-end")
               p(class="fs-13 mb-1") Instock
               h6(class="text-orange fw-medium") 10
-    // /Low Stock Products
-    // Recent Sales
+    //- /Low Stock Products
+    //- Recent Sales
     div(class="col-xxl-4 col-md-12 d-flex")
       div(class="card flex-fill")
         div(class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3")
@@ -503,9 +495,9 @@ block main
               span(class="badge badge-success badge-xs d-inline-flex align-items-center")
                 i(class="ti ti-circle-filled fs-5 me-1")
                 | Completed
-    // /Recent Sales
+    //- /Recent Sales
   div(class="row")
-    // Sales Statics
+    //- Sales Statics
     div(class="col-xl-6 col-sm-12 col-12 d-flex")
       div(class="card flex-fill")
         div(class="card-header d-flex justify-content-between align-items-center")
@@ -539,8 +531,8 @@ block main
                   | 25%
               p Expense
           div#sales-statistics
-    // /Sales Statics
-    // Recent Transactions
+    //- /Sales Statics
+    //- Recent Transactions
     div(class="col-xl-6 col-sm-12 col-12 d-flex")
       div(class="card flex-fill")
         div(class="card-header d-flex align-items-center justify-content-between flex-wrap gap-3")
@@ -955,9 +947,9 @@ block main
                           i(class="ti ti-circle-filled fs-5 me-1")
                           | Paid
                       td(class="text-gray-9") $1000
-    // /Recent Transactions
+    //- /Recent Transactions
   div(class="row")
-    // Top Customers
+    //- Top Customers
     div(class="col-xxl-4 col-md-6 d-flex")
       div(class="card flex-fill")
         div(class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3")
@@ -1037,8 +1029,8 @@ block main
                   p 14 Orders
             div(class="text-end")
               h5 $3,5698
-    // /Top Customers
-    // Top Categories
+    //- /Top Customers
+    //- Top Categories
     div(class="col-xxl-4 col-md-6 d-flex")
       div(class="card flex-fill")
         div(class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3")
@@ -1086,8 +1078,8 @@ block main
                 i(class="ti ti-square-rounded-filled text-orange fs-8 me-2")
                 | Total Number Of Products
               h5 7899
-    // /Top Categories
-    // Order Statistics
+    //- /Top Categories
+    //- Order Statistics
     div(class="col-xxl-4 col-md-12 d-flex")
       div(class="card flex-fill")
         div(class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3")
@@ -1108,4 +1100,4 @@ block main
                 a(href="javascript:void(0);", class="dropdown-item") Monthly
         div(class="card-body pb-0")
           div(id="heat_chart")
-    // /Order Statistics
+    //- /Order Statistics

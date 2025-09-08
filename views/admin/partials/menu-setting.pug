@@ -1,0 +1,111 @@
+ul
+  li(class="submenu")
+    a(href="javascript:void(0);")
+      i(class="ti ti-settings fs-16 me-2")
+      span Cài đặt chung
+      span(class="menu-arrow")
+    ul
+      li
+        a(href=`${prefixAdmin}/setting/general`) Hồ sơ
+      li
+        a(href=`${prefixAdmin}/setting/security`) Bảo mật
+      li
+        a(href=`${prefixAdmin}/setting/notification`) Thông báo
+      li
+        a(href=`${prefixAdmin}/setting/connected-apps`) Ứng dụng kết nối
+  li(class="submenu")
+    a(href="javascript:void(0);")
+      i(class="ti ti-world fs-16 me-2")
+      span Cài đặt website
+      span(class="menu-arrow")
+    ul
+      li
+        a(href=`${prefixAdmin}/setting/system`) Cài đặt hệ thống
+      li
+        a(href=`${prefixAdmin}/setting/company`) Thông tin Website
+      li
+        a(href=`${prefixAdmin}/setting/localization`) Bản địa hóa
+      li
+        a(href=`${prefixAdmin}/setting/prefixes`) Tiền tố
+      li
+        a(href=`${prefixAdmin}/setting/preference`) Tùy chọn
+      li
+        a(href=`${prefixAdmin}/setting/appearance`) Giao diện
+      li
+        a(href=`${prefixAdmin}/setting/social-authentication`) Xác thực xã hội
+      li
+        a(href=`${prefixAdmin}/setting/language`) Ngôn ngữ
+  li(class="submenu")
+    a(href="javascript:void(0);")
+      i(class="ti ti-device-mobile fs-16 me-2")
+      span Cài đặt ứng dụng
+      span(class="menu-arrow")
+    ul
+      li(class="submenu submenu-two")
+        a(href="javascript:void(0);") Hóa đơn
+          span(class="menu-arrow inside-submenu")
+        ul
+          li
+            a(href=`${prefixAdmin}/setting/invoice`) Cài đặt hóa đơn
+          li
+            a(href=`${prefixAdmin}/setting/invoice-templates`) Mẫu hóa đơn
+      li
+        a(href=`${prefixAdmin}/setting/printer`) Máy in
+      li
+        a(href=`${prefixAdmin}/setting/pos`) POS
+      li
+        a(href=`${prefixAdmin}/setting/custom-fields`) Trường tùy chỉnh
+  li(class="submenu")
+    a(href="javascript:void(0);")
+      i(class="ti ti-device-desktop fs-16 me-2")
+      span Cài đặt hệ thống
+      span(class="menu-arrow")
+    ul
+      li(class="submenu submenu-two")
+        a(href="javascript:void(0);") Email
+          span(class="menu-arrow inside-submenu")
+        ul
+          li
+            a(href=`${prefixAdmin}/setting/email`) Cài đặt Email
+          li
+            a(href=`${prefixAdmin}/setting/email-templates`) Mẫu Email
+      li(class="submenu submenu-two")
+        a(href="javascript:void(0);") SMS
+          span(class="menu-arrow inside-submenu")
+        ul
+          li
+            a(href=`${prefixAdmin}/setting/sms`) Cài đặt SMS
+          li
+            a(href=`${prefixAdmin}/setting/sms-templates`) Mẫu SMS
+      li
+        a(href=`${prefixAdmin}/setting/otp`) OTP
+      li
+        a(href=`${prefixAdmin}/setting/gdpr`) Cookie GDPR
+  li(class="submenu")
+    a(href="javascript:void(0);")
+      i(class="ti ti-settings-dollar fs-16 me-2")
+      span Cài đặt tài chính
+      span(class="menu-arrow")
+    ul
+      li
+        a(href=`${prefixAdmin}/setting/payment-gateway`) Cổng thanh toán
+      li
+        a(href=`${prefixAdmin}/setting/bank`) Tài khoản ngân hàng
+      li
+        a(href=`${prefixAdmin}/setting/tax-rates`) Thuế suất
+      li
+        a(href=`${prefixAdmin}/setting/currency`) Tiền tệ
+  li(class="submenu")
+    a(href="javascript:void(0);")
+      i(class="ti ti-settings-2 fs-16 me-2")
+      span Cài đặt khác
+      span(class="menu-arrow")
+    ul
+      li
+        a(href=`${prefixAdmin}/setting/storage`) Lưu trữ
+      li
+        a(href=`${prefixAdmin}/setting/ban-ip-address`) Cấm IP
+  li
+    a(href=`${prefixAdmin}/setting/signin`)
+      i(class="ti ti-logout fs-16 me-2")
+      span Đăng xuất

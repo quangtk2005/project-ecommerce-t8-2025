@@ -18,6 +18,8 @@ import giftCards from "./giftCards.routes";
 import purchase from "./purchase.routes";
 import purchaseReturn from "./purchase-return.routes";
 import setting from "./setting.routes";
+import account from "./account-admin.routes";
+import role from "./roles.routes";
 import * as adminMiddlewares from "../../middlewares/admin/middlewares";
 
 router.use(adminMiddlewares.checkInternet)
@@ -38,7 +40,9 @@ router.use("/coupons", coupons)
 router.use("/gift-cards", giftCards)
 router.use("/purchase", purchase)
 router.use("/purchase-return", purchaseReturn)
+router.use("/account", account)
 router.use("/setting", setting)
+router.use("/role", role)
 
 router.all('{*splat}', (req: Request, res: Response) => {
   res.status(404).render("admin/pages/status/404");

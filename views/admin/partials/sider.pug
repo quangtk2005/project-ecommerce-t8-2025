@@ -1,4 +1,3 @@
-//- Sidebar
 div#sidebar(class="sidebar")
   //- Logo
   div(class="sidebar-logo active")
@@ -53,476 +52,458 @@ div#sidebar(class="sidebar")
     div#sidebar-menu(class="sidebar-menu")
       ul
         li(class="submenu-open")
-          h6(class="submenu-hdr") Main
+          h6(class="submenu-hdr user-select-none") Trang chủ
           ul
             li(class="submenu")
-              a(href="javascript:void(0);", class="subdrop active")
+              a(href="javascript:void(0);", class="")
                 i(class="ti ti-layout-grid fs-16 me-2")
-                span Dashboard
+                span Bảng điều khiển
                 span(class="menu-arrow")
               ul
                 li
-                  a(href="index.html", class="active") Admin Dashboard
+                  a(href=`${prefixAdmin}/dashboard`, class="") Tổng quan chính
                 li
-                  a(href="admin-dashboard.html") Admin Dashboard 2
+                  a(href="admin-dashboard.html") Bảng điều khiển admin
                 li
-                  a(href="sales-dashboard.html") Sales Dashboard
+                  a(href="sales-dashboard.html") Bảng điều khiển bán hàng
             li(class="submenu")
               a(href="javascript:void(0);")
                 i(class="ti ti-user-edit fs-16 me-2")
-                span Super Admin
+                span Quản trị viên
                 span(class="menu-arrow")
               ul
                 li
-                  a(href="dashboard.html") Dashboard
+                  a(href="dashboard.html") Bảng điều khiển
                 li
-                  a(href="companies.html") Companies
+                  a(href="companies.html") Công ty
                 li
-                  a(href="subscription.html") Subscriptions
+                  a(href="subscription.html") Gói đăng ký
                 li
-                  a(href="packages.html") Packages
+                  a(href="packages.html") Gói dịch vụ
                 li
-                  a(href="domain.html") Domain
+                  a(href="domain.html") Tên miền
                 li
-                  a(href="purchase-transaction.html") Purchase Transaction
+                  a(href="purchase-transaction.html") Giao dịch mua hàng
             li(class="submenu")
               a(href="javascript:void(0);")
                 i(class="ti ti-brand-apple-arcade fs-16 me-2")
-                span Application
+                span Ứng dụng
                 span(class="menu-arrow")
               ul
                 li
-                  a(href="chat.html") Chat
+                  a(href="chat.html") Trò chuyện
                 li(class="submenu submenu-two")
-                  a(href="javascript:void(0);") Call
+                  a(href="javascript:void(0);") Cuộc gọi
                     span(class="menu-arrow inside-submenu")
                   ul
                     li
-                      a(href="video-call.html") Video Call
+                      a(href="video-call.html") Video call
                     li
-                      a(href="audio-call.html") Audio Call
+                      a(href="audio-call.html") Audio call
                     li
-                      a(href="call-history.html") Call History
+                      a(href="call-history.html") Lịch sử cuộc gọi
                 li
-                  a(href="calendar.html") Calendar
+                  a(href="calendar.html") Lịch
                 li
-                  a(href="contacts.html") Contacts
+                  a(href="contacts.html") Danh bạ
                 li
                   a(href="email.html") Email
                 li
-                  a(href="todo.html") To Do
+                  a(href="todo.html") Công việc
                 li
-                  a(href="notes.html") Notes
+                  a(href="notes.html") Ghi chú
                 li
-                  a(href="file-manager.html") File Manager
+                  a(href="file-manager.html") Quản lý tệp
                 li
-                  a(href="projects.html") Projects
+                  a(href="projects.html") Dự án
                 li(class="submenu submenu-two")
-                  a(href="javascript:void(0);") Ecommerce
+                  a(href="javascript:void(0);") Thương mại điện tử
                     span(class="menu-arrow inside-submenu")
                   ul
                     li
-                      a(href="products.html") Products
+                      a(href="products.html") Sản phẩm
                     li
-                      a(href="orders.html") Orders
+                      a(href="orders.html") Đơn hàng
                     li
-                      a(href="customers.html") Customers
+                      a(href="customers.html") Khách hàng
                     li
-                      a(href="cart.html") Cart
+                      a(href="cart.html") Giỏ hàng
                     li
-                      a(href="checkout.html") Checkout
+                      a(href="checkout.html") Thanh toán
                     li
-                      a(href="wishlist.html") Wishlist
+                      a(href="wishlist.html") Danh sách yêu thích
                     li
-                      a(href="reviews.html") Reviews
+                      a(href="reviews.html") Đánh giá
                 li
-                  a(href="social-feed.html") Social Feed
+                  a(href="social-feed.html") Bảng tin xã hội
                 li
-                  a(href="search-list.html") Search List
+                  a(href="search-list.html") Danh sách tìm kiếm
             li(class="submenu")
               a(href="javascript:void(0);")
                 i(class="ti ti-layout-sidebar-right-collapse fs-16 me-2")
-                span Layouts
+                span Bố cục
                 span(class="menu-arrow")
               ul
                 li
-                  a(href="layout-horizontal.html") Horizontal
+                  a(href="layout-horizontal.html") Ngang
                 li
-                  a(href="layout-detached.html") Detached
+                  a(href="layout-detached.html") Tách biệt
                 li
-                  a(href="layout-two-column.html") Two Column
+                  a(href="layout-two-column.html") Hai cột
                 li
-                  a(href="layout-hovered.html") Hovered
+                  a(href="layout-hovered.html") Hover
                 li
-                  a(href="layout-boxed.html") Boxed
+                  a(href="layout-boxed.html") Hộp
                 li
                   a(href="layout-rtl.html") RTL
                 li
-                  a(href="layout-dark.html") Dark
+                  a(href="layout-dark.html") Tối
         li(class="submenu-open")
-          h6(class="submenu-hdr") Inventory
+          h6(class="submenu-hdr user-select-none") Quản lý kho
           ul
             li
-              a(href="product-list.html")
+              a(href=`${prefixAdmin}/product`)
                 i(data-feather="box")
-                span Products
+                span Danh sách sản phẩm
             li
-              a(href="add-product.html")
+              a(href=`${prefixAdmin}/product/create`)
                 i(class="ti ti-table-plus fs-16 me-2")
-                span Create Product
+                span Thêm sản phẩm
             li
               a(href="expired-products.html")
                 i(class="ti ti-progress-alert fs-16 me-2")
-                span Expired Products
+                span Sản phẩm hết hạn
             li
               a(href="low-stocks.html")
                 i(class="ti ti-trending-up-2 fs-16 me-2")
-                span Low Stocks
+                span Hàng tồn kho thấp
             li
-              a(href="category-list.html")
+              a(href=`${prefixAdmin}/category`)
                 i(class="ti ti-list-details fs-16 me-2")
-                span Category
+                span Danh mục
             li
-              a(href="sub-categories.html")
+              a(href=null)
                 i(class="ti ti-carousel-vertical fs-16 me-2")
-                span Sub Category
+                span Danh mục con
             li
-              a(href="brand-list.html")
+              a(href=`${prefixAdmin}/brand`)
                 i(class="ti ti-triangles fs-16 me-2")
-                span Brands
+                span Thương hiệu
             li
-              a(href="units.html")
+              a(href=`${prefixAdmin}/unit`)
                 i(class="ti ti-brand-unity fs-16 me-2")
-                span Units
+                span Đơn vị
             li
-              a(href="varriant-attributes.html")
+              a(href=`${prefixAdmin}/attribute`)
                 i(class="ti ti-checklist fs-16 me-2")
-                span Variant Attributes
+                span Thuộc tính biến thể
             li
-              a(href="warranty.html")
+              a(href=`${prefixAdmin}/warranty`)
                 i(class="ti ti-certificate fs-16 me-2")
-                span Warranties
+                span Bảo hành
             li
-              a(href="barcode.html")
+              a(href=`${prefixAdmin}/barcode`)
                 i(class="ti ti-barcode fs-16 me-2")
-                span Print Barcode
+                span In mã vạch
             li
-              a(href="qrcode.html")
+              a(href=null)
                 i(class="ti ti-qrcode fs-16 me-2")
-                span Print QR Code
+                span In mã QR
         li(class="submenu-open")
-          h6(class="submenu-hdr") Stock
+          h6(class="submenu-hdr user-select-none") Kho hàng
           ul
             li
-              a(href="manage-stocks.html")
+              a(href=`${prefixAdmin}/stock`)
                 i(class="ti ti-stack-3 fs-16 me-2")
-                span Manage Stock
+                span Quản lý kho
             li
-              a(href="stock-adjustment.html")
+              a(href=null)
                 i(class="ti ti-stairs-up fs-16 me-2")
-                span Stock Adjustment
+                span Điều chỉnh kho
             li
-              a(href="stock-transfer.html")
+              a(href=`${prefixAdmin}/stock/transfer`)
                 i(class="ti ti-stack-pop fs-16 me-2")
-                span Stock Transfer
+                span Chuyển kho
         li(class="submenu-open")
-          h6(class="submenu-hdr") Sales
+          h6(class="submenu-hdr user-select-none") Bán hàng
           ul
-            li(class="submenu")
-              a(href="javascript:void(0);")
+            li
+              a(href=`${prefixAdmin}/order`)
                 i(class="ti ti-layout-grid fs-16 me-2")
-                span Sales
-                span(class="menu-arrow")
-              ul
-                li
-                  a(href="online-orders.html") Online Orders
-                li
-                  a(href="pos-orders.html") POS Orders
+                span Đơn hàng
             li
-              a(href="invoice.html")
+              a(href=`${prefixAdmin}/invoice`)
                 i(class="ti ti-file-invoice fs-16 me-2")
-                span Invoices
+                span Hóa đơn
             li
-              a(href="sales-returns.html")
+              a(href=`${prefixAdmin}/order/return`)
                 i(class="ti ti-receipt-refund fs-16 me-2")
-                span Sales Return
+                span Trả hàng
             li
-              a(href="quotation-list.html")
+              a(href=`${prefixAdmin}/quotation`)
                 i(class="ti ti-files fs-16 me-2")
-                span Quotation
-            li(class="submenu")
-              a(href="javascript:void(0);")
+                span Báo giá
+            li
+              a(href=`${prefixAdmin}/pos`)
                 i(class="ti ti-device-laptop fs-16 me-2")
-                span POS
-                span(class="menu-arrow")
-              ul
-                li
-                  a(href="pos.html") POS 1
-                li
-                  a(href="pos-2.html") POS 2
-                li
-                  a(href="pos-3.html") POS 3
-                li
-                  a(href="pos-4.html") POS 4
-                li
-                  a(href="pos-5.html") POS 5
+                span Hệ thống bán hàng
         li(class="submenu-open")
-          h6(class="submenu-hdr") Promo
+          h6(class="submenu-hdr user-select-none") Khuyến mãi
           ul
             li
-              a(href="coupons.html")
+              a(href=`${prefixAdmin}/coupons`)
                 i(class="ti ti-ticket fs-16 me-2")
-                span Coupons
+                span Mã giảm giá
             li
-              a(href="gift-cards.html")
+              a(href=`${prefixAdmin}/gift-cards`)
                 i(class="ti ti-cards fs-16 me-2")
-                span Gift Cards
+                span Thẻ quà tặng
             li(class="submenu")
               a(href="javascript:void(0);")
                 i(class="ti ti-file-percent fs-16 me-2")
-                span Discount
+                span Giảm giá
                 span(class="menu-arrow")
               ul
                 li
-                  a(href="discount-plan.html") Discount Plan
+                  a(href="discount-plan.html") Kế hoạch giảm giá
                 li
-                  a(href="discount.html") Discount
+                  a(href="discount.html") Giảm giá
         li(class="submenu-open")
-          h6(class="submenu-hdr") Purchases
+          h6(class="submenu-hdr user-select-none") Mua hàng
           ul
             li
-              a(href="purchase-list.html")
+              a(href=`${prefixAdmin}/purchase`)
                 i(class="ti ti-shopping-bag fs-16 me-2")
-                span Purchases
+                span Danh sách mua hàng
             li
               a(href="purchase-order-report.html")
                 i(class="ti ti-file-unknown fs-16 me-2")
-                span Purchase Order
+                span Sản phẩm đã mua
             li
-              a(href="purchase-returns.html")
+              a(href=`${prefixAdmin}/purchase-return`)
                 i(class="ti ti-file-upload fs-16 me-2")
-                span Purchase Return
+                span Trả hàng đã mua
         li(class="submenu-open")
-          h6(class="submenu-hdr") Finance &amp; Accounts
+          h6(class="submenu-hdr user-select-none") Tài chính &amp; Kế toán
           ul
             li(class="submenu")
               a(href="javascript:void(0);")
                 i(class="ti ti-file-stack fs-16 me-2")
-                span Expenses
+                span Chi phí
                 span(class="menu-arrow")
               ul
                 li
-                  a(href="expense-list.html") Expenses
+                  a(href="expense-list.html") Danh sách chi phí
                 li
-                  a(href="expense-category.html") Expense Category
+                  a(href="expense-category.html") Danh mục chi phí
             li(class="submenu")
               a(href="javascript:void(0);")
                 i(class="ti ti-file-pencil fs-16 me-2")
-                span Income
+                span Thu nhập
                 span(class="menu-arrow")
               ul
                 li
-                  a(href="income.html") Income
+                  a(href="income.html") Thu nhập
                 li
-                  a(href="income-category.html") Income Category
+                  a(href="income-category.html") Danh mục thu nhập
             li
               a(href="account-list.html")
                 i(class="ti ti-building-bank fs-16 me-2")
-                span Bank Accounts
+                span Tài khoản ngân hàng
             li
               a(href="money-transfer.html")
                 i(class="ti ti-moneybag fs-16 me-2")
-                span Money Transfer
+                span Chuyển tiền
             li
               a(href="balance-sheet.html")
                 i(class="ti ti-report-money fs-16 me-2")
-                span Balance Sheet
+                span Bảng cân đối kế toán
             li
               a(href="trial-balance.html")
                 i(class="ti ti-alert-circle fs-16 me-2")
-                span Trial Balance
+                span Bảng cân đối thử
             li
               a(href="cash-flow.html")
                 i(class="ti ti-zoom-money fs-16 me-2")
-                span Cash Flow
+                span Dòng tiền
             li
               a(href="account-statement.html")
                 i(class="ti ti-file-infinity fs-16 me-2")
-                span Account Statement
+                span Sao kê tài khoản
         li(class="submenu-open")
-          h6(class="submenu-hdr") Peoples
+          h6(class="submenu-hdr user-select-none") Đối tác
           ul
             li
               a(href="customers.html")
                 i(class="ti ti-users-group fs-16 me-2")
-                span Customers
+                span Khách hàng
             li
               a(href="billers.html")
                 i(class="ti ti-user-up fs-16 me-2")
-                span Billers
+                span Người lập hóa đơn
             li
               a(href="suppliers.html")
                 i(class="ti ti-user-dollar fs-16 me-2")
-                span Suppliers
+                span Nhà cung cấp
             li
               a(href="store-list.html")
                 i(class="ti ti-home-bolt fs-16 me-2")
-                span Stores
+                span Cửa hàng
             li
               a(href="warehouse.html")
                 i(class="ti ti-archive fs-16 me-2")
-                span Warehouses
+                span Kho hàng
         li(class="submenu-open")
-          h6(class="submenu-hdr") HRM
+          h6(class="submenu-hdr user-select-none") Quản lý nhân sự
           ul
             li
               a(href="employees-grid.html")
                 i(class="ti ti-user fs-16 me-2")
-                span Employees
+                span Nhân viên
             li
               a(href="department-grid.html")
                 i(class="ti ti-compass fs-16 me-2")
-                span Departments
+                span Phòng ban
             li
               a(href="designation.html")
                 i(class="ti ti-git-merge fs-16 me-2")
-                span Designation
+                span Chức vụ
             li
               a(href="shift.html")
                 i(class="ti ti-arrows-shuffle fs-16 me-2")
-                span Shifts
+                span Ca làm việc
             li(class="submenu")
               a(href="javascript:void(0);")
                 i(class="ti ti-user-cog fs-16 me-2")
-                span Attendence
+                span Chấm công
                 span(class="menu-arrow")
               ul
                 li
-                  a(href="attendance-employee.html") Employee
+                  a(href="attendance-employee.html") Nhân viên
                 li
-                  a(href="attendance-admin.html") Admin
+                  a(href="attendance-admin.html") Quản trị
             li(class="submenu")
               a(href="javascript:void(0);")
                 i(class="ti ti-calendar fs-16 me-2")
-                span Leaves
+                span Nghỉ phép
                 span(class="menu-arrow")
               ul
                 li
-                  a(href="leaves-admin.html") Admin Leaves
+                  a(href="leaves-admin.html") Nghỉ phép quản trị
                 li
-                  a(href="leaves-employee.html") Employee Leaves
+                  a(href="leaves-employee.html") Nghỉ phép nhân viên
                 li
-                  a(href="leave-types.html") Leave Types
+                  a(href="leave-types.html") Loại nghỉ phép
             li
               a(href="holidays.html")
                 i(class="ti ti-calendar-share fs-16 me-2")
-                span Holidays
+                span Ngày lễ
             li(class="submenu")
               a(href="employee-salary.html")
                 i(class="ti ti-file-dollar fs-16 me-2")
-                span Payroll
+                span Lương
                 span(class="menu-arrow")
               ul
                 li
-                  a(href="employee-salary.html") Employee Salary
+                  a(href="employee-salary.html") Lương nhân viên
                 li
-                  a(href="payslip.html") Payslip
+                  a(href="payslip.html") Phiếu lương
         li(class="submenu-open")
-          h6(class="submenu-hdr") Reports
+          h6(class="submenu-hdr user-select-none") Báo cáo
           ul
             li(class="submenu")
               a(href="javascript:void(0);")
                 i(class="ti ti-chart-bar fs-16 me-2")
-                span Sales Report
+                span Báo cáo bán hàng
                 span(class="menu-arrow")
               ul
                 li
-                  a(href="sales-report.html") Sales Report
+                  a(href="sales-report.html") Báo cáo bán hàng
                 li
-                  a(href="best-seller.html") Best Seller
+                  a(href="best-seller.html") Sản phẩm bán chạy
             li
               a(href="purchase-report.html")
                 i(class="ti ti-chart-pie-2 fs-16 me-2")
-                span Purchase report
+                span Báo cáo mua hàng
             li(class="submenu")
               a(href="javascript:void(0);")
                 i(class="ti ti-triangle-inverted fs-16 me-2")
-                span Inventory Report
+                span Báo cáo kho
                 span(class="menu-arrow")
               ul
                 li
-                  a(href="inventory-report.html") Inventory Report
+                  a(href="inventory-report.html") Báo cáo tồn kho
                 li
-                  a(href="stock-history.html") Stock History
+                  a(href="stock-history.html") Lịch sử kho
                 li
-                  a(href="sold-stock.html") Sold Stock
+                  a(href="sold-stock.html") Hàng đã bán
             li
               a(href="invoice-report.html")
                 i(class="ti ti-businessplan fs-16 me-2")
-                span Invoice Report
+                span Báo cáo hóa đơn
             li(class="submenu")
               a(href="javascript:void(0);")
                 i(class="ti ti-user-star fs-16 me-2")
-                span Supplier Report
+                span Báo cáo nhà cung cấp
                 span(class="menu-arrow")
               ul
                 li
-                  a(href="supplier-report.html") Supplier Report
+                  a(href="supplier-report.html") Báo cáo nhà cung cấp
                 li
-                  a(href="supplier-due-report.html") Supplier Due Report
+                  a(href="supplier-due-report.html") Báo cáo nợ nhà cung cấp
             li(class="submenu")
               a(href="javascript:void(0);")
                 i(class="ti ti-report fs-16 me-2")
-                span Customer Report
+                span Báo cáo khách hàng
                 span(class="menu-arrow")
               ul
                 li
-                  a(href="customer-report.html") Customer Report
+                  a(href="customer-report.html") Báo cáo khách hàng
                 li
-                  a(href="customer-due-report.html") Customer Due Report
+                  a(href="customer-due-report.html") Báo cáo nợ khách hàng
             li(class="submenu")
               a(href="javascript:void(0);")
                 i(class="ti ti-report-analytics fs-16 me-2")
-                span Product Report
+                span Báo cáo sản phẩm
                 span(class="menu-arrow")
               ul
                 li
-                  a(href="product-report.html") Product Report
+                  a(href="product-report.html") Báo cáo sản phẩm
                 li
-                  a(href="product-expiry-report.html") Product Expiry Report
+                  a(href="product-expiry-report.html") Báo cáo hết hạn
                 li
-                  a(href="product-quantity-alert.html") Product Quantity Alert
+                  a(href="product-quantity-alert.html") Cảnh báo số lượng
             li
               a(href="expense-report.html")
                 i(class="ti ti-file-vector fs-16 me-2")
-                span Expense Report
+                span Báo cáo chi phí
             li
               a(href="income-report.html")
                 i(class="ti ti-chart-ppf fs-16 me-2")
-                span Income Report
+                span Báo cáo thu nhập
             li
               a(href="tax-reports.html")
                 i(class="ti ti-chart-dots-2 fs-16 me-2")
-                span Tax Report
+                span Báo cáo thuế
             li
               a(href="profit-and-loss.html")
                 i(class="ti ti-chart-donut fs-16 me-2")
-                span Profit &amp; Loss
+                span Lãi lỗ
             li
               a(href="annual-report.html")
                 i(class="ti ti-report-search fs-16 me-2")
-                span Annual Report
+                span Báo cáo năm
         li(class="submenu-open")
-          h6(class="submenu-hdr") Content (CMS)
+          h6(class="submenu-hdr user-select-none") Nội dung (CMS)
           ul
             li(class="submenu")
               a(href="javascript:void(0);")
                 i(class="ti ti-page-break fs-16 me-2")
-                span Pages
+                span Trang
                 span(class="menu-arrow")
               ul
                 li
-                  a(href="pages.html") Pages
+                  a(href="pages.html") Trang
             li(class="submenu")
               a(href="javascript:void(0);")
                 i(class="ti ti-wallpaper fs-16 me-2")
@@ -530,264 +511,154 @@ div#sidebar(class="sidebar")
                 span(class="menu-arrow")
               ul
                 li
-                  a(href="all-blog.html") All Blog
+                  a(href="all-blog.html") Tất cả blog
                 li
-                  a(href="blog-tag.html") Blog Tags
+                  a(href="blog-tag.html") Thẻ blog
                 li
-                  a(href="blog-categories.html") Categories
+                  a(href="blog-categories.html") Danh mục
                 li
-                  a(href="blog-comments.html") Blog Comments
+                  a(href="blog-comments.html") Bình luận blog
             li(class="submenu")
               a(href="javascript:void(0);")
                 i(class="ti ti-map-pin fs-16 me-2")
-                span Location
+                span Vị trí
                 span(class="menu-arrow")
               ul
                 li
-                  a(href="countries.html") Countries
+                  a(href="countries.html") Quốc gia
                 li
-                  a(href="states.html") States
+                  a(href="states.html") Tỉnh/Thành phố
                 li
-                  a(href="cities.html") Cities
+                  a(href="cities.html") Thành phố
             li
               a(href="testimonials.html")
                 i(class="ti ti-star fs-16 me-2")
-                span Testimonials
+                span Đánh giá khách hàng
             li
               a(href="faq.html")
                 i(class="ti ti-help-circle fs-16 me-2")
-                span FAQ
+                span Câu hỏi thường gặp
         li(class="submenu-open")
-          h6(class="submenu-hdr") User Management
+          h6(class="submenu-hdr user-select-none") Quản lý tài khoản quản trị
           ul
             li
-              a(href="users.html")
+              a(href=`${prefixAdmin}/account`)
                 i(class="ti ti-shield-up fs-16 me-2")
-                span Users
+                span Danh sách tài khoản
             li
-              a(href="roles-permissions.html")
+              a(href=`${prefixAdmin}/role`)
                 i(class="ti ti-jump-rope fs-16 me-2")
-                span Roles &amp; Permissions
+                span Vai trò và Quyền
             li
-              a(href="delete-account.html")
+              a(href=`${prefixAdmin}/role/permission`)
                 i(class="ti ti-trash-x fs-16 me-2")
-                span Delete Account Request
+                span Yêu cầu xóa tài khoản
         li(class="submenu-open")
-          h6(class="submenu-hdr") Pages
+          h6(class="submenu-hdr user-select-none") Trang
           ul
             li
               a(href="profile.html")
                 i(class="ti ti-user-circle fs-16 me-2")
-                span Profile
+                span Hồ sơ
             li(class="submenu")
               a(href="javascript:void(0);")
                 i(class="ti ti-shield fs-16 me-2")
-                span Authentication
+                span Xác thực
                 span(class="menu-arrow")
               ul
                 li(class="submenu submenu-two")
-                  a(href="javascript:void(0);") Login
+                  a(href="javascript:void(0);") Đăng nhập
                     span(class="menu-arrow inside-submenu")
                   ul
                     li
-                      a(href="signin.html") Cover
+                      a(href="signin.html") Bìa
                     li
-                      a(href="signin-2.html") Illustration
+                      a(href="signin-2.html") Minh họa
                     li
-                      a(href="signin-3.html") Basic
+                      a(href="signin-3.html") Cơ bản
                 li(class="submenu submenu-two")
-                  a(href="javascript:void(0);") Register
+                  a(href="javascript:void(0);") Đăng ký
                     span(class="menu-arrow inside-submenu")
                   ul
                     li
-                      a(href="register.html") Cover
+                      a(href="register.html") Bìa
                     li
-                      a(href="register-2.html") Illustration
+                      a(href="register-2.html") Minh họa
                     li
-                      a(href="register-3.html") Basic
+                      a(href="register-3.html") Cơ bản
                 li(class="submenu submenu-two")
-                  a(href="javascript:void(0);") Forgot Password
+                  a(href="javascript:void(0);") Quên mật khẩu
                     span(class="menu-arrow inside-submenu")
                   ul
                     li
-                      a(href="forgot-password.html") Cover
+                      a(href="forgot-password.html") Bìa
                     li
-                      a(href="forgot-password-2.html") Illustration
+                      a(href="forgot-password-2.html") Minh họa
                     li
-                      a(href="forgot-password-3.html") Basic
+                      a(href="forgot-password-3.html") Cơ bản
                 li(class="submenu submenu-two")
-                  a(href="javascript:void(0);") Reset Password
+                  a(href="javascript:void(0);") Đặt lại mật khẩu
                     span(class="menu-arrow inside-submenu")
                   ul
                     li
-                      a(href="reset-password.html") Cover
+                      a(href="reset-password.html") Bìa
                     li
-                      a(href="reset-password-2.html") Illustration
+                      a(href="reset-password-2.html") Minh họa
                     li
-                      a(href="reset-password-3.html") Basic
+                      a(href="reset-password-3.html") Cơ bản
                 li(class="submenu submenu-two")
-                  a(href="javascript:void(0);") Email Verification
+                  a(href="javascript:void(0);") Xác thực Email
                     span(class="menu-arrow inside-submenu")
                   ul
                     li
-                      a(href="email-verification.html") Cover
+                      a(href="email-verification.html") Bìa
                     li
-                      a(href="email-verification-2.html") Illustration
+                      a(href="email-verification-2.html") Minh họa
                     li
-                      a(href="email-verification-3.html") Basic
+                      a(href="email-verification-3.html") Cơ bản
                 li(class="submenu submenu-two")
-                  a(href="javascript:void(0);") 2 Step Verification
+                  a(href="javascript:void(0);") Xác thực 2 bước
                     span(class="menu-arrow inside-submenu")
                   ul
                     li
-                      a(href="two-step-verification.html") Cover
+                      a(href="two-step-verification.html") Bìa
                     li
-                      a(href="two-step-verification-2.html") Illustration
+                      a(href="two-step-verification-2.html") Minh họa
                     li
-                      a(href="two-step-verification-3.html") Basic
+                      a(href="two-step-verification-3.html") Cơ bản
                 li
-                  a(href="lock-screen.html") Lock Screen
+                  a(href="lock-screen.html") Khóa màn hình
             li(class="submenu")
               a(href="javascript:void(0);")
                 i(class="ti ti-file-x fs-16 me-2")
-                span Error Pages
+                span Trang lỗi
                 span(class="menu-arrow")
               ul
                 li
-                  a(href="error-404.html") 404 Error 
+                  a(href="error-404.html") Lỗi 404 
                 li
-                  a(href="error-500.html") 500 Error 
+                  a(href="error-500.html") Lỗi 500 
             li
               a(href="blank-page.html")
                 i(class="ti ti-file fs-16 me-2")
-                span Blank Page
+                span Trang trống
             li
               a(href="pricing.html")
                 i(class="ti ti-currency-dollar fs-16 me-2")
-                span Pricing
+                span Bảng giá
             li
               a(href="coming-soon.html")
                 i(class="ti ti-send fs-16 me-2")
-                span Coming Soon
+                span Sắp ra mắt
             li
               a(href="under-maintenance.html")
                 i(class="ti ti-alert-triangle fs-16 me-2")
-                span Under Maintenance
+                span Bảo trì
         li(class="submenu-open")
-          h6(class="submenu-hdr") Settings
-          ul
-            li(class="submenu")
-              a(href="javascript:void(0);")
-                i(class="ti ti-settings fs-16 me-2")
-                span General Settings
-                span(class="menu-arrow")
-              ul
-                li
-                  a(href="general-settings.html") Profile
-                li
-                  a(href="security-settings.html") Security
-                li
-                  a(href="notification.html") Notifications
-                li
-                  a(href="connected-apps.html") Connected Apps
-            li(class="submenu")
-              a(href="javascript:void(0);")
-                i(class="ti ti-world fs-16 me-2")
-                span Website Settings
-                span(class="menu-arrow")
-              ul
-                li
-                  a(href="system-settings.html") System Settings
-                li
-                  a(href="company-settings.html") Company Settings 
-                li
-                  a(href="localization-settings.html") Localization
-                li
-                  a(href="prefixes.html") Prefixes
-                li
-                  a(href="preference.html") Preference
-                li
-                  a(href="appearance.html") Appearance
-                li
-                  a(href="social-authentication.html") Social Authentication
-                li
-                  a(href="language-settings.html") Language
-            li(class="submenu")
-              a(href="javascript:void(0);")
-                i(class="ti ti-device-mobile fs-16 me-2")
-                span App Settings
-                span(class="menu-arrow")
-              ul
-                li(class="submenu submenu-two")
-                  a(href="javascript:void(0);") Invoice
-                    span(class="menu-arrow inside-submenu")
-                  ul
-                    li
-                      a(href="invoice-settings.html") Invoice Settings
-                    li
-                      a(href="invoice-template.html") Invoice Template
-                li
-                  a(href="printer-settings.html") Printer
-                li
-                  a(href="pos-settings.html") POS
-                li
-                  a(href="custom-fields.html") Custom Fields
-            li(class="submenu")
-              a(href="javascript:void(0);")
-                i(class="ti ti-device-desktop fs-16 me-2")
-                span System Settings
-                span(class="menu-arrow")
-              ul
-                li(class="submenu submenu-two")
-                  a(href="javascript:void(0);") Email
-                    span(class="menu-arrow inside-submenu")
-                  ul
-                    li
-                      a(href="email-settings.html") Email Settings
-                    li
-                      a(href="email-template.html") Email Template
-                li(class="submenu submenu-two")
-                  a(href="javascript:void(0);") SMS
-                    span(class="menu-arrow inside-submenu")
-                  ul
-                    li
-                      a(href="sms-settings.html") SMS Settings
-                    li
-                      a(href="sms-template.html") SMS Template
-                li
-                  a(href="otp-settings.html") OTP
-                li
-                  a(href="gdpr-settings.html") GDPR Cookies
-            li(class="submenu")
-              a(href="javascript:void(0);")
-                i(class="ti ti-settings-dollar fs-16 me-2")
-                span Financial Settings
-                span(class="menu-arrow")
-              ul
-                li
-                  a(href="payment-gateway-settings.html") Payment Gateway
-                li
-                  a(href="bank-settings-grid.html") Bank Accounts
-                li
-                  a(href="tax-rates.html") Tax Rates
-                li
-                  a(href="currency-settings.html") Currencies
-            li(class="submenu")
-              a(href="javascript:void(0);")
-                i(class="ti ti-settings-2 fs-16 me-2")
-                span Other Settings
-                span(class="menu-arrow")
-              ul
-                li
-                  a(href="storage-settings.html") Storage
-                li
-                  a(href="ban-ip-address.html") Ban IP Address
-            li
-              a(href="signin.html")
-                i(class="ti ti-logout fs-16 me-2")
-                span Logout
+          h6(class="submenu-hdr user-select-none") Cài đặt
+          include ../partials/menu-setting.pug
         li(class="submenu-open")
-          h6(class="submenu-hdr") UI Interface
+          h6(class="submenu-hdr user-select-none") UI Interface
           ul
             li(class="submenu")
               a(href="javascript:void(0);")
@@ -998,7 +869,7 @@ div#sidebar(class="sidebar")
                 li
                   a(href="maps-leaflet.html") Leaflet
         li(class="submenu-open")
-          h6(class="submenu-hdr") Help
+          h6(class="submenu-hdr user-select-none") Help
           ul
             li
               a(href="javascript:void(0);")

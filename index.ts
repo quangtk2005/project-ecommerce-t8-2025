@@ -1,11 +1,11 @@
 import express, { Application, Request, Response } from "express";
+import "dotenv/config";
 import clientRouter from "./routes/client/index.route";
 import adminRouter from "./routes/admin/index.route";
-import "dotenv/config";
 import * as databaseConnect from "./configs/mongodb.connect";
 
 const app: Application = express();
-const port = process.env.PORT || 3000;
+const port: Number = parseInt(process.env.PORT as string) || 3000;
 
 databaseConnect.mongodbConnect();
 app.use((req: Request, res: Response, next) => {

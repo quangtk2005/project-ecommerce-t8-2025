@@ -3,16 +3,7 @@ import wifi from 'node-wifi';
 import ColorVariable from "../../models/color-variable.model";
 
 export const checkInternet = async (req: Request, res: Response, next: NextFunction) => {
-  const colorVariable = await ColorVariable.findOne({}).lean();
-  res.locals.COLOR = colorVariable;
-  if (colorVariable) {
-    const skip = new Set(["_id", "__v", "createdAt", "updatedAt"]);
-    const css = Object.entries(colorVariable)
-      .filter(([k]) => !skip.has(k))
-      .map(([k, v]) => `--${k}: ${v};`)
-      .join("\n  ");
-    res.locals.COLOR_ROOT = css;
-  }
+  res.locals.prefixAdmin = "/admin";
 
   wifi.init({
     iface: null
@@ -20,7 +11,7 @@ export const checkInternet = async (req: Request, res: Response, next: NextFunct
 
   wifi.getCurrentConnections((error, currentConnections) => {
     if (error) {
-      console.log(error);
+      // console.log(error);
       // return res.render("admin/pages/status/no-internet");
       next();
     }

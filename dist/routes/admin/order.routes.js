@@ -37,4 +37,5 @@ const express_1 = require("express");
 const orderController = __importStar(require("../../controllers/admin/order.controller"));
 const router = (0, express_1.Router)({ caseSensitive: true });
 router.get("", orderController.index);
+router.get("/return", orderController.index);
 exports.default = router;

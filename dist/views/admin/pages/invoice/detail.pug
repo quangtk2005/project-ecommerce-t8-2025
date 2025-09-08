@@ -1,32 +1,24 @@
 extends ../../layout/default.pug
 
 block css
-  // animation CSS
+  //- animation CSS
   link(rel="stylesheet", href="/admin/assets/css/animate.css")
-  // Datatable CSS
+  //- Datatable CSS
   link(rel="stylesheet", href="/admin/assets/css/dataTables.bootstrap5.min.css")
-  // Datetimepicker CSS
+  //- Datetimepicker CSS
   link(rel="stylesheet", href="/admin/assets/css/bootstrap-datetimepicker.min.css")
-  // Quill CSS
+  //- Quill CSS
   link(rel="stylesheet", href="/admin/assets/plugins/quill/quill.snow.css")
-  // Tabler Icon CSS
-  link(rel="stylesheet", href="/admin/assets/plugins/tabler-icons/tabler-icons.min.css")
-  // Color Picker Css
-  link(rel="stylesheet", href="/admin/assets/plugins/@simonwep/pickr/themes/nano.min.css")
 
 block js
-  // Datatable JS
+  //- Datatable JS
   script(src="/admin/assets/js/jquery.dataTables.min.js")
   script(src="/admin/assets/js/dataTables.bootstrap5.min.js")
-  // Datetimepicker JS
+  //- Datetimepicker JS
   script(src="/admin/assets/js/moment.min.js")
   script(src="/admin/assets/js/bootstrap-datetimepicker.min.js")
-  // Quill JS
+  //- Quill JS
   script(src="/admin/assets/plugins/quill/quill.min.js")
-  // Color Picker JS
-  script(src="/admin/assets/plugins/@simonwep/pickr/pickr.es5.min.js")
-  // Custom JS
-  script(src="/admin/assets/js/theme-colorpicker.js")
 
 block main
   div(class="page-header")
@@ -47,7 +39,7 @@ block main
       a(href="invoice.html", class="btn btn-primary")
         i(data-feather="arrow-left", class="me-2")
         | Back to Invoices
-  // Invoices
+  //- Invoices
   div(class="card")
     div(class="card-body")
       div(class="row justify-content-between align-items-center border-bottom mb-3")
@@ -175,7 +167,7 @@ block main
             span(class="text-dark") 45366287987
           p(class="fs-12") IFSC : 
             span(class="text-dark") HDFC0018159
-  // /Invoices
+  //- /Invoices
   div(class="d-flex justify-content-center align-items-center mb-4")
     a(href="invoice-details.html#", class="btn btn-primary d-flex justify-content-center align-items-center me-2")
       i(class="ti ti-printer me-2")

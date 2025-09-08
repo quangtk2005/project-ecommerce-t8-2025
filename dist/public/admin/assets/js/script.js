@@ -158,7 +158,7 @@ $(document).ready(function(){
 
 	// Loader
 	setTimeout(function () {
-		$('#global-loader');
+		// $('#global-loader');
 		setTimeout(function () {
 			$("#global-loader").fadeOut("slow");
 		}, 100);

@@ -1,33 +1,24 @@
 extends ../../layout/default.pug
 
 block css
-  // animation CSS
+  //- animation CSS
   link(rel="stylesheet", href="assets/css/animate.css")
-  // Datetimepicker CSS
+  //- Datetimepicker CSS
   link(rel="stylesheet", href="assets/css/bootstrap-datetimepicker.min.css")
-  // Datatable CSS
+  //- Datatable CSS
   link(rel="stylesheet", href="assets/css/dataTables.bootstrap5.min.css")
-  // Bootstrap Tagsinput CSS
+  //- Bootstrap Tagsinput CSS
   link(rel="stylesheet", href="assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css")
-  // Tabler Icon CSS
-  link(rel="stylesheet", href="assets/plugins/tabler-icons/tabler-icons.min.css")
-  // Color Picker Css
-  link(rel="stylesheet", href="assets/plugins/@simonwep/pickr/themes/nano.min.css")
 
 block js
-  // Datatable JS
+  //- Datatable JS
   script(src="assets/js/jquery.dataTables.min.js")
   script(src="assets/js/dataTables.bootstrap5.min.js")
-  // Datetimepicker JS
+  //- Datetimepicker JS
   script(src="assets/js/moment.min.js")
   script(src="assets/js/bootstrap-datetimepicker.min.js")
-  // Bootstrap Tagsinput JS
+  //- Bootstrap Tagsinput JS
   script(src="assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js")
-  // Color Picker JS
-  script(src="assets/plugins/@simonwep/pickr/pickr.es5.min.js")
-  // Custom JS
-  script(src="assets/js/theme-colorpicker.js")
-
 
 block main
   div(class="page-header")
@@ -52,7 +43,7 @@ block main
       a(href="varriant-attributes.html#", class="btn btn-primary", data-bs-toggle="modal", data-bs-target="#add-variant")
         i(class="ti ti-circle-plus me-1")
         | Add Variant
-  // /product list
+  //- /product list
   div(class="card")
     div(class="card-header d-flex align-items-center justify-content-between flex-wrap row-gap-3")
       div(class="search-set")
