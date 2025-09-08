@@ -54,7 +54,7 @@ app.use(express_1.default.static(`${__dirname}/public`));
 app.use("/admin", index_route_2.default);
 app.use(index_route_1.default);
 app.set("view engine", "pug");
-app.set("views", "views");
+app.set("views", `${__dirname}/views`);
 app.listen(port, () => {
     console.log(`Website đang chạy trên cổng ${port}`);
 });
