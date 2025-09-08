@@ -19,7 +19,11 @@ export const checkInternet = async (req: Request, res: Response, next: NextFunct
   });
 
   wifi.getCurrentConnections((error, currentConnections) => {
-    if (error) return res.render("admin/pages/status/no-internet");
+    if (error) {
+      console.log(error);
+      // return res.render("admin/pages/status/no-internet");
+      next();
+    }
     if(currentConnections.length > 0) next()
     else return res.render("admin/pages/status/no-internet");
   });

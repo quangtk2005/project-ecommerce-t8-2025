@@ -21,8 +21,10 @@ const checkInternet = async (req, res, next) => {
         iface: null
     });
     node_wifi_1.default.getCurrentConnections((error, currentConnections) => {
-        if (error)
-            return res.render("admin/pages/status/no-internet");
+        if (error) {
+            console.log(error);
+            next();
+        }
         if (currentConnections.length > 0)
             next();
         else
